@@ -6,8 +6,9 @@ namespace ObiektDwa
     {
         static void Main()
         {
-            Menu menu = new Menu();
+            MenuManager menu = new MenuManager();
             menu.Welcome();
+            menu.BeginingOfService();
             menu.TakeOrder();
         }
     }

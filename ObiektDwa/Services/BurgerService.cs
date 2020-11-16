@@ -11,10 +11,10 @@ namespace ObiektDwa
 
         private Item[] burgers = new Item[]
             {
-                new Item("Meat Burger"),
-                new Item("Vege Burger"),
-                new Item("Burger of a Day"),
-                new Item("Master Burger")
+                new Item("Meat Burger",new List<Ingredient>(){ new Ingredient("meat",8.00)}),
+                new Item("Vege Burger",new List<Ingredient>(){ new Ingredient("vegeMeatsubstitute",9.50)}),
+                new Item("Burger of a Day",new List<Ingredient>(){ new Ingredient("day",100.33)}),
+                new Item("Master Burger",new List<Ingredient>(){ new Ingredient("masterMeat",1_000_000.00)})
             };
 
         public Item GetItemById(int burgerNumber)

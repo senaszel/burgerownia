@@ -7,6 +7,7 @@ namespace ObiektDwa
         public string Name { get; }
         public double Price { get => TallPrice(); }
         public List<Ingredient> Ingredients { get; set; }
+        public bool IsService { get; set; }
 
         private double TallPrice()
         {

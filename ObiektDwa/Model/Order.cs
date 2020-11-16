@@ -58,5 +58,12 @@ namespace ObiektDwa
         {
             Messages.Display("Thank you for placing order. It will be ready soon.", true);
         }
+
+        internal double TotalPrice()
+        {
+            double totalPrice = 0;
+            OrderItems.ForEach(each => totalPrice += each.Price);
+            return totalPrice;
+        }
     }
 }

@@ -4,17 +4,30 @@ using System.Linq;
 
 namespace ObiektDwa
 {
-    internal class Menu
+    internal class MenuManager
     {
         private Order order;
-        public Menu()
+        public MenuManager()
         {
             order = new Order();
+        }
+
+        internal void BeginingOfService()
+        {
+            MenuService menuService = new MenuService();
+            if (order.OrderItems.Count != 0)
+            {
+                menuService.AddToMenu("Services", new Item("Change the order") { IsService = true });
+            }
+            ShowMenu(menuService.Services);
+            TakeChoiceFromMenu(menuService.Services);
         }
 
         internal void Welcome()
         {
             string textMessage = "Hello, welcome to Our Burger Joint.";
+            Messages.Display(textMessage);
+            textMessage = "How may I serve you?";
             Messages.Display(textMessage);
         }
 
@@ -33,32 +46,62 @@ namespace ObiektDwa
             }
         }
 
-        private void TakeChoiceFromMenu(Item[] menus, string choice = "")
+        private void TakeChoiceFromMenu(Item[] menuArr)
         {
-            if (choice != "")
-            {
-                string textMessage = $"{choice} has been chosen.";
-                Messages.Display(textMessage);
-            }
-
             int.TryParse(Console.ReadLine().ToString(), out int chosenNumber);
-            if (Enumerable.Range(1, menus.Length).Contains(chosenNumber))
+            if (Enumerable.Range(1, menuArr.Length).Contains(chosenNumber))
             {
-                RedirectTo(menus[chosenNumber - 1].Name);
+                if (menuArr[chosenNumber - 1].IsService)
+                {
+                    //todo
+                    RedirectToProperMenu(menuArr[chosenNumber - 1]);
+                }
+                else
+                {
+                    RedirectTo(menuArr[chosenNumber - 1]);
+                }
+
             }
             else
             {
                 Messages.Display("Please take available choice!");
-                TakeChoiceFromMenu(menus);
+                TakeChoiceFromMenu(menuArr);
             }
 
         }
 
-        private void RedirectTo(string chosenMenu)
+        private void RedirectToProperMenu(Item chosenItem)
         {
-            string textMessage = $"DISPLAY MENU = {chosenMenu}";
+            //todo
+            switch (chosenItem.Name)
+            {
+                case "Take Order":
+                    TakeOrder();
+                    break;
+                case "Check, please":
+                    CheckPlease();
+                    break;
+                case "Change the order":
+                    //todo Add change order functionality.
+                    var changeOrder = order.OrderItems.ToArray();
+                    ShowMenu(changeOrder);
+                    Messages.PressAnyKeyToContinue();
+                    break;
+            }
+        }
+
+        private void CheckPlease()
+        {
+            Messages.Display($"Your order is {order.TotalPrice()}", true);
+            Messages.PressAnyKeyToContinue();
+        }
+
+        private void RedirectTo(Item chosenItem)
+        {
+            string textMessage = $"DISPLAY MENU = {chosenItem}";
             Messages.Display(textMessage, true);
-            switch (chosenMenu)
+
+            switch (chosenItem.Name)
             {
                 case "Burgers":
                     Item[] burgers = new BurgerService().Items;
@@ -77,19 +120,18 @@ namespace ObiektDwa
                     }
                     else
                     {
-                        order.ThankYouForOrder();
+                        BeginingOfService();
                     }
                     Messages.PressAnyKeyToContinue();
                     break;
                 default:
-                    order.AddItem(new Item(chosenMenu));
+                    order.AddItem(chosenItem);
                     order.Summary();
                     if (order.IsThatAll())
                     {
                         order.Summary();
                         Messages.PressAnyKeyToContinue();
-                        order.ThankYouForOrder();
-                        Environment.Exit(0);
+                        BeginingOfService();
                     }
                     else
                     {
