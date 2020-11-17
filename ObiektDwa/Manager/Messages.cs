@@ -4,16 +4,19 @@ namespace ObiektDwa
 {
     internal class Messages
     {
-        internal static void Display(string textMessage,bool clear = false)
+        internal static void Display(string textMessage, bool clear = false)
         {
             if (clear) Console.Clear();
             Console.WriteLine(textMessage);
         }
 
-        internal static void PressAnyKeyToContinue()
+        internal static void PressAnyKeyToContinue(string textMessage = "")
         {
-            string textMessage = "press any key to continue";
-            var halfWay = (Console.BufferWidth/2) - (textMessage.Length / 2);
+            if (textMessage == "")
+            {
+                textMessage = "press any key to continue";
+            }
+            var halfWay = (Console.BufferWidth / 2) - (textMessage.Length / 2);
             Console.WriteLine();
             Console.SetCursorPosition(halfWay, Console.CursorTop);
             Console.WriteLine(textMessage);

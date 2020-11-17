@@ -56,7 +56,7 @@ namespace ObiektDwa
 
         internal void ThankYouForOrder()
         {
-            Messages.Display("Thank you for placing order. It will be ready soon.", true);
+            Messages.PressAnyKeyToContinue("Thank you for placing order. It will be ready soon.");
         }
 
         internal double TotalPrice()

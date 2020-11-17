@@ -8,8 +8,7 @@ namespace ObiektDwa
         {
             MenuManager menu = new MenuManager();
             menu.Welcome();
-            menu.BeginingOfService();
-            menu.TakeOrder();
+            menu.BeginingOfService(false);    
         }
     }
 }

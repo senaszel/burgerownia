@@ -21,7 +21,7 @@ namespace ObiektDwa
 
         internal void AddToMenu(string whichMenu, Item whatToAdd)
         {
-            List<Item> temp = new List<Item>();
+            List<Item> temp;
             switch (whichMenu)
             {
                 case "Services":
@@ -35,6 +35,25 @@ namespace ObiektDwa
                     menus = temp.ToArray();
                     break;
             }
+        }
+
+        internal void ChangeItem(string whichMenu, string whatToReplace, Item withWhat)
+        {
+            List<Item> temp;
+            switch (whichMenu)
+            {
+                case "Services":
+                    temp = services.ToList();
+                    temp.Remove(temp.Find(item=> item.Name==whatToReplace));
+                    services = temp.ToArray();
+                    break;
+                case "Menus":
+                    temp = menus.ToList();
+                    temp.Remove(temp.Find(item => item.Name == whatToReplace));
+                    menus = temp.ToArray();
+                    break;
+            }
+            AddToMenu(whichMenu, withWhat);
         }
 
         public Item[] Menus { get => menus; }

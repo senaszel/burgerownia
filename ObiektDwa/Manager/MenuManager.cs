@@ -6,21 +6,10 @@ namespace ObiektDwa
 {
     internal class MenuManager
     {
-        private Order order;
+        internal Order order;
         public MenuManager()
         {
             order = new Order();
-        }
-
-        internal void BeginingOfService()
-        {
-            MenuService menuService = new MenuService();
-            if (order.OrderItems.Count != 0)
-            {
-                menuService.AddToMenu("Services", new Item("Change the order") { IsService = true });
-            }
-            ShowMenu(menuService.Services);
-            TakeChoiceFromMenu(menuService.Services);
         }
 
         internal void Welcome()
@@ -34,48 +23,49 @@ namespace ObiektDwa
         internal void TakeOrder()
         {
             Messages.Display("What would you like to order?");
-            ShowMenu(new MenuService().Menus);
-            TakeChoiceFromMenu(new MenuService().Menus);
+            ShowMenu(new MenuService().Menus, true);
+            TakeChoiceFromPassedMenu(new MenuService().Menus);
         }
 
-        internal void ShowMenu(Item[] menuItems)
+        internal void ShowMenu(Item[] menuItems, bool clear = false)
         {
+            Messages.Display("", clear);
             for (int i = 0; i < menuItems.Length; i++)
             {
                 Messages.Display($"{i + 1}. {menuItems[i]}");
             }
         }
 
-        private void TakeChoiceFromMenu(Item[] menuArr)
+        internal void TakeChoiceFromPassedMenu(Item[] passedMenu)
         {
             int.TryParse(Console.ReadLine().ToString(), out int chosenNumber);
-            if (Enumerable.Range(1, menuArr.Length).Contains(chosenNumber))
+            if (Enumerable.Range(1, passedMenu.Length).Contains(chosenNumber))
             {
-                if (menuArr[chosenNumber - 1].IsService)
+                if (passedMenu[chosenNumber - 1].IsService)
                 {
-                    //todo
-                    RedirectToProperMenu(menuArr[chosenNumber - 1]);
+                    RedirectToProperMenu(passedMenu[chosenNumber - 1]);
                 }
                 else
                 {
-                    RedirectTo(menuArr[chosenNumber - 1]);
+                    RedirectTo(passedMenu[chosenNumber - 1]);
                 }
 
             }
             else
             {
                 Messages.Display("Please take available choice!");
-                TakeChoiceFromMenu(menuArr);
+                TakeChoiceFromPassedMenu(passedMenu);
             }
 
         }
 
         private void RedirectToProperMenu(Item chosenItem)
         {
-            //todo
+            Messages.Display("", true);
             switch (chosenItem.Name)
             {
                 case "Take Order":
+                case "Order more":
                     TakeOrder();
                     break;
                 case "Check, please":
@@ -83,11 +73,17 @@ namespace ObiektDwa
                     break;
                 case "Change the order":
                     //todo Add change order functionality.
-                    var changeOrder = order.OrderItems.ToArray();
-                    ShowMenu(changeOrder);
-                    Messages.PressAnyKeyToContinue();
+                    ChangeOrder();
                     break;
             }
+        }
+
+        private void ChangeOrder()
+        {
+            var changeOrder = order.OrderItems.ToArray();
+            Messages.Display("Choose order item you want to make changes to:", true);
+            ShowMenu(changeOrder);
+            Messages.PressAnyKeyToContinue();
         }
 
         private void CheckPlease()
@@ -98,31 +94,27 @@ namespace ObiektDwa
 
         private void RedirectTo(Item chosenItem)
         {
-            string textMessage = $"DISPLAY MENU = {chosenItem}";
-            Messages.Display(textMessage, true);
-
             switch (chosenItem.Name)
             {
                 case "Burgers":
                     Item[] burgers = new BurgerService().Items;
-                    ShowMenu(burgers);
-                    TakeChoiceFromMenu(burgers);
+                    ShowMenu(burgers, true);
+                    TakeChoiceFromPassedMenu(burgers);
                     break;
                 case "Refreshments":
                     Item[] refreshments = new RefreshmentsService().Items;
-                    ShowMenu(refreshments);
-                    TakeChoiceFromMenu(refreshments);
+                    ShowMenu(refreshments, true);
+                    TakeChoiceFromPassedMenu(refreshments);
                     break;
                 case "Nothing thanks":
                     if (order.OrderItems.Count == 0)
                     {
-                        Messages.Display("Get out if you're not a customer, please.", true);
+                        Messages.PressAnyKeyToContinue("Get out if you're not a customer, please.");
                     }
                     else
                     {
-                        BeginingOfService();
+                        Messages.PressAnyKeyToContinue("Good Bye then");
                     }
-                    Messages.PressAnyKeyToContinue();
                     break;
                 default:
                     order.AddItem(chosenItem);
@@ -130,16 +122,21 @@ namespace ObiektDwa
                     if (order.IsThatAll())
                     {
                         order.Summary();
-                        Messages.PressAnyKeyToContinue();
+                        order.ThankYouForOrder();
                         BeginingOfService();
                     }
-                    else
+                    else 
                     {
-                        TakeOrder();
+                        BeginingOfService();
                     }
                     break;
             }
         }
 
+        internal void BeginingOfService(bool clear = true)
+        {
+            var beginningOfServiceManager = new Manager.BeginningOfServiceManager();
+            beginningOfServiceManager.BeginingOfService(this, clear);
+        }
     }
 }
