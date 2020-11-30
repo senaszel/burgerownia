@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ObiektDwa
 {
-    internal class Burger : Item
+    public class Burger : Item
     {
         public Burger(string name) 
             : base(name)

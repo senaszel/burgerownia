@@ -2,10 +2,9 @@
 
 namespace ObiektDwa
 {
-    internal class RefreshmentsService : IServiceable
+    public class RefreshmentsService : IServiceable
     {
         public Item[] Items => refreshments;
-
         public int ItemsCount => refreshments.Length;
 
         private Item[] refreshments = new Item[]

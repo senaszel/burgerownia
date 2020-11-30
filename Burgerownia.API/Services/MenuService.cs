@@ -4,14 +4,14 @@ using System.Linq;
 
 namespace ObiektDwa
 {
-    class MenuService
+    public class MenuService
     {
         private Item[] menus = new Item[]
-{
+        {
         new Item("Burgers"),
         new Item("Refreshments"),
         new Item("Nothing thanks")
-};
+        };
 
         private Item[] services = new Item[]
         {
@@ -19,7 +19,7 @@ namespace ObiektDwa
         new Item("Check, please") {IsService = true }
         };
 
-        internal void AddToMenu(string whichMenu, Item whatToAdd)
+        public void AddToMenu(string whichMenu, Item whatToAdd)
         {
             List<Item> temp;
             switch (whichMenu)
@@ -37,14 +37,14 @@ namespace ObiektDwa
             }
         }
 
-        internal void ChangeItem(string whichMenu, string whatToReplace, Item withWhat)
+        public void ChangeItem(string whichMenu, string whatToReplace, Item withWhat)
         {
             List<Item> temp;
             switch (whichMenu)
             {
                 case "Services":
                     temp = services.ToList();
-                    temp.Remove(temp.Find(item=> item.Name==whatToReplace));
+                    temp.Remove(temp.Find(item => item.Name == whatToReplace));
                     services = temp.ToArray();
                     break;
                 case "Menus":

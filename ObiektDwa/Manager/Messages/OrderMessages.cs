@@ -1,31 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
+using ObiektDwa;
 
-namespace ObiektDwa
+namespace ObiektDwa.Manager
 {
-    internal class Order
+    public static class OrderMessages
     {
-        public List<Item> OrderItems { get => orderItems; }
-        private List<Item> orderItems;
-
-        public Order()
-        {
-            orderItems = new List<Item>();
-        }
-
-        internal void AddItem(Item item)
-        {
-            OrderItems.Add(item);
-        }
-
-        internal void Summary()
-        {
-            Messages.Display("This is your order: ", true);
-            Messages.Display("");
-            OrderItems.ForEach(eachItem => Messages.Display($"- {eachItem}"));
-        }
-
-        internal bool IsThatAll()
+        public static bool IsThatAll()
         {
             bool choice = false;
 
@@ -54,16 +36,16 @@ namespace ObiektDwa
             return choice;
         }
 
-        internal void ThankYouForOrder()
+        public static void Summary(Order order)
         {
-            Messages.PressAnyKeyToContinue("Thank you for placing order. It will be ready soon.");
+            Messages.Display("This is your order: ", true);
+            Messages.Display("");
+            order.OrderItems.ForEach(eachItem => Messages.Display($"- {eachItem}"));
         }
 
-        internal double TotalPrice()
+        public static void ThankYouForOrder()
         {
-            double totalPrice = 0;
-            OrderItems.ForEach(each => totalPrice += each.Price);
-            return totalPrice;
+            Messages.PressAnyKeyToContinue("Thank you for placing order. It will be ready soon.");
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ObiektDwa.Manager;
+using System;
 using System.Data;
 using System.Linq;
 
@@ -6,9 +7,11 @@ namespace ObiektDwa
 {
     internal class MenuManager
     {
+        internal Burgerownia.API.Repositories.IngredientRepository ingredientRepository;
         internal Order order;
         public MenuManager()
         {
+            ingredientRepository = new Burgerownia.API.Repositories.IngredientRepository();
             order = new Order();
         }
 
@@ -89,6 +92,7 @@ namespace ObiektDwa
         private void CheckPlease()
         {
             Messages.Display($"Your order is {order.TotalPrice()}", true);
+            OrderMessages.Summary(order);
             Messages.PressAnyKeyToContinue();
         }
 
@@ -118,11 +122,11 @@ namespace ObiektDwa
                     break;
                 default:
                     order.AddItem(chosenItem);
-                    order.Summary();
-                    if (order.IsThatAll())
+                    OrderMessages.Summary(order);
+                    if (OrderMessages.IsThatAll())
                     {
-                        order.Summary();
-                        order.ThankYouForOrder();
+                        OrderMessages.Summary(order);
+                        OrderMessages.ThankYouForOrder();
                         BeginingOfService();
                     }
                     else 

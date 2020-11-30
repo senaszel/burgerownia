@@ -24,7 +24,7 @@ namespace ObiektDwa
         public Item(string name, List<Ingredient> ingredients)
             : this(name)
         {
-            Ingredients = ingredients;
+            ingredients.ForEach(ingredient => this.Ingredients.Add(ingredient));
         }
 
         public override string ToString()

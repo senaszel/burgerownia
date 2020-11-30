@@ -2,7 +2,7 @@
 
 namespace ObiektDwa
 {
-    internal class Messages
+    public class Messages
     {
         internal static void Display(string textMessage, bool clear = false)
         {
@@ -31,5 +31,7 @@ namespace ObiektDwa
                 Display(msgs[i]);
             }
         }
+
+        
     }
 }
