@@ -4,7 +4,8 @@ namespace ObiektDwa
 {
     public class Item
     {
-        public string Name { get; }
+        public int Id { get; set; }
+        public string Name { get; set; }
         public double Price { get => TallPrice(); }
         public List<Ingredient> Ingredients { get; set; }
         public bool IsService { get; set; }

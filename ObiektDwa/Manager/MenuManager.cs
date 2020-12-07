@@ -25,7 +25,8 @@ namespace ObiektDwa
         internal void TakeOrder()
         {
             Messages.Display("What would you like to order?");
-            ShowMenu(new MenuService().Menus, true);
+            Messages.Display($"Todays special is : {new Burgerownia.API.Services.BurgerOfADayService().TodaysSpecial()}");
+            ShowMenu(new MenuService().Menus, false);
             TakeChoiceFromPassedMenu(new MenuService().Menus);
         }
 
