@@ -9,8 +9,8 @@ public    class BurgerRepository
     {
         private List<Burger> Burgers = new List<Burger>()
         {
-                new Burger("New Burger",new Ingredients(1,2,3)),
-                new Burger("Marek Burger",new Ingredients(1)),
+                new Burger("New Burger",new Ingredients(1,2,3).GetAll()),
+                new Burger("Marek Burger",new Ingredients(1).GetAll()),
 
                 new Burger(
                     "Meat Burger",

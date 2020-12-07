@@ -1,6 +1,5 @@
 ﻿using ObiektDwa.Manager;
 using System;
-using System.Data;
 using System.Linq;
 
 namespace ObiektDwa
@@ -52,7 +51,6 @@ namespace ObiektDwa
                 {
                     RedirectTo(passedMenu[chosenNumber - 1]);
                 }
-
             }
             else
             {
