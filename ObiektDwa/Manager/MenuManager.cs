@@ -85,7 +85,7 @@ namespace ObiektDwa
             var changeOrder = order.OrderItems.ToArray();
             Messages.Display("Choose order item you want to make changes to:", true);
             ShowMenu(changeOrder);
-            Messages.PressAnyKeyToContinue();
+            Messages.PressAnyKeyToContinue("Tutaj dodac wybieranie przedmiotu ktory bedzie zmieniony i przeprowadzic operacje :(");
         }
 
         private void CheckPlease()

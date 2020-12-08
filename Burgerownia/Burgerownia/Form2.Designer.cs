@@ -45,7 +45,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.ListBox_BurgerIngredients = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -67,9 +67,9 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(12, 176);
+            this.button1.Location = new System.Drawing.Point(12, 171);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 27);
+            this.button1.Size = new System.Drawing.Size(55, 55);
             this.button1.TabIndex = 1;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -77,9 +77,9 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(12, 247);
+            this.button2.Location = new System.Drawing.Point(12, 232);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(30, 27);
+            this.button2.Size = new System.Drawing.Size(55, 55);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -87,36 +87,36 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(12, 318);
+            this.button3.Location = new System.Drawing.Point(12, 300);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(30, 27);
+            this.button3.Size = new System.Drawing.Size(55, 55);
             this.button3.TabIndex = 1;
             this.button3.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Red;
-            this.button4.Location = new System.Drawing.Point(12, 387);
+            this.button4.Location = new System.Drawing.Point(12, 368);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(30, 27);
+            this.button4.Size = new System.Drawing.Size(55, 55);
             this.button4.TabIndex = 1;
             this.button4.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Red;
-            this.button5.Location = new System.Drawing.Point(12, 457);
+            this.button5.Location = new System.Drawing.Point(12, 445);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(30, 27);
+            this.button5.Size = new System.Drawing.Size(55, 55);
             this.button5.TabIndex = 1;
             this.button5.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(491, 153);
+            this.pictureBox2.Location = new System.Drawing.Point(441, 171);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(74, 73);
+            this.pictureBox2.Size = new System.Drawing.Size(55, 55);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -124,9 +124,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(491, 232);
+            this.pictureBox3.Location = new System.Drawing.Point(441, 311);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(74, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(55, 55);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
@@ -134,9 +134,9 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(491, 300);
+            this.pictureBox4.Location = new System.Drawing.Point(441, 240);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(74, 62);
+            this.pictureBox4.Size = new System.Drawing.Size(55, 55);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
@@ -144,9 +144,9 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(491, 368);
+            this.pictureBox5.Location = new System.Drawing.Point(441, 380);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(74, 62);
+            this.pictureBox5.Size = new System.Drawing.Size(55, 55);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 2;
             this.pictureBox5.TabStop = false;
@@ -154,9 +154,9 @@
             // pictureBox6
             // 
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(491, 436);
+            this.pictureBox6.Location = new System.Drawing.Point(441, 445);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(74, 62);
+            this.pictureBox6.Size = new System.Drawing.Size(55, 55);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 2;
             this.pictureBox6.TabStop = false;
@@ -167,10 +167,10 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(137, 174);
+            this.textBox1.Location = new System.Drawing.Point(99, 182);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(336, 29);
+            this.textBox1.Size = new System.Drawing.Size(336, 52);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "MARIO";
             // 
@@ -180,7 +180,7 @@
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox2.ForeColor = System.Drawing.Color.Blue;
-            this.textBox2.Location = new System.Drawing.Point(137, 247);
+            this.textBox2.Location = new System.Drawing.Point(85, 240);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(336, 47);
@@ -193,7 +193,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox3.ForeColor = System.Drawing.Color.Yellow;
-            this.textBox3.Location = new System.Drawing.Point(137, 318);
+            this.textBox3.Location = new System.Drawing.Point(85, 311);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(336, 44);
@@ -206,10 +206,10 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox4.ForeColor = System.Drawing.Color.SlateGray;
-            this.textBox4.Location = new System.Drawing.Point(137, 387);
+            this.textBox4.Location = new System.Drawing.Point(85, 380);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(250, 43);
+            this.textBox4.Size = new System.Drawing.Size(250, 55);
             this.textBox4.TabIndex = 3;
             this.textBox4.Text = "Arkanoid";
             // 
@@ -219,28 +219,28 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox5.ForeColor = System.Drawing.Color.Lime;
-            this.textBox5.Location = new System.Drawing.Point(137, 457);
+            this.textBox5.Location = new System.Drawing.Point(85, 446);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(336, 41);
+            this.textBox5.Size = new System.Drawing.Size(340, 54);
             this.textBox5.TabIndex = 3;
             this.textBox5.Text = "Space Invader";
             // 
-            // checkedListBox1
+            // ListBox_BurgerIngredients
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(651, 153);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(319, 346);
-            this.checkedListBox1.TabIndex = 4;
+            this.ListBox_BurgerIngredients.FormattingEnabled = true;
+            this.ListBox_BurgerIngredients.Location = new System.Drawing.Point(651, 279);
+            this.ListBox_BurgerIngredients.Name = "ListBox_BurgerIngredients";
+            this.ListBox_BurgerIngredients.Size = new System.Drawing.Size(319, 220);
+            this.ListBox_BurgerIngredients.TabIndex = 4;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(1019, 808);
-            this.Controls.Add(this.checkedListBox1);
+            this.ClientSize = new System.Drawing.Size(1019, 805);
+            this.Controls.Add(this.ListBox_BurgerIngredients);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -288,6 +288,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.CheckedListBox ListBox_BurgerIngredients;
     }
 }

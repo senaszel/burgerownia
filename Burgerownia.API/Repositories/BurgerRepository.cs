@@ -40,7 +40,7 @@ namespace Burgerownia.API.Repositories
         }
 
         public Burger Get(int id) => Burgers.Find(b => b.Id == id);
-
+        
         public List<Burger> GetAll() => Burgers;
     }
 }

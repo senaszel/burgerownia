@@ -12,20 +12,27 @@ namespace Burgerownia
 {
     public partial class Form2 : Form
     {
+        API.Repositories.BurgerRepository burgerRepository;
+        API.Repositories.IngredientRepository ingredientRepository;
         private Mati mati;
         public Form2()
         {
             mati = new Mati();
             InitializeComponent();
 
-            Burgerownia.API.Repositories.IngredientRepository ingredientRepository = new API.Repositories.IngredientRepository();
-            var all = ingredientRepository.GetAll().ToArray();
-            checkedListBox1.Items.AddRange(all);
+            ingredientRepository = new API.Repositories.IngredientRepository();
+            Ingredient[] allIngredients = ingredientRepository.GetAll().ToArray();
+            //ListBox_BurgerIngredients.Items.AddRange(allIngredients);
+
+            burgerRepository = new API.Repositories.BurgerRepository();
+            List<Burger> burgers = burgerRepository.GetAll();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mati.order.AddItem(new Burger("Mario Burger", new Ingredients(1, 2, 3).GetAll()));
+            ListBox_BurgerIngredients.Items.Clear();
+            ListBox_BurgerIngredients.Items.AddRange(burgerRepository.Get(1).Ingredients.ToArray());
+           // mati.order.AddItem(new Burger("Mario Burger", new Ingredients(1, 2, 3).GetAll()));
             //label1.Text = mati.order.OrderItems[0].ToString();
         }
 
