@@ -17,12 +17,16 @@ namespace Burgerownia
         {
             mati = new Mati();
             InitializeComponent();
+
+            Burgerownia.API.Repositories.IngredientRepository ingredientRepository = new API.Repositories.IngredientRepository();
+            var all = ingredientRepository.GetAll().ToArray();
+            checkedListBox1.Items.AddRange(all);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             mati.order.AddItem(new Burger("Mario Burger", new Ingredients(1, 2, 3).GetAll()));
-            label1.Text = mati.order.OrderItems[0].ToString();
+            //label1.Text = mati.order.OrderItems[0].ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -35,7 +39,8 @@ namespace Burgerownia
                         1_000_000.00) }
                 ));
 
-            label1.Text = mati.order.OrderItems[1].ToString();
+            //label1.Text = mati.order.OrderItems[1].ToString();
         }
+
     }
 }

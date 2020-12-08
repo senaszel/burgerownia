@@ -13,5 +13,8 @@ namespace Burgerownia.API.Repositories
             new Ingredient(2,"kotlet wieprzowy",20.00),
             new Ingredient(3,"salata lodowa",5.00)
         };
+
+        public List<Ingredient> GetAll() => Ingredients;
+
     }
 }
