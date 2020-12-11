@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Burgerownia.API\Burgerownia.API.csproj" />
+    <ProjectReference Include="..\burgerownia.BazaDanych_SQLite\burgerownia.BazaDanych_SQLite.csproj" />
   </ItemGroup>
 
 </Project>
