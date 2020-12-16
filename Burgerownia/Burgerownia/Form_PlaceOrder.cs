@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Burgerownia
 {
-    public partial class Form2 : Form
+    public partial class Form_PlaceOrder : Form
     {
         API.Repositories.BurgerRepository burgerRepository;
         API.Repositories.IngredientRepository ingredientRepository;
         private Mati mati;
-        public Form2()
+        public Form_PlaceOrder()
         {
             mati = new Mati();
             InitializeComponent();

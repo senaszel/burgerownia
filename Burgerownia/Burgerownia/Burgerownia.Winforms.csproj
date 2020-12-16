@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>Burgerownia.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Form_WelcomeScreen.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

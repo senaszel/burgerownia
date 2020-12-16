@@ -1,6 +1,6 @@
 ﻿namespace Burgerownia
 {
-    partial class Form2
+    partial class Form_PlaceOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_PlaceOrder));
+            this.pictureBox_YourOrder = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.ListBox_BurgerIngredients = new System.Windows.Forms.CheckedListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_YourOrder)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -54,15 +54,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pictureBox_YourOrder
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(266, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(470, 115);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_YourOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox_YourOrder.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox_YourOrder.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_YourOrder.Image")));
+            this.pictureBox_YourOrder.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_YourOrder.MaximumSize = new System.Drawing.Size(880, 200);
+            this.pictureBox_YourOrder.Name = "pictureBox_YourOrder";
+            this.pictureBox_YourOrder.Size = new System.Drawing.Size(880, 200);
+            this.pictureBox_YourOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_YourOrder.TabIndex = 0;
+            this.pictureBox_YourOrder.TabStop = false;
             // 
             // button1
             // 
@@ -234,12 +237,15 @@
             this.ListBox_BurgerIngredients.Size = new System.Drawing.Size(319, 220);
             this.ListBox_BurgerIngredients.TabIndex = 4;
             // 
-            // Form2
+            // Form_PlaceOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlText;
-            this.ClientSize = new System.Drawing.Size(1019, 805);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(791, 805);
             this.Controls.Add(this.ListBox_BurgerIngredients);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -256,10 +262,13 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "Form2";
-            this.Text = "Form2";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Controls.Add(this.pictureBox_YourOrder);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Form_PlaceOrder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Place Your Order";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_YourOrder)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -289,5 +298,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.CheckedListBox ListBox_BurgerIngredients;
+        private System.Windows.Forms.PictureBox pictureBox_YourOrder;
     }
 }
