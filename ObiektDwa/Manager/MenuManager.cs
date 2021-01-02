@@ -1,41 +1,45 @@
-﻿using ObiektDwa.Manager;
-using System;
+﻿using System;
 using System.Linq;
 
-namespace ObiektDwa
+using Burgerownia.API.Model;
+using Burgerownia.API.Repositories;
+using Burgerownia.API.Services;
+using Burgerownia.Manager.Messages;
+
+namespace Burgerownia.Manager
 {
     internal class MenuManager
     {
-        internal Burgerownia.API.Repositories.IngredientRepository ingredientRepository;
+        internal IngredientRepository ingredientRepository;
         internal Order order;
         public MenuManager()
         {
-            ingredientRepository = new Burgerownia.API.Repositories.IngredientRepository();
+            ingredientRepository = new IngredientRepository();
             order = new Order();
         }
 
         internal void Welcome()
         {
             string textMessage = "Hello, welcome to Our Burger Joint.";
-            Messages.Display(textMessage);
+            Message.Display(textMessage);
             textMessage = "How may I serve you?";
-            Messages.Display(textMessage);
+            Message.Display(textMessage);
         }
 
         internal void TakeOrder()
         {
-            Messages.Display("What would you like to order?");
-            Messages.Display($"Todays special is : {new Burgerownia.API.Services.BurgerOfADayService().TodaysSpecial()}");
+            Message.Display("What would you like to order?");
+            Message.Display($"Todays special is : {new Burgerownia.API.Services.BurgerOfADayService().TodaysSpecial()}");
             ShowMenu(new MenuService().Menus, false);
             TakeChoiceFromPassedMenu(new MenuService().Menus);
         }
 
         internal void ShowMenu(Item[] menuItems, bool clear = false)
         {
-            Messages.Display("", clear);
+            Message.Display("", clear);
             for (int i = 0; i < menuItems.Length; i++)
             {
-                Messages.Display($"{i + 1}. {menuItems[i]}");
+                Message.Display($"{i + 1}. {menuItems[i]}");
             }
         }
 
@@ -55,7 +59,7 @@ namespace ObiektDwa
             }
             else
             {
-                Messages.Display("Please take available choice!");
+                Message.Display("Please take available choice!");
                 TakeChoiceFromPassedMenu(passedMenu);
             }
 
@@ -63,7 +67,7 @@ namespace ObiektDwa
 
         private void RedirectToProperMenu(Item chosenItem)
         {
-            Messages.Display("", true);
+            Message.Display("", true);
             switch (chosenItem.Name)
             {
                 case "Take Order":
@@ -83,16 +87,16 @@ namespace ObiektDwa
         private void ChangeOrder()
         {
             var changeOrder = order.OrderItems.ToArray();
-            Messages.Display("Choose order item you want to make changes to:", true);
+            Message.Display("Choose order item you want to make changes to:", true);
             ShowMenu(changeOrder);
-            Messages.PressAnyKeyToContinue("Tutaj dodac wybieranie przedmiotu ktory bedzie zmieniony i przeprowadzic operacje :(");
+            Message.PressAnyKeyToContinue("Tutaj dodac wybieranie przedmiotu ktory bedzie zmieniony i przeprowadzic operacje :(");
         }
 
         private void CheckPlease()
         {
-            Messages.Display($"Your order is {order.TotalPrice()}", true);
-            OrderMessages.Summary(order);
-            Messages.PressAnyKeyToContinue();
+            Message.Display($"Your order is {order.TotalPrice()}", true);
+            OrderMessage.Summary(order);
+            Message.PressAnyKeyToContinue();
         }
 
         private void RedirectTo(Item chosenItem)
@@ -112,20 +116,20 @@ namespace ObiektDwa
                 case "Nothing thanks":
                     if (order.OrderItems.Count == 0)
                     {
-                        Messages.PressAnyKeyToContinue("Get out if you're not a customer, please.");
+                        Message.PressAnyKeyToContinue("Get out if you're not a customer, please.");
                     }
                     else
                     {
-                        Messages.PressAnyKeyToContinue("Good Bye then");
+                        Message.PressAnyKeyToContinue("Good Bye then");
                     }
                     break;
                 default:
                     order.AddItem(chosenItem);
-                    OrderMessages.Summary(order);
-                    if (OrderMessages.IsThatAll())
+                    OrderMessage.Summary(order);
+                    if (OrderMessage.IsThatAll())
                     {
-                        OrderMessages.Summary(order);
-                        OrderMessages.ThankYouForOrder();
+                        OrderMessage.Summary(order);
+                        OrderMessage.ThankYouForOrder();
                         BeginingOfService();
                     }
                     else 
@@ -138,7 +142,7 @@ namespace ObiektDwa
 
         internal void BeginingOfService(bool clear = true)
         {
-            var beginningOfServiceManager = new Manager.BeginningOfServiceManager();
+            var beginningOfServiceManager = new BeginningOfServiceManager();
             beginningOfServiceManager.BeginingOfService(this, clear);
         }
     }

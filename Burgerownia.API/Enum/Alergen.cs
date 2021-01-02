@@ -1,4 +1,4 @@
-﻿namespace ObiektDwa
+﻿namespace Burgerownia.API.Enum
 {
     public enum Alergen
     {

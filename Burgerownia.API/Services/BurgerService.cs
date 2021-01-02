@@ -1,7 +1,8 @@
-﻿using Burgerownia.API.Repositories;
-using System.Collections.Generic;
+﻿using Burgerownia.API.Interface;
+using Burgerownia.API.Model;
+using Burgerownia.API.Repositories;
 
-namespace ObiektDwa
+namespace Burgerownia.API.Services
 {
     public class BurgerService : IServiceable
     {

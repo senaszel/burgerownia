@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace ObiektDwa
+using Burgerownia.API.Model;
+
+namespace Burgerownia.API.Services
 {
     public class MenuService
     {

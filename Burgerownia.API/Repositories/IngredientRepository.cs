@@ -1,7 +1,5 @@
-﻿using ObiektDwa;
-using System;
+﻿using Burgerownia.API.Model;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Burgerownia.API.Repositories
 {

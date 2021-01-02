@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Data.Sqlite;
 
-namespace burgerownia.BazaDanych_SQLite
+namespace Burgerownia.BazaDanych.SQLite
 {
     public class SQLite_DB
     {

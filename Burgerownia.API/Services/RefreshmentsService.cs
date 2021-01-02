@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 
-namespace ObiektDwa
+using Burgerownia.API.Interface;
+using Burgerownia.API.Model;
+
+namespace Burgerownia.API.Services
 {
     public class RefreshmentsService : IServiceable
     {
