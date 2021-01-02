@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Burgerownia.API.Repositories;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Burgerownia.Winforms
@@ -19,7 +20,7 @@ namespace Burgerownia.Winforms
         {
             burgers = new List<EachSingleItemCustomControl>();
             int counter = 0;
-            var burgerRepository = new API.Repositories.BurgerRepository();
+            BurgerRepository burgerRepository = new BurgerRepository();
             burgerRepository.GetAll().ForEach(p =>
             {
                 burgers.Add(

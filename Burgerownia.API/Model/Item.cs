@@ -29,6 +29,12 @@ namespace Burgerownia.API.Model
             ingredients.ForEach(ingredient => this.Ingredients.Add(ingredient));
         }
 
+        public Item(string name, Ingredients ingredients)
+            : this(name)
+        {
+            ingredients.GetAll().ForEach(ingredient => this.Ingredients.Add(ingredient));
+        }
+
         public override string ToString()
         {
             string toString;
