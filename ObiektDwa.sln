@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Burgerownia.API", "Burgerow
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Burgerownia.Winforms", "Burgerownia\Burgerownia\Burgerownia.Winforms.csproj", "{0959FB64-8F5A-4771-BDD7-EE0CF79012E4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "burgerownia.BazaDanych_SQLite", "burgerownia.BazaDanych_SQLite\burgerownia.BazaDanych_SQLite.csproj", "{42CC7750-A551-4A8E-B157-C1E4D5BC5E6C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Burgerownia.BazaDanych_SQLite", "burgerownia.BazaDanych_SQLite\Burgerownia.BazaDanych_SQLite.csproj", "{42CC7750-A551-4A8E-B157-C1E4D5BC5E6C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

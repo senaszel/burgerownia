@@ -1,5 +1,7 @@
 ﻿using System.Windows.Forms;
 
+using Burgerownia.API.Model;
+
 namespace Burgerownia.Winforms
 {
     public partial class EachSingleItemCustomControl : UserControl
@@ -9,7 +11,7 @@ namespace Burgerownia.Winforms
             InitializeComponent();
         }
 
-        public EachSingleItemCustomControl(Burgerownia.Model.Burger burger)
+        public EachSingleItemCustomControl(Burger burger)
         {
             InitializeComponent();
             this.textBox_name.Text = burger.Name;

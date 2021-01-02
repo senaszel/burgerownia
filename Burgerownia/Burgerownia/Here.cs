@@ -19,7 +19,7 @@ namespace Burgerownia.Winforms
         {
             burgers = new List<EachSingleItemCustomControl>();
             int counter = 0;
-            API.Repositories.BurgerRepository burgerRepository = new API.Repositories.BurgerRepository();
+            var burgerRepository = new API.Repositories.BurgerRepository();
             burgerRepository.GetAll().ForEach(p =>
             {
                 burgers.Add(

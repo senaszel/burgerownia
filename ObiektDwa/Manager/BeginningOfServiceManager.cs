@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Burgerownia.API.Model;
+using Burgerownia.API.Services;
 
-namespace ObiektDwa.Manager
+namespace Burgerownia.Manager
 {
     class BeginningOfServiceManager
     {

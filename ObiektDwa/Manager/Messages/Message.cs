@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ObiektDwa
+namespace Burgerownia.Manager.Messages
 {
-    public class Messages
+    public class Message
     {
         internal static void Display(string textMessage, bool clear = false)
         {

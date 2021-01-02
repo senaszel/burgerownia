@@ -1,7 +1,7 @@
 ﻿using Burgerownia.API.Services;
 using System.Collections.Generic;
 
-namespace ObiektDwa
+namespace Burgerownia.API.Model
 {
     public class Ingredients : List<Ingredient>
     {

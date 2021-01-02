@@ -1,5 +1,4 @@
-﻿using Burgerownia.Model;
-using ObiektDwa;
+﻿using Burgerownia.API.Model;
 using System.Collections.Generic;
 
 namespace Burgerownia.API.Repositories

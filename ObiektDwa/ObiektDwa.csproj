@@ -3,12 +3,12 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>ObiektDwa.Program</StartupObject>
+    <StartupObject>Burgerownia.ConsoleApp.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Burgerownia.API\Burgerownia.API.csproj" />
-    <ProjectReference Include="..\burgerownia.BazaDanych_SQLite\burgerownia.BazaDanych_SQLite.csproj" />
+    <ProjectReference Include="..\burgerownia.BazaDanych_SQLite\Burgerownia.BazaDanych_SQLite.csproj" />
   </ItemGroup>
 
 </Project>

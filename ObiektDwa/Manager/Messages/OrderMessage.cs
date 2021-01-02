@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using ObiektDwa;
+﻿using Burgerownia.API.Model;
+using System;
 
-namespace ObiektDwa.Manager
+namespace Burgerownia.Manager.Messages
 {
-    public static class OrderMessages
+    public static class OrderMessage
     {
         public static bool IsThatAll()
         {
@@ -20,7 +18,7 @@ namespace ObiektDwa.Manager
             int.TryParse(Console.ReadLine().ToString(), out int key);
             if (!(key == 1 || key == 2))
             {
-                Messages.Display("Please take available choice!");
+                Message.Display("Please take available choice!");
                 IsThatAll();
             }
             else
@@ -38,14 +36,14 @@ namespace ObiektDwa.Manager
 
         public static void Summary(Order order)
         {
-            Messages.Display("This is your order: ", true);
-            Messages.Display("");
-            order.OrderItems.ForEach(eachItem => Messages.Display($"- {eachItem}"));
+            Message.Display("This is your order: ", true);
+            Message.Display("");
+            order.OrderItems.ForEach(eachItem => Message.Display($"- {eachItem}"));
         }
 
         public static void ThankYouForOrder()
         {
-            Messages.PressAnyKeyToContinue("Thank you for placing order. It will be ready soon.");
+            Message.PressAnyKeyToContinue("Thank you for placing order. It will be ready soon.");
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿using ObiektDwa;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace Burgerownia.Model
+namespace Burgerownia.API.Model
 {
     public class Burger : Item
     {

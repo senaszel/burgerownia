@@ -1,5 +1,5 @@
 ﻿using Burgerownia.API.Repositories;
-using Burgerownia.Model;
+using Burgerownia.API.Model;
 
 namespace Burgerownia.API.Services
 {

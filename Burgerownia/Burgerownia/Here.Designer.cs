@@ -49,8 +49,8 @@ namespace Burgerownia.Winforms
             this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
             this.tableLayoutPanel.RowCount = 2;
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.66667F));
-            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.33334F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.77778F));
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 76.22222F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(800, 450);
             this.tableLayoutPanel.TabIndex = 0;
             // 
@@ -63,7 +63,7 @@ namespace Burgerownia.Winforms
             this.pictureBox_YourOrder.Location = new System.Drawing.Point(3, 3);
             this.pictureBox_YourOrder.MaximumSize = new System.Drawing.Size(880, 200);
             this.pictureBox_YourOrder.Name = "pictureBox_YourOrder";
-            this.pictureBox_YourOrder.Size = new System.Drawing.Size(794, 51);
+            this.pictureBox_YourOrder.Size = new System.Drawing.Size(794, 101);
             this.pictureBox_YourOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_YourOrder.TabIndex = 1;
             this.pictureBox_YourOrder.TabStop = false;
@@ -72,9 +72,9 @@ namespace Burgerownia.Winforms
             // 
             this.panel.AutoScroll = true;
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel.Location = new System.Drawing.Point(108, 60);
+            this.panel.Location = new System.Drawing.Point(108, 110);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(689, 387);
+            this.panel.Size = new System.Drawing.Size(689, 337);
             this.panel.TabIndex = 2;
             // 
             // Here

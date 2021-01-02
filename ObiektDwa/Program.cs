@@ -1,4 +1,6 @@
-﻿namespace ObiektDwa
+﻿using Burgerownia.Manager;
+
+namespace Burgerownia.ConsoleApp
 {
     class Program
     {

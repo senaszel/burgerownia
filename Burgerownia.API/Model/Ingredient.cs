@@ -1,6 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Burgerownia.API.Enum;
+using System.Collections.Generic;
 
-namespace ObiektDwa
+namespace Burgerownia.API.Model
 {
     public class Ingredient
     {

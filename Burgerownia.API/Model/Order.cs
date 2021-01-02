@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-namespace ObiektDwa
+namespace Burgerownia.API.Model
 {
     public class Order
     {

@@ -1,4 +1,6 @@
-﻿namespace ObiektDwa
+﻿using Burgerownia.API.Model;
+
+namespace Burgerownia.API.Interface
 {
     interface IServiceable
     {
