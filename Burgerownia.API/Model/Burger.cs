@@ -1,9 +1,7 @@
-﻿using System;
+﻿using ObiektDwa;
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Text;
 
-namespace ObiektDwa
+namespace Burgerownia.Model
 {
     public class Burger : Item
     {

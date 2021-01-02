@@ -1,14 +1,13 @@
-﻿using ObiektDwa;
-using System;
+﻿using Burgerownia.Model;
+using ObiektDwa;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Burgerownia.API.Repositories
 {
     public class BurgerRepository
     {
-
         private List<Burger> Burgers = new List<Burger>();
+
         public BurgerRepository()
         {
             AddBurger(new Burger("New Burger", new Ingredients(1, 2, 3).GetAll()));

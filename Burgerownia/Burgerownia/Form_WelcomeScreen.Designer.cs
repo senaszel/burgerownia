@@ -74,7 +74,6 @@
             this.Controls.Add(this.pictureBox_placeYourOrder_alaButton);
             this.Controls.Add(this.pictureBox_logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.IsMdiContainer = true;
             this.Name = "Form_WelcomeScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome Screen";
