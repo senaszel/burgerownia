@@ -1,15 +1,14 @@
 ﻿using System.Collections.Generic;
 
-namespace Burgerownia.API.Model
+namespace Burgerownia.Back.Model
 {
     public class Order
     {
-        public List<Item> OrderItems { get => orderItems; }
-        private List<Item> orderItems;
+        public List<Item> OrderItems { get; }
 
         public Order()
         {
-            orderItems = new List<Item>();
+            OrderItems = new List<Item>();
         }
 
         public void AddItem(Item item)

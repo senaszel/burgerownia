@@ -1,7 +1,7 @@
 ﻿
 namespace Burgerownia.Winforms
 {
-    partial class EachSingleItemCustomControl
+    partial class MenuPositionCustomControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Burgerownia.Winforms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EachSingleItemCustomControl));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPositionCustomControl));
             this.pictureBox_For_burgerPicture = new System.Windows.Forms.PictureBox();
             this.pictureBox_For_Number = new System.Windows.Forms.PictureBox();
             this.textBox_for_Ingredients = new System.Windows.Forms.TextBox();

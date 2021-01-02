@@ -1,7 +1,7 @@
-﻿using Burgerownia.API.Enum;
+﻿using Burgerownia.Back.Enum;
 using System.Collections.Generic;
 
-namespace Burgerownia.API.Model
+namespace Burgerownia.Back.Model
 {
     public class Ingredient
     {
@@ -9,7 +9,7 @@ namespace Burgerownia.API.Model
         public string Name { get; set; }
         public double Price { get; set; }
         public bool IsVege { get; set; }
-        public bool HasAlergens { get; set; }
+        public bool HasAlergens => Alergens.Count > 0;
         public List<Alergen> Alergens { get; set; }
 
 

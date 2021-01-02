@@ -1,7 +1,7 @@
-﻿using Burgerownia.API.Model;
-using Burgerownia.API.Services;
+﻿using Burgerownia.Back.Model;
+using Burgerownia.Back.Services;
 
-namespace Burgerownia.Manager
+namespace Burgerownia.ConsoleApp.Manager
 {
     class BeginningOfServiceManager
     {

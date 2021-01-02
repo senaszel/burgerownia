@@ -1,7 +1,7 @@
-﻿using Burgerownia.API.Repositories;
-using Burgerownia.API.Model;
+﻿using Burgerownia.Back.Repositories;
+using Burgerownia.Back.Model;
 
-namespace Burgerownia.API.Services
+namespace Burgerownia.Back.Services
 {
     public class BurgerOfADayService
     {

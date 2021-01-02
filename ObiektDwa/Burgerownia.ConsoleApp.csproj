@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Burgerownia.API\Burgerownia.API.csproj" />
-    <ProjectReference Include="..\burgerownia.BazaDanych_SQLite\Burgerownia.BazaDanych_SQLite.csproj" />
+    <ProjectReference Include="..\Burgerownia.API\Burgerownia.Back.csproj" />
+    <ProjectReference Include="..\burgerownia.BazaDanych_SQLite\Burgerownia.DataBase.SQLite.csproj" />
   </ItemGroup>
 
 </Project>

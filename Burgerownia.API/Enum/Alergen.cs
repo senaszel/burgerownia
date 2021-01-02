@@ -1,4 +1,4 @@
-﻿namespace Burgerownia.API.Enum
+﻿namespace Burgerownia.Back.Enum
 {
     public enum Alergen
     {

@@ -1,7 +1,7 @@
-﻿using Burgerownia.API.Model;
-using Burgerownia.API.Repositories;
+﻿using Burgerownia.Back.Model;
+using Burgerownia.Back.Repositories;
 
-namespace Burgerownia.API.Services
+namespace Burgerownia.Back.Services
 {
     class IngredientService
     {

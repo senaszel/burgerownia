@@ -2,19 +2,19 @@
 
 namespace Burgerownia.Back.Model
 {
-    public class Burger : Item
+    public class Refreshment : Item
     {
-        public Burger(string name) 
+        public Refreshment(string name)
             : base(name)
         {
         }
 
-        public Burger(string name, Ingredients ingredients) 
+        public Refreshment(string name, Ingredients ingredients)
             : base(name, ingredients)
         {
         }
 
-        public Burger(string name, List<Ingredient> ingredients)
+        public Refreshment(string name, List<Ingredient> ingredients)
             : base(name, ingredients)
         {
         }

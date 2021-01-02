@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Linq;
 
-using Burgerownia.API.Model;
-using Burgerownia.API.Repositories;
-using Burgerownia.API.Services;
-using Burgerownia.Manager.Messages;
+using Burgerownia.Back.Model;
+using Burgerownia.Back.Repositories;
+using Burgerownia.Back.Services;
+using Burgerownia.ConsoleApp.Manager.Messages;
 
-namespace Burgerownia.Manager
+namespace Burgerownia.ConsoleApp.Manager
+
 {
     internal class MenuManager
     {
@@ -29,7 +30,7 @@ namespace Burgerownia.Manager
         internal void TakeOrder()
         {
             Message.Display("What would you like to order?");
-            Message.Display($"Todays special is : {new Burgerownia.API.Services.BurgerOfADayService().TodaysSpecial()}");
+            Message.Display($"Todays special is : {new Burgerownia.Back.Services.BurgerOfADayService().TodaysSpecial()}");
             ShowMenu(new MenuService().Menus, false);
             TakeChoiceFromPassedMenu(new MenuService().Menus);
         }

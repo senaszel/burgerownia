@@ -1,6 +1,6 @@
-﻿using Burgerownia.API.Model;
+﻿using Burgerownia.Back.Model;
 
-namespace Burgerownia.API.Interface
+namespace Burgerownia.Back.Interface
 {
     interface IServiceable
     {

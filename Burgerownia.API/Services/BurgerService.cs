@@ -1,8 +1,8 @@
-﻿using Burgerownia.API.Interface;
-using Burgerownia.API.Model;
-using Burgerownia.API.Repositories;
+﻿using Burgerownia.Back.Interface;
+using Burgerownia.Back.Model;
+using Burgerownia.Back.Repositories;
 
-namespace Burgerownia.API.Services
+namespace Burgerownia.Back.Services
 {
     public class BurgerService : IServiceable
     {

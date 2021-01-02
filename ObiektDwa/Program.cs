@@ -1,4 +1,4 @@
-﻿using Burgerownia.Manager;
+﻿using Burgerownia.ConsoleApp.Manager;
 
 namespace Burgerownia.ConsoleApp
 {

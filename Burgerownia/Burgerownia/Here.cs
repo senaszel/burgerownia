@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using Burgerownia.Back.Repositories;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace Burgerownia.Winforms
 {
     public partial class Here : Form
     {
-        List<EachSingleItemCustomControl> burgers;
+        List<MenuPosition_Burger> _menuPositionBurgers;
 
         public Here()
         {
@@ -17,24 +18,23 @@ namespace Burgerownia.Winforms
 
         private void InitializeMore()
         {
-            burgers = new List<EachSingleItemCustomControl>();
+            _menuPositionBurgers = new List<MenuPosition_Burger>();
             int counter = 0;
-            var burgerRepository = new API.Repositories.BurgerRepository();
+            BurgerRepository burgerRepository = new BurgerRepository();
             burgerRepository.GetAll().ForEach(p =>
             {
-                burgers.Add(
-                     new EachSingleItemCustomControl(p)
+                _menuPositionBurgers.Add(
+                     new MenuPosition_Burger(p)
                      {
                          Left = ClientSize.Width - this.Width / 2,
                          Top = ClientSize.Height - this.Height / 2,
-                         Name = "burger[" + p.Id + "] " + p.Name,
                          Location = new System.Drawing.Point(0, 0 + (300 * counter)),
                          Size = new System.Drawing.Size(700, 300),
                      });
                 counter += 1;
             });
 
-            burgers.ForEach(c =>
+            _menuPositionBurgers.ForEach(c =>
             {
                 this.panel.Controls.Add(c);
             });

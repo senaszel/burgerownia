@@ -1,19 +1,20 @@
 ﻿using System.Collections.Generic;
 
-using Burgerownia.API.Interface;
-using Burgerownia.API.Model;
+using Burgerownia.Back.Interface;
+using Burgerownia.Back.Model;
 
-namespace Burgerownia.API.Services
+namespace Burgerownia.Back.Services
 {
     public class RefreshmentsService : IServiceable
     {
         public Item[] Items => refreshments;
         public int ItemsCount => refreshments.Length;
 
-        private Item[] refreshments = new Item[]
+        private Refreshment[] refreshments = new Refreshment[]
         {
-            new Item("Water",new List<Ingredient>(){ new Ingredient("water",1.00)}),
-            new Item("Pepsi",new List<Ingredient>(){ new Ingredient("Pepsi",3.00)})
+            new Refreshment("Water",new List<Ingredient>(){ new Ingredient("water",1.00)}),
+            new Refreshment("Pepsi",new List<Ingredient>(){ new Ingredient("Pepsi",3.00)}),
+            new Refreshment("Mirinda", new Ingredients(4,5))
         };
 
         public Item GetItemById(int refreshmentNumber)

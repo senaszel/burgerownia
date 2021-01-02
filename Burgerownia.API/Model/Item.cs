@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Burgerownia.API.Model
+namespace Burgerownia.Back.Model
 
 {
     public class Item
@@ -9,6 +9,9 @@ namespace Burgerownia.API.Model
         public string Name { get; set; }
         public double Price { get => TallPrice(); }
         public List<Ingredient> Ingredients { get; set; }
+
+        public string IngredientsToString => string.Join(',', Ingredients);
+
         public bool IsService { get; set; }
 
         private double TallPrice()
@@ -27,6 +30,12 @@ namespace Burgerownia.API.Model
             : this(name)
         {
             ingredients.ForEach(ingredient => this.Ingredients.Add(ingredient));
+        }
+
+        public Item(string name, Ingredients ingredients)
+            : this(name)
+        {
+            ingredients.GetAll().ForEach(ingredient => this.Ingredients.Add(ingredient));
         }
 
         public override string ToString()
