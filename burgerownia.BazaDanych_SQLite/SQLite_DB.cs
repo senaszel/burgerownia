@@ -1,82 +1,98 @@
 ﻿using System;
+using System.IO;
+using Burgerownia.DataBase.SQLite.Extensions;
 using Microsoft.Data.Sqlite;
 
 namespace Burgerownia.DataBase.SQLite
 {
     public class SQLite_DB
     {
-        SqliteConnectionStringBuilder connectionStringBuilder;
+        /// <summary>
+        /// connection string | path to db.
+        /// </summary>
+        internal SqliteConnectionStringBuilder _connectionStringBuilder;
+
+        /// <summary>
+        /// Creates database connection. If exists proceeds in ReadWrite Mode. Otherwise Creates with batch of initial data.
+        /// </summary>
         public SQLite_DB()
         {
-            connectionStringBuilder = new SqliteConnectionStringBuilder();
-            //Use DB in project directory.  If it does not exist, create it:
-            connectionStringBuilder.DataSource = "./SqliteDB.db";
-
-            using (var connection = new SqliteConnection(connectionStringBuilder.ConnectionString))
+            _connectionStringBuilder = new SqliteConnectionStringBuilder();
+            if (!File.Exists("./SqliteDB.db"))
             {
-                connection.Open();
-
-                //Create a table (drop if already exists first):
-
-                var delTableCmd = connection.CreateCommand();
-                delTableCmd.CommandText = "DROP TABLE IF EXISTS Ingredients";
-                delTableCmd.ExecuteNonQuery();
-
-                var createTableCmd = connection.CreateCommand();
-                createTableCmd.CommandText = "CREATE TABLE Ingredients (id INTEGER PRIMARY KEY AUTOINCREMENT ,name VARCHAR(50) NOT NULL, price INTEGER NOT NULL)";
-                createTableCmd.ExecuteNonQuery();
-
-                //Seed some data:
-                SeedData("1, \'miesko\', 1000");
-                SeedData("2, \'serek\', 500");
-
-                //Read the newly inserted data:
-                ReadData();
-
+                _connectionStringBuilder.Mode = SqliteOpenMode.ReadWriteCreate;
+                _connectionStringBuilder.DataSource = "./SqliteDB.db";
+                this.CreateDB();
+            }
+            else
+            {
+                _connectionStringBuilder.Mode = SqliteOpenMode.ReadWrite;
+                _connectionStringBuilder.DataSource = "./SqliteDB.db";
             }
         }
 
-        private void ReadData()
+        /// <summary>
+        /// Rizes db file.
+        /// </summary>
+        public void RizeIt()
         {
-
-            using (var connection = new SqliteConnection(connectionStringBuilder.ConnectionString))
-            {
-                connection.Open();
-                var selectCmd = connection.CreateCommand();
-                selectCmd.CommandText = "SELECT * FROM Ingredients";
-
-                using (var reader = selectCmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        var message = reader.GetString(0);
-                        var message2 = reader.GetString(1);
-                        var message3 = reader.GetString(2);
-                        Console.Write(message);
-                        Console.Write(message2);
-                        Console.WriteLine(message3);
-                    }
-                }
-            }
+            this.Rize();
         }
 
-        private void SeedData(string values)
+        /// <summary>
+        /// Creates new table with statement passed in declaration.
+        /// </summary>
+        /// <param name="tableName">self explanatory</param>
+        /// <param name="creationDeclaration"></param>
+        public void CreateTable(string tableName, string creationDeclaration)
         {
-            using (var connection = new SqliteConnection(connectionStringBuilder.ConnectionString))
+            using SqliteConnection connection = new SqliteConnection(_connectionStringBuilder.ConnectionString);
+            connection.Open();
+            connection
+                .CreateCommand()
+                .CreateTable(tableName, creationDeclaration)
+                .ExecuteNonQuery();
+        }
+
+        /// <summary>
+        /// Seeds db's chosen table with data.
+        /// </summary>
+        /// <param name="tableName">self explanatory</param>
+        /// <param name="values">record's data</param>
+        public void SeedData(string tableName, string values)
+        {
+            using var connection = new SqliteConnection(_connectionStringBuilder.ConnectionString);
+            connection.Open();
+            using var transaction = connection.BeginTransaction();
+            connection
+                .CreateCommand()
+                .InsertInto(tableName, values)
+                .ExecuteNonQuery();
+
+            transaction.Commit();
+        }
+        public void ReadData(string fromTable)
+        {
+            using SqliteConnection connection = new SqliteConnection(_connectionStringBuilder.ConnectionString);
+            connection.Open();
+            SqliteCommand selectCmd = connection.CreateCommand().SelectAll(fromTable);
+            using SqliteDataReader reader = selectCmd.ExecuteReader();
+            while (reader.Read())
             {
-                connection.Open();
-                using (var transaction = connection.BeginTransaction())
-                {
-                    var insertCmd = connection.CreateCommand();
-
-                    insertCmd.CommandText = $"INSERT INTO Ingredients VALUES({values})";
-                    insertCmd.ExecuteNonQuery();
-
-
-                    transaction.Commit();
-                }
+                var message = reader.GetString(0);
+                var message2 = reader.GetString(1);
+                var message3 = reader.GetString(2);
+                Console.Write(message);
+                Console.Write(" ");
+                Console.Write(message2);
+                Console.Write(" ");
+                Console.Write(message3);
+                Console.WriteLine(" zł");
             }
         }
+
+
+
     }
 }
 
