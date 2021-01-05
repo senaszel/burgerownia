@@ -2,27 +2,25 @@
 
 namespace Burgerownia.Back.Model
 {
-    public class Order
+    public class Order : IOrder
     {
-        public List<Item> OrderItems { get; }
+        public List<Item> Items { get; }
 
         public Order()
         {
-            OrderItems = new List<Item>();
+            Items = new List<Item>();
         }
 
-        public void AddItem(Item item)
-        {
-            OrderItems.Add(item);
-        }
+        public void AddItem(Item item) => Items.Add(item);
 
-        
 
         public double TotalPrice()
         {
             double totalPrice = 0;
-            OrderItems.ForEach(each => totalPrice += each.Price);
+            Items.ForEach(each => totalPrice += each.Price);
             return totalPrice;
         }
+
+
     }
 }

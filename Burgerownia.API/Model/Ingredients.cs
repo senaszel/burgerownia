@@ -1,44 +1,35 @@
-﻿using Burgerownia.Back.Services;
+﻿using Burgerownia.Back.Interface;
+using Burgerownia.Back.Services;
 using System.Collections.Generic;
 
 namespace Burgerownia.Back.Model
 {
     public class Ingredients : List<Ingredient>
     {
+        private IServiceable<Ingredient> _ingredientService;
         private List<Ingredient> _listOfIngredients;
-        private IngredientService _service;
+        
 
-        public Ingredients(params int[] ingredient)
+        public List<Ingredient> GetAll() => _listOfIngredients;
+
+        public Ingredients(IServiceable<Ingredient> ingredientService,params int[] ingredients)
         {
-            _service = new IngredientService();
-            _listOfIngredients = new List<Ingredient>();
-
-            for (int i = 0; i < ingredient.Length; i++)
-            {
-                _listOfIngredients.Add(
-                    _service.GetIngredient(ingredient[i])
-                    );
-            }
+            _ingredientService = ingredientService;
+            this.AddRange(_ingredientService.GetItemsFromArray(ingredients));
         }
 
         public Ingredients(params Ingredient[] ingredient)
         {
-            _listOfIngredients = new List<Ingredient>();
-
-            for (int i = 0; i < ingredient.Length; i++)
-            {
-                _listOfIngredients.Add(ingredient[i]);
-            }
+            this.AddRange(ingredient);
         }
 
-        public List<Ingredient> GetAll() => _listOfIngredients;
 
         public override string ToString()
         {
             string result = string.Empty;
-            _listOfIngredients.ForEach(i =>
+            ForEach(i =>
             {
-                if (i != _listOfIngredients[_listOfIngredients.Count - 1])
+                if (i != this[Count - 1])
                 {
                     result += i;
                     if (i.HasAlergens)

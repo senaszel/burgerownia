@@ -34,11 +34,11 @@ namespace Burgerownia.ConsoleApp.Manager.Messages
             return choice;
         }
 
-        public static void Summary(Order order)
+        public static void Summary(IOrder order)
         {
             Message.Display("This is your order: ", true);
             Message.Display("");
-            order.OrderItems.ForEach(eachItem => Message.Display($"- {eachItem}"));
+            order.Items.ForEach(eachItem => Message.Display($"- {eachItem}"));
         }
 
         public static void ThankYouForOrder()

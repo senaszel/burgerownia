@@ -24,7 +24,7 @@ namespace Burgerownia
         private void MoveOverToPlaceOrderForm()
         {
             this.Hide();
-            Here here = new Here();
+            Form_PlaceOrder here = new Form_PlaceOrder();
             here.Show();
         }
     }

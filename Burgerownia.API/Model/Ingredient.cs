@@ -3,24 +3,14 @@ using System.Collections.Generic;
 
 namespace Burgerownia.Back.Model
 {
-    public class Ingredient
+    public class Ingredient : Item
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public double Price { get; set; }
         public bool IsVege { get; set; }
         public bool HasAlergens => Alergens.Count > 0;
         public List<Alergen> Alergens { get; set; }
 
-
-        public Ingredient(string name, double price)
-        {
-            Name = name;
-            Price = price;
-        }
-
         public Ingredient(int id, string name, double price)
-           : this(name,price)
+           : base(name,price)
         {
             Id = id;
         }

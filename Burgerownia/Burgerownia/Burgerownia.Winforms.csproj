@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Burgerownia.API\Burgerownia.Back.csproj" />
+    <ProjectReference Include="..\..\burgerownia.BazaDanych_SQLite\Burgerownia.DataBase.SQLite.csproj" />
   </ItemGroup>
 
   <ItemGroup>

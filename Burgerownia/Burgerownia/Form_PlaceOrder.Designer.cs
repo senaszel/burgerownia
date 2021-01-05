@@ -1,7 +1,7 @@
 ﻿
 namespace Burgerownia.Winforms
 {
-    partial class Here
+    partial class Form_PlaceOrder
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Burgerownia.Winforms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Here));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_PlaceOrder));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox_YourOrder = new System.Windows.Forms.PictureBox();
             this.panel = new System.Windows.Forms.Panel();

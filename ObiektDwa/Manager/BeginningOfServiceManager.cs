@@ -9,7 +9,7 @@ namespace Burgerownia.ConsoleApp.Manager
         {
 
             MenuService menuService = new MenuService();
-            if (menuManager.order.OrderItems.Count != 0)
+            if (menuManager.order.Items.Count != 0)
             {
                 menuService.AddToMenu("Services", new Item("Change the order") { IsService = true });
                 menuService.ChangeItem("Services", "Take Order", new Item("Order more") { IsService = true });

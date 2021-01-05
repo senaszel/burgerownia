@@ -1,12 +1,13 @@
 ﻿using Burgerownia.Back.Model;
+using System.Collections.Generic;
 
 namespace Burgerownia.Back.Interface
 {
-    interface IServiceable
+    public interface IServiceable<T>
     {
-        Item[] Items { get; }
+        List<T> Items { get; }
         int ItemsCount { get; }
-
-        Item GetItemById(int itemNumber);
+        T GetItemById(int items_id);
+        List<T> GetItemsFromArray(int[] items_ids);
     }
 }

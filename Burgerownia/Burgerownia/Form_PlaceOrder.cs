@@ -1,26 +1,30 @@
-﻿using Burgerownia.Back.Repositories;
+﻿using Burgerownia.Back;
+using Burgerownia.Back.Interface;
+using Burgerownia.DataBase.SQLite;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Burgerownia.Back.Model;
 
 namespace Burgerownia.Winforms
 {
-    public partial class Here : Form
+    public partial class Form_PlaceOrder : Form
     {
-        List<MenuPosition_Burger> _menuPositionBurgers;
+        private Context _context;
+        internal List<MenuPosition_Burger> _menuPositionBurgers;
 
-        public Here()
+        public Form_PlaceOrder()
         {
+            _context = new Back.Context();
 
             InitializeComponent();
             InitializeMore();
-
         }
 
         private void InitializeMore()
         {
             _menuPositionBurgers = new List<MenuPosition_Burger>();
             int counter = 0;
-            BurgerRepository burgerRepository = new BurgerRepository();
+            IRepository<Burger> burgerRepository = _context.BurgerRepository;
             burgerRepository.GetAll().ForEach(p =>
             {
                 _menuPositionBurgers.Add(

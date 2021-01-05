@@ -5,13 +5,13 @@ namespace Burgerownia.Back.Model
 {
     public class Item
     {
+        private double price;
+
         public int Id { get; set; }
         public string Name { get; set; }
-        public double Price { get => TallPrice(); }
+        public double Price { get => TallPrice(); set => price = value; }
         public List<Ingredient> Ingredients { get; set; }
-
         public string IngredientsToString => string.Join(',', Ingredients);
-
         public bool IsService { get; set; }
 
         private double TallPrice()
@@ -20,10 +20,22 @@ namespace Burgerownia.Back.Model
             Ingredients.ForEach(each => sum += each.Price);
             return sum;
         }
+
+        public Item()
+        {
+            Ingredients = new List<Ingredient>();
+        }
+
         public Item(string name)
+            : this()
         {
             Name = name;
-            Ingredients = new List<Ingredient>();
+        }
+
+        public Item(string name, double price)
+            : this(name)
+        {
+            Price = price;
         }
 
         public Item(string name, List<Ingredient> ingredients)
@@ -36,6 +48,20 @@ namespace Burgerownia.Back.Model
             : this(name)
         {
             ingredients.GetAll().ForEach(ingredient => this.Ingredients.Add(ingredient));
+        }
+
+        public Item(int id, string name, Ingredients ingredients)
+            : this(name)
+        {
+            Id = id;
+            Ingredients = ingredients;
+        }
+
+        public Item(int id, string name, double price)
+            : this(name)
+        {
+            Id = id;
+            Price = price;
         }
 
         public override string ToString()

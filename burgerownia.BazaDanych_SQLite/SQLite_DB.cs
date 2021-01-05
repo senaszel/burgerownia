@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Burgerownia.DataBase.SQLite.Extensions;
+using Burgerownia.DataBase.SQLite.Enum;
 using Microsoft.Data.Sqlite;
 
 namespace Burgerownia.DataBase.SQLite
 {
-    public class SQLite_DB
+    public class SQLite_DB : IDB
     {
         /// <summary>
         /// connection string | path to db.
@@ -34,7 +36,7 @@ namespace Burgerownia.DataBase.SQLite
         /// <summary>
         /// Rizes db file.
         /// </summary>
-        public void RizeIt()
+        internal void RizeIt()
         {
             this.Rize();
         }
@@ -44,7 +46,7 @@ namespace Burgerownia.DataBase.SQLite
         /// </summary>
         /// <param name="tableName">self explanatory</param>
         /// <param name="creationDeclaration"></param>
-        public void CreateTable(string tableName, string creationDeclaration)
+        internal void CreateTable(Tables tableName, string creationDeclaration)
         {
             using SqliteConnection connection = new SqliteConnection(_connectionStringBuilder.ConnectionString);
             connection.Open();
@@ -59,7 +61,7 @@ namespace Burgerownia.DataBase.SQLite
         /// </summary>
         /// <param name="tableName">self explanatory</param>
         /// <param name="values">record's data</param>
-        public void SeedData(string tableName, string values)
+        internal void SeedData(Tables tableName, string values)
         {
             using var connection = new SqliteConnection(_connectionStringBuilder.ConnectionString);
             connection.Open();
@@ -71,24 +73,56 @@ namespace Burgerownia.DataBase.SQLite
 
             transaction.Commit();
         }
-        public void ReadData(string fromTable)
+
+        /// <summary>
+        /// Gets all records from chosen table.
+        /// </summary>
+        /// <param name="fromTable">self explanatory</param>
+        /// <returns></returns>
+        public List<string> GetAll(Tables fromTable)
         {
+            var result = new List<string>();
             using SqliteConnection connection = new SqliteConnection(_connectionStringBuilder.ConnectionString);
             connection.Open();
             SqliteCommand selectCmd = connection.CreateCommand().SelectAll(fromTable);
             using SqliteDataReader reader = selectCmd.ExecuteReader();
             while (reader.Read())
             {
-                var message = reader.GetString(0);
-                var message2 = reader.GetString(1);
-                var message3 = reader.GetString(2);
-                Console.Write(message);
-                Console.Write(" ");
-                Console.Write(message2);
-                Console.Write(" ");
-                Console.Write(message3);
-                Console.WriteLine(" zł");
+                string newEntry = string.Empty;
+                for (int col = 0; col < reader.FieldCount; col++)
+                {
+                    if (col == 0)
+                        newEntry = reader.GetString(col);
+                    else
+                        newEntry += String.Concat(',', reader.GetString(col));
+                }
+                result.Add(newEntry);
             }
+
+            return result;
+        }
+
+        public List<string> GetAll(int burger_id)
+        {
+            var result = new List<string>();
+            using SqliteConnection connection = new SqliteConnection(_connectionStringBuilder.ConnectionString);
+            connection.Open();
+            SqliteCommand selectCmd = connection.CreateCommand().SelectIngredientsOfBurger(burger_id);
+            using SqliteDataReader reader = selectCmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string newEntry = string.Empty;
+                for (int col = 0; col < reader.FieldCount; col++)
+                {
+                    if (col == 0)
+                        newEntry = reader.GetString(col);
+                    else
+                        newEntry += String.Concat(',', reader.GetString(col));
+                }
+                result.Add(newEntry);
+            }
+
+            return result;
         }
 
 

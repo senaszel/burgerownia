@@ -1,21 +1,35 @@
 ﻿using System;
 using System.Linq;
-
 using Burgerownia.Back.Model;
-using Burgerownia.Back.Repositories;
 using Burgerownia.Back.Services;
 using Burgerownia.ConsoleApp.Manager.Messages;
+using Burgerownia.DataBase.SQLite;
+using Burgerownia.Back.Interface;
 
 namespace Burgerownia.ConsoleApp.Manager
 
 {
     internal class MenuManager
     {
-        internal IngredientRepository ingredientRepository;
-        internal Order order;
-        public MenuManager()
+        internal IDB _db;
+        internal IRepository<Ingredient> _ingredientRepository;
+        internal IServiceable<Ingredient> _ingredientService;
+        internal IRepository<Burger> _burgerRepository;
+        internal IServiceable<Burger> _burgerService;
+        internal IRepository<Refreshment> _refreshmentRepository;
+        internal IServiceable<Refreshment> _refreshmentService;
+
+        internal IOrder order;
+
+        public MenuManager(IContext contex)
         {
-            ingredientRepository = new IngredientRepository();
+            _db = contex.Db;
+            _ingredientRepository = contex.IngredientRepository;
+            _ingredientService = contex.IngredientService;
+            _burgerRepository = contex.BurgerRepository;
+            _burgerService = contex.BurgerService;
+            _refreshmentRepository = contex.RefreshmentRepository;
+            _refreshmentService = contex.RefreshmentService;
             order = new Order();
         }
 
@@ -30,7 +44,7 @@ namespace Burgerownia.ConsoleApp.Manager
         internal void TakeOrder()
         {
             Message.Display("What would you like to order?");
-            Message.Display($"Todays special is : {new Burgerownia.Back.Services.BurgerOfADayService().TodaysSpecial()}");
+            Message.Display($"Todays special is : {_burgerRepository.SpecialOfADay()}");
             ShowMenu(new MenuService().Menus, false);
             TakeChoiceFromPassedMenu(new MenuService().Menus);
         }
@@ -87,7 +101,7 @@ namespace Burgerownia.ConsoleApp.Manager
 
         private void ChangeOrder()
         {
-            var changeOrder = order.OrderItems.ToArray();
+            var changeOrder = order.Items.ToArray();
             Message.Display("Choose order item you want to make changes to:", true);
             ShowMenu(changeOrder);
             Message.PressAnyKeyToContinue("Tutaj dodac wybieranie przedmiotu ktory bedzie zmieniony i przeprowadzic operacje :(");
@@ -105,17 +119,22 @@ namespace Burgerownia.ConsoleApp.Manager
             switch (chosenItem.Name)
             {
                 case "Burgers":
-                    Item[] burgers = new BurgerService().Items;
+                    Item[] burgers = _burgerService.Items.ToArray();
                     ShowMenu(burgers, true);
                     TakeChoiceFromPassedMenu(burgers);
                     break;
                 case "Refreshments":
-                    Item[] refreshments = new RefreshmentsService().Items;
+                    Item[] refreshments = _refreshmentService.Items.ToArray();
                     ShowMenu(refreshments, true);
                     TakeChoiceFromPassedMenu(refreshments);
                     break;
+                case "Ingredients":
+                    Item[] ingredients = _ingredientRepository.GetAll().ToArray();
+                    ShowMenu(ingredients, true);
+                    TakeChoiceFromPassedMenu(ingredients);
+                    break;
                 case "Nothing thanks":
-                    if (order.OrderItems.Count == 0)
+                    if (order.Items.Count == 0)
                     {
                         Message.PressAnyKeyToContinue("Get out if you're not a customer, please.");
                     }

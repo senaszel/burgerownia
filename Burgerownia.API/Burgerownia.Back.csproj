@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\burgerownia.BazaDanych_SQLite\Burgerownia.DataBase.SQLite.csproj" />
+  </ItemGroup>
+
 </Project>

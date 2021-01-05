@@ -1,24 +1,30 @@
 ﻿using Burgerownia.Back.Interface;
 using Burgerownia.Back.Model;
-using Burgerownia.Back.Repositories;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Burgerownia.Back.Services
 {
-    public class BurgerService : IServiceable
+    public class BurgerService : IServiceable<Burger>
     {
-        private BurgerRepository BurgerRepository { get; }
-        public BurgerService()
+        private IRepository<Burger> BurgerRepository { get; }
+
+        public BurgerService(IRepository<Burger> burgerRepository)
         {
-            BurgerRepository = new BurgerRepository();
+            BurgerRepository = burgerRepository;
+
+        }
+
+        public List<Burger> Items => BurgerRepository.GetAll();
+        public int ItemsCount => Items.Count; 
+        public Burger GetItemById(int burgers_id) => Items[burgers_id];
+        public List<Burger> GetItemsFromArray(int[] burgers_ids) 
+        {
+            List<Burger> resultsList = new List<Burger>();
+            burgers_ids.ToList().ForEach(burger_id => resultsList.Add(GetItemById(burger_id)));
+            return resultsList;
         }
 
 
-        public Item[] Items { get => BurgerRepository.GetAll().ToArray(); }
-        public int ItemsCount { get => Items.Length; }
-
-        public Item GetItemById(int burgerNumber)
-        {
-            return Items[burgerNumber];
-        }
     }
 }

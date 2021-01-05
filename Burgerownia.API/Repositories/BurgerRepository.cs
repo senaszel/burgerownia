@@ -1,55 +1,45 @@
-﻿using Burgerownia.Back.Model;
+﻿using Burgerownia.Back.Interface;
+using Burgerownia.Back.Model;
+using Burgerownia.Back.Services;
+using Burgerownia.DataBase.SQLite;
+using System;
 using System.Collections.Generic;
+using Burgerownia.DataBase.SQLite.Enum;
 
 namespace Burgerownia.Back.Repositories
 {
-    public class BurgerRepository
+    public class BurgerRepository : IRepository<Burger>
     {
-        private List<Burger> Burgers = new List<Burger>();
-
-        public BurgerRepository()
+        private IDB _db;
+        private string[] _splitted;
+        private List<Burger> Burgers;
+                
+        public BurgerRepository(IDB db, IServiceable<Ingredient> ingredientService) 
         {
-            AddBurger(new Burger("New Burger", new Ingredients(1, 2, 3)));
+            _db = db;
+            Burgers = new List<Burger>();
+            _db.GetAll(Tables.Burgers)
+                .ForEach(ingredient =>
+                {
+                    _splitted = ingredient.Split(',');
+                    int[] allIngredients_id = new int[_splitted.Length - 2];
+                    for (int ingredient_id = 2; ingredient_id < _splitted.Length; ingredient_id++)
+                    {
+                        allIngredients_id[ingredient_id] = Convert.ToInt32(_splitted[ingredient_id]);
+                    }
 
-            AddBurger(new Burger("Marek Burger", new Ingredients(1)));
-
-            AddBurger(new Burger("Meat Burger",new Ingredients(
-                 new Ingredient("meat",8.00),
-                 new Ingredient("newIngredient",44.44)
-                 )));
-
-            AddBurger(new Burger("Vege Burger", new Ingredients(
-                 new Ingredient("vegeMeatsubstitute", 9.50)
-                 )));
-
-            AddBurger(new Burger("Burger of a Day", new Ingredients(
-                 new Ingredient("day", 100.33)
-                 )));
-
-            AddBurger(new Burger("Master Burger", new Ingredients(
-                new Ingredient("masterMeat", 1_000_000.00),
-                new Ingredient("masterMeat", 1_000_000.00),
-                new Ingredient("masterMeat", 1_000_000.00),
-                new Ingredient("masterMeat", 1_000_000.00)
-                )));
-        }
-
-
-        public void AddBurger(Burger burger)
-        {
-            if (Burgers.Count != 0)
-            {
-                burger.Id = Burgers.Count + 1;
-                Burgers.Add(burger);
-            } else
-            {
-                burger.Id = 1;
-                Burgers.Add(burger);
-            }
+                    Burgers.Add(new Burger(
+                        Convert.ToInt32(_splitted[0]),
+                        _splitted[1],
+                        new Ingredients(ingredientService, allIngredients_id)
+                            ));
+                });
         }
 
         public Burger Get(int id) => Burgers.Find(b => b.Id == id);
-        
         public List<Burger> GetAll() => Burgers;
+        public Burger SpecialOfADay() => Get((int)System.DateTime.Now.DayOfWeek);
+
+
     }
 }

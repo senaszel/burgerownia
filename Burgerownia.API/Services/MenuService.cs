@@ -11,6 +11,7 @@ namespace Burgerownia.Back.Services
         {
         new Item("Burgers"),
         new Item("Refreshments"),
+        new Item("Ingredients"),
         new Item("Nothing thanks")
         };
 
