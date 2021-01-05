@@ -1,5 +1,4 @@
-﻿using Burgerownia.Back.Interface;
-using Burgerownia.Back.Model;
+﻿using Burgerownia.Back.Model;
 using Burgerownia.DataBase.SQLite;
 
 namespace Burgerownia.Back.Interface

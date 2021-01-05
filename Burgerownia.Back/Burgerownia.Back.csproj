@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\burgerownia.BazaDanych_SQLite\Burgerownia.DataBase.SQLite.csproj" />
+    <ProjectReference Include="..\Burgerownia.DataBase.SQLite\Burgerownia.DataBase.SQLite.csproj" />
   </ItemGroup>
 
 </Project>
