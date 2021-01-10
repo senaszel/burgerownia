@@ -21,9 +21,9 @@ namespace Burgerownia.Back
             _database = new SQLite_DB();
             _ingredientRepository = new IngredientRepository(_database);
             _ingredientService = new IngredientService(_ingredientRepository);
-            _refreshmentRepository = new RefreshmentRepository(_database);
             _burgerRepository = new BurgerRepository(_database,_ingredientService);
-            _burgerService = new BurgerService(_burgerRepository);
+            _burgerService = new BurgerService(_burgerRepository.GetAll());
+            _refreshmentRepository = new RefreshmentRepository(_database);
             _refreshmentService = new RefreshmentService(_refreshmentRepository);
         }
 

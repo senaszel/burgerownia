@@ -12,9 +12,28 @@ namespace Burgerownia.DataBase.SQLite.Extensions
         /// <param name="sqliteCommand"></param>
         /// <param name="tableName">Self explanatory</param>
         /// <returns></returns>
-        public static SqliteCommand SelectAll(this SqliteCommand sqliteCommand, Tables tableName)
+        public static SqliteCommand SelectSafelyAll(this SqliteCommand sqliteCommand, Tables tableName)
         {
-            sqliteCommand.CommandText = String.Format("SELECT * FROM {0}",tableName);
+            switch (tableName)
+            {
+                case Tables.Ingredients:
+                    sqliteCommand.CommandText = $"SELECT {tableName}.id,{tableName}.nameof, {tableName}.price FROM {tableName}";
+                    break;
+                case Tables.Refreshments:
+                    sqliteCommand.CommandText = $"SELECT {tableName}.id,{tableName}.nameof, {tableName}.price FROM {tableName}";
+                    break;
+                case Tables.Burgers:
+                    sqliteCommand.CommandText = $"SELECT {tableName}.id,{tableName}.nameof FROM {tableName}";
+                    break;
+                case Tables.Compositions:
+                    sqliteCommand.CommandText = $"SELECT {Tables.Compositions}.id, {Tables.Compositions}.ingredient_id , {Tables.Compositions}.burger_id FROM {Tables.Compositions}";
+                    break;
+                case Tables.BurgersFullInfo:
+                    // todo test
+                    sqliteCommand.CommandText = $"SELECT {Tables.Compositions}.ingredient_id, {Tables.Compositions}.burger_id FROM {Tables.Compositions}";
+                    break;
+            }
+
             return sqliteCommand;
         }
 

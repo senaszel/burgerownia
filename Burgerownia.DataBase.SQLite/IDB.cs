@@ -5,8 +5,9 @@ namespace Burgerownia.DataBase.SQLite
 {
     public interface IDB
     {
-        List<string> GetAll(Tables fromTable);
+        List<string> Select(Tables fromTable);
 
+        string GetAll_IngredientsIdsOf(int burger_id);
 
     }
 }

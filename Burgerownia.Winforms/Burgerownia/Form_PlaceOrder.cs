@@ -9,12 +9,12 @@ namespace Burgerownia.Winforms
 {
     public partial class Form_PlaceOrder : Form
     {
-        private Context _context;
+        private IContext _context;
         internal List<MenuPosition_Burger> _menuPositionBurgers;
 
-        public Form_PlaceOrder()
+        public Form_PlaceOrder(IContext context)
         {
-            _context = new Back.Context();
+            _context = context;
 
             InitializeComponent();
             InitializeMore();
@@ -22,13 +22,20 @@ namespace Burgerownia.Winforms
 
         private void InitializeMore()
         {
+            CreateControlsForEachBurger(_context.BurgerService);
+            AddToPanel_Burgers_AsControls();
+        }
+
+
+
+        private void CreateControlsForEachBurger(IServiceable<Burger> burgerService)
+        {
             _menuPositionBurgers = new List<MenuPosition_Burger>();
             int counter = 0;
-            IRepository<Burger> burgerRepository = _context.BurgerRepository;
-            burgerRepository.GetAll().ForEach(p =>
+            burgerService.Items.ForEach(eachBurger =>
             {
                 _menuPositionBurgers.Add(
-                     new MenuPosition_Burger(p)
+                     new MenuPosition_Burger(eachBurger)
                      {
                          Left = ClientSize.Width - this.Width / 2,
                          Top = ClientSize.Height - this.Height / 2,
@@ -37,7 +44,10 @@ namespace Burgerownia.Winforms
                      });
                 counter += 1;
             });
+        }
 
+        private void AddToPanel_Burgers_AsControls()
+        {
             _menuPositionBurgers.ForEach(c =>
             {
                 this.panel.Controls.Add(c);

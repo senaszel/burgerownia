@@ -56,6 +56,7 @@ namespace Burgerownia.DataBase.SQLite
                 .ExecuteNonQuery();
         }
 
+
         /// <summary>
         /// Seeds db's chosen table with data.
         /// </summary>
@@ -79,50 +80,51 @@ namespace Burgerownia.DataBase.SQLite
         /// </summary>
         /// <param name="fromTable">self explanatory</param>
         /// <returns></returns>
-        public List<string> GetAll(Tables fromTable)
+        public List<string> Select(Tables fromTable)
         {
             var result = new List<string>();
             using SqliteConnection connection = new SqliteConnection(_connectionStringBuilder.ConnectionString);
             connection.Open();
-            SqliteCommand selectCmd = connection.CreateCommand().SelectAll(fromTable);
+            SqliteCommand selectCmd = connection.CreateCommand().SelectSafelyAll(fromTable);
             using SqliteDataReader reader = selectCmd.ExecuteReader();
-            while (reader.Read())
             {
-                string newEntry = string.Empty;
-                for (int col = 0; col < reader.FieldCount; col++)
+                while (reader.Read())
                 {
-                    if (col == 0)
-                        newEntry = reader.GetString(col);
-                    else
-                        newEntry += String.Concat(',', reader.GetString(col));
+                    string newEntry = string.Empty;
+                    for (int col = 0; col < reader.FieldCount; col++)
+                    {
+                        if (col == 0)
+                            newEntry = reader.GetString(col);
+                        else
+                            newEntry += String.Concat(',', reader.GetString(col));
+                    }
+                    result.Add(newEntry);
                 }
-                result.Add(newEntry);
             }
 
             return result;
         }
 
-        public List<string> GetAll(int burger_id)
+        /// <summary>
+        /// Gets All of ingredients name composing of a chosen burger by its id.
+        /// </summary>
+        /// <param name="burger_id">Self explanatory</param>
+        /// <returns></returns>
+        public string GetAll_IngredientsIdsOf(int burger_id)
         {
-            var result = new List<string>();
             using SqliteConnection connection = new SqliteConnection(_connectionStringBuilder.ConnectionString);
             connection.Open();
             SqliteCommand selectCmd = connection.CreateCommand().SelectIngredientsOfBurger(burger_id);
             using SqliteDataReader reader = selectCmd.ExecuteReader();
+            string singleEntry = string.Empty;
+            
             while (reader.Read())
             {
-                string newEntry = string.Empty;
-                for (int col = 0; col < reader.FieldCount; col++)
-                {
-                    if (col == 0)
-                        newEntry = reader.GetString(col);
-                    else
-                        newEntry += String.Concat(',', reader.GetString(col));
-                }
-                result.Add(newEntry);
+                singleEntry += reader.GetString(0);
+                if (reader.HasRows) singleEntry += ',';
             }
 
-            return result;
+            return singleEntry;
         }
 
 

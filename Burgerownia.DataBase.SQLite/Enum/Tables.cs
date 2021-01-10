@@ -6,6 +6,8 @@
         Ingredients,
         Refreshments,
         Burgers,
-        Compositions
+        Compositions,
+        BurgersFullInfo
+
     }
 }

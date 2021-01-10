@@ -1,13 +1,17 @@
 ﻿using Burgerownia.Winforms;
 using System;
 using System.Windows.Forms;
+using Burgerownia.Back.Interface;
+using Burgerownia.Back;
 
 namespace Burgerownia
 {
     public partial class Form_WelcomeScreen : Form
     {
-        public Form_WelcomeScreen()
+        IContext _context;
+        public Form_WelcomeScreen(IContext context)
         {
+            _context = context;
             InitializeComponent();
         }
 
@@ -24,7 +28,7 @@ namespace Burgerownia
         private void MoveOverToPlaceOrderForm()
         {
             this.Hide();
-            Form_PlaceOrder here = new Form_PlaceOrder();
+            Form_PlaceOrder here = new Form_PlaceOrder(_context);
             here.Show();
         }
     }

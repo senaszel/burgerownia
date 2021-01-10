@@ -7,11 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Burgerownia.Back\Burgerownia.Back.csproj" />
-    <ProjectReference Include="..\Burgerownia.DataBase.SQLite\Burgerownia.DataBase.SQLite.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Enum\" />
   </ItemGroup>
 
 </Project>
