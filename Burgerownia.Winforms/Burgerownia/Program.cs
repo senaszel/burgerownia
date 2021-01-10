@@ -1,5 +1,7 @@
 using System;
 using System.Windows.Forms;
+using Burgerownia.Back.Interface;
+using Burgerownia.Back;
 
 namespace Burgerownia
 {
@@ -14,10 +16,12 @@ namespace Burgerownia
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_WelcomeScreen());
-            //Application.Run(new Form_PlaceOrder());
+            IContext context = new Context();
+            Application.Run(new Form_WelcomeScreen(context));
 
 
         }
+
+
     }
 }

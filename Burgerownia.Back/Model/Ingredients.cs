@@ -7,10 +7,10 @@ namespace Burgerownia.Back.Model
     public class Ingredients : List<Ingredient>
     {
         private IServiceable<Ingredient> _ingredientService;
-        private List<Ingredient> _listOfIngredients;
-        
+        //private List<Ingredient> _listOfIngredients;
 
-        public List<Ingredient> GetAll() => _listOfIngredients;
+
+        public List<Ingredient> GetAll() => this; //_listOfIngredients;
 
         public Ingredients(IServiceable<Ingredient> ingredientService,params int[] ingredients)
         {

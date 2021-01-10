@@ -1,13 +1,12 @@
 ﻿using Burgerownia.Back.Model;
 using Burgerownia.Back.Services;
 
-namespace Burgerownia.ConsoleApp.Manager
+namespace Burgerownia.ConsoleApp2.Manager
 {
     class BeginningOfServiceManager
     {
         internal void BeginingOfService(MenuManager menuManager, bool clear = false)
         {
-
             MenuService menuService = new MenuService();
             if (menuManager.order.Items.Count != 0)
             {

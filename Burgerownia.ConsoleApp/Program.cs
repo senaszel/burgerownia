@@ -1,5 +1,5 @@
 ﻿using Burgerownia.Back;
-using Burgerownia.ConsoleApp.Manager;
+using Burgerownia.ConsoleApp.Helpers;
 
 namespace Burgerownia.ConsoleApp
 {
@@ -7,57 +7,14 @@ namespace Burgerownia.ConsoleApp
     {
         static void Main()
         {
-            Context context = new Context();
-            MenuManager menu = new MenuManager(context);
-            menu.Welcome();
-            menu.BeginingOfService(false);
+            Context injectContext = new Context();
+            MainMenu_MenuItems fillMenuWithThese = new MainMenu_MenuItems();
+            IMenuStart mainMenu = new MainMenu(injectContext, fillMenuWithThese.Items);
+            WelcomeClass.Welcome();
+            mainMenu.Start();
 
-            //Burgerownia.DataBase.SQLite.SQLite_DB db = new DataBase.SQLite.SQLite_DB();
-            //db.RizeIt();
-            //System.Console.WriteLine("wyczyscilo");
-            //System.Console.ReadKey();
-
-            //db = new DataBase.SQLite.SQLite_DB();
-            //System.Console.WriteLine("utworzylo z niczego");
-            //System.Console.ReadKey();
-
-            //var temp = db.GetAll("Refreshments");
-            //temp.ForEach(t => System.Console.WriteLine(t));
-            //System.Console.WriteLine();
-            //var temp = db.GetAll("Burgers");
-            //temp.ForEach(t => System.Console.WriteLine(t));
-            //System.Console.WriteLine();
-            //temp = db.GetAll("Ingredients");
-            //temp.ForEach(t => System.Console.WriteLine(t));
-            //System.Console.WriteLine();
-            //temp = db.GetAll("Compositions");
-            //temp.ForEach(t => System.Console.WriteLine(t));
-            //System.Console.WriteLine();
-            //System.Console.WriteLine();
-            //System.Console.WriteLine("przeczytalo");
-            //System.Console.ReadKey();
-
-
-            //db.ShowBurgerIngredients();
-            //db.RizeIt();
-            //System.Console.WriteLine("wyczyscilo");
-            //System.Console.ReadKey();
-
-            //db = new DataBase.SQLite.SQLite_DB();
-            //temp = db.GetAll("Refreshments");
-            //temp.ForEach(t => System.Console.WriteLine(t));
-            //System.Console.WriteLine();
-            //temp = db.GetAll("Burgers");
-            //temp.ForEach(t => System.Console.WriteLine(t));
-            //System.Console.WriteLine();
-            //temp = db.GetAll("Ingredients");
-            //temp.ForEach(t => System.Console.WriteLine(t));
-            //System.Console.WriteLine();
-            //temp = db.GetAll("Compositions");
-            //temp.ForEach(t => System.Console.WriteLine(t));
-            //System.Console.WriteLine();
-            //System.Console.WriteLine();
-            //System.Console.WriteLine("test success");
         }
+
+
     }
 }

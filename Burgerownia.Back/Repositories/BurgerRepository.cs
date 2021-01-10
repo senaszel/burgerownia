@@ -11,13 +11,13 @@ namespace Burgerownia.Back.Repositories
     public class BurgerRepository : IRepository<Burger>
     {
         private IDB _db;
-        private string[] _splitted;
-        private List<Burger> Burgers;
+        private List<Burger> _burgers;
                 
         public BurgerRepository(IDB db, IServiceable<Ingredient> ingredientService) 
         {
+            string[] _splitted;
             _db = db;
-            Burgers = new List<Burger>();
+            _burgers = new List<Burger>();
             _db.GetAll(Tables.Burgers)
                 .ForEach(ingredient =>
                 {
@@ -28,7 +28,7 @@ namespace Burgerownia.Back.Repositories
                         allIngredients_id[ingredient_id] = Convert.ToInt32(_splitted[ingredient_id]);
                     }
 
-                    Burgers.Add(new Burger(
+                    _burgers.Add(new Burger(
                         Convert.ToInt32(_splitted[0]),
                         _splitted[1],
                         new Ingredients(ingredientService, allIngredients_id)
@@ -36,8 +36,8 @@ namespace Burgerownia.Back.Repositories
                 });
         }
 
-        public Burger Get(int id) => Burgers.Find(b => b.Id == id);
-        public List<Burger> GetAll() => Burgers;
+        public Burger Get(int id) => _burgers.Find(b => b.Id == id);
+        public List<Burger> GetAll() => _burgers;
         public Burger SpecialOfADay() => Get((int)System.DateTime.Now.DayOfWeek);
 
 

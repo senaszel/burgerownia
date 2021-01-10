@@ -8,14 +8,14 @@ namespace Burgerownia.Back.Services
     public class BurgerService : IServiceable<Burger>
     {
         private IRepository<Burger> BurgerRepository { get; }
+        private List<Burger> _items;
 
         public BurgerService(IRepository<Burger> burgerRepository)
         {
-            BurgerRepository = burgerRepository;
-
+            _items = burgerRepository.GetAll();
         }
 
-        public List<Burger> Items => BurgerRepository.GetAll();
+        public List<Burger> Items => _items;
         public int ItemsCount => Items.Count; 
         public Burger GetItemById(int burgers_id) => Items[burgers_id];
         public List<Burger> GetItemsFromArray(int[] burgers_ids) 

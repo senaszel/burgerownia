@@ -56,6 +56,7 @@ namespace Burgerownia.DataBase.SQLite
                 .ExecuteNonQuery();
         }
 
+
         /// <summary>
         /// Seeds db's chosen table with data.
         /// </summary>

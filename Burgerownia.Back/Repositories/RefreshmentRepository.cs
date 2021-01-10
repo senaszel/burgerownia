@@ -10,18 +10,18 @@ namespace Burgerownia.Back.Repositories
     public class RefreshmentRepository : IRepository<Refreshment>
     {
         private IDB _db;
-        private string[] _splitted;
-        private List<Refreshment> Refreshments;
+        private List<Refreshment> _refreshments;
 
         public RefreshmentRepository(IDB db)
         {
+            string[] _splitted;
             _db = db;
-            Refreshments = new List<Refreshment>();
+            _refreshments = new List<Refreshment>();
             _db.GetAll(Tables.Refreshments)
                 .ForEach(ingredient =>
                 {
                     _splitted = ingredient.Split(',');
-                    Refreshments.Add(new Refreshment(
+                    _refreshments.Add(new Refreshment(
                         Convert.ToInt32(_splitted[0]),
                         _splitted[1],
                         Convert.ToDouble(_splitted[2])
@@ -29,8 +29,8 @@ namespace Burgerownia.Back.Repositories
                 });
         }
 
-        public Refreshment Get(int id) => Refreshments.Find(b => b.Id == id);
-        public List<Refreshment> GetAll() => Refreshments;
+        public Refreshment Get(int id) => _refreshments.Find(b => b.Id == id);
+        public List<Refreshment> GetAll() => _refreshments;
         public Refreshment SpecialOfADay() => Get((int)System.DateTime.Now.DayOfWeek);
 
 

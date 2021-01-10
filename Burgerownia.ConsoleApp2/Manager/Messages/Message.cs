@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Burgerownia.ConsoleApp.Manager.Messages
+namespace Burgerownia.ConsoleApp2.Manager.Messages
 {
     public class Message
     {

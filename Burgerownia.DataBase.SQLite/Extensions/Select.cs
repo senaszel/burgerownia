@@ -14,7 +14,7 @@ namespace Burgerownia.DataBase.SQLite.Extensions
         /// <returns></returns>
         public static SqliteCommand SelectAll(this SqliteCommand sqliteCommand, Tables tableName)
         {
-            sqliteCommand.CommandText = String.Format("SELECT * FROM {0}",tableName);
+            sqliteCommand.CommandText = String.Format($"SELECT * FROM {tableName}");
             return sqliteCommand;
         }
 

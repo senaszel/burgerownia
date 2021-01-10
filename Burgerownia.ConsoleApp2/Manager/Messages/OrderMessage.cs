@@ -1,7 +1,7 @@
 ﻿using Burgerownia.Back.Model;
 using System;
 
-namespace Burgerownia.ConsoleApp.Manager.Messages
+namespace Burgerownia.ConsoleApp2.Manager.Messages
 {
     public static class OrderMessage
     {

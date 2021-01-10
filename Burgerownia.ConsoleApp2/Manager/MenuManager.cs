@@ -2,11 +2,11 @@
 using System.Linq;
 using Burgerownia.Back.Model;
 using Burgerownia.Back.Services;
-using Burgerownia.ConsoleApp.Manager.Messages;
+using Burgerownia.ConsoleApp2.Manager.Messages;
 using Burgerownia.DataBase.SQLite;
 using Burgerownia.Back.Interface;
 
-namespace Burgerownia.ConsoleApp.Manager
+namespace Burgerownia.ConsoleApp2.Manager
 
 {
     internal class MenuManager
