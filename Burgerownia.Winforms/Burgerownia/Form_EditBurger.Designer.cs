@@ -29,7 +29,7 @@ namespace Burgerownia.Winforms
         /// </summary>
         private void InitializeComponent()
         {
-            this.ListBox_inredients = new System.Windows.Forms.ListBox();
+            this.ListBox_for_Ingredients = new System.Windows.Forms.ListBox();
             this.button_Delete = new System.Windows.Forms.Button();
             this.button_Add = new System.Windows.Forms.Button();
             this.button_Swap = new System.Windows.Forms.Button();
@@ -38,14 +38,14 @@ namespace Burgerownia.Winforms
             // 
             // ListBox_inredients
             // 
-            this.ListBox_inredients.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ListBox_inredients.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ListBox_inredients.FormattingEnabled = true;
-            this.ListBox_inredients.ItemHeight = 54;
-            this.ListBox_inredients.Location = new System.Drawing.Point(12, 12);
-            this.ListBox_inredients.Name = "ListBox_inredients";
-            this.ListBox_inredients.Size = new System.Drawing.Size(417, 274);
-            this.ListBox_inredients.TabIndex = 0;
+            this.ListBox_for_Ingredients.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ListBox_for_Ingredients.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ListBox_for_Ingredients.FormattingEnabled = true;
+            this.ListBox_for_Ingredients.ItemHeight = 54;
+            this.ListBox_for_Ingredients.Location = new System.Drawing.Point(12, 12);
+            this.ListBox_for_Ingredients.Name = "ListBox_inredients";
+            this.ListBox_for_Ingredients.Size = new System.Drawing.Size(417, 274);
+            this.ListBox_for_Ingredients.TabIndex = 0;
             // 
             // button_Delete
             // 
@@ -95,7 +95,7 @@ namespace Burgerownia.Winforms
             this.Controls.Add(this.button_Swap);
             this.Controls.Add(this.button_Add);
             this.Controls.Add(this.button_Delete);
-            this.Controls.Add(this.ListBox_inredients);
+            this.Controls.Add(this.ListBox_for_Ingredients);
             this.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_EditBurger";
@@ -109,7 +109,7 @@ namespace Burgerownia.Winforms
 
         #endregion
 
-        private System.Windows.Forms.ListBox ListBox_inredients;
+        private System.Windows.Forms.ListBox ListBox_for_Ingredients;
         private System.Windows.Forms.Button button_Delete;
         private System.Windows.Forms.Button button_Add;
         private System.Windows.Forms.Button button_Swap;

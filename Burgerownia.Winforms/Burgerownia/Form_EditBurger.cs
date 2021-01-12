@@ -29,13 +29,13 @@ namespace Burgerownia.Winforms
 
         private void RefreshIngredientsListBox()
         {
-            ListBox_inredients.Items.Clear();
-            _ingredients.ForEach(ingredient => ListBox_inredients.Items.Add(ingredient));
+            ListBox_for_Ingredients.Items.Clear();
+            _ingredients.ForEach(ingredient => ListBox_for_Ingredients.Items.Add(ingredient));
         }
 
         private void DeleteIngredient(object sender, EventArgs e)
         {
-            _ingredients.Remove(ListBox_inredients.SelectedItem as Ingredient);
+            _ingredients.Remove(ListBox_for_Ingredients.SelectedItem as Ingredient);
             RefreshIngredientsListBox();
         }
 
@@ -49,7 +49,7 @@ namespace Burgerownia.Winforms
 
         private void SwapIngredients(object sender, EventArgs e)
         {
-            _ingredients.Remove(ListBox_inredients.SelectedItem as Ingredient);
+            _ingredients.Remove(ListBox_for_Ingredients.SelectedItem as Ingredient);
             Form_ChooseIngredient form_ChooseIngredient = new Form_ChooseIngredient();
             form_ChooseIngredient.ShowDialog();
             _ingredients.Add(form_ChooseIngredient.IngredientChosenToAdd);
