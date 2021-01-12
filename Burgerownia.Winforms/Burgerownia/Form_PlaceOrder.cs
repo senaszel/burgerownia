@@ -17,9 +17,22 @@ namespace Burgerownia.Winforms
         public Form_PlaceOrder()
         {
             _context = Program.context;
+            this.AutoScroll = true;
 
             InitializeComponent();
             InitializeMore();
+            this.pictureBox_refreshmentsIcon.Click += new EventHandler(AutoscrollToRefreshments);
+            this.pictureBox_burgersIcon.Click += new EventHandler(AutoscrollToBurgers);
+            this.pictureBox_dolarSignIcon.Click += new EventHandler(GoToFinalizeOrder);
+        }
+
+        private void AutoscrollToRefreshments(object sender, EventArgs e) => panel.ScrollControlIntoView(_menuPositionRefreshments[0]);
+        private void AutoscrollToBurgers(object sender, EventArgs e) => panel.ScrollControlIntoView(_menuPositionBurgers[0]);
+        private void GoToFinalizeOrder(object sender, EventArgs e) 
+        {
+            Hide();
+            Form_WelcomeScreen ws = new Form_WelcomeScreen();
+            ws.Show();
         }
 
         private void InitializeMore()
@@ -36,9 +49,9 @@ namespace Burgerownia.Winforms
 
         private void AddEventListenersForEachRefreshmentControl()
         {
-           // _menuPositionRefreshments.ForEach(eachControl =>
-             //   eachControl.Click += new EventHandler(eachControl.OnClick_EditBurger)
-               // );
+            // _menuPositionRefreshments.ForEach(eachControl =>
+            //   eachControl.Click += new EventHandler(eachControl.OnClick_EditBurger)
+            // );
         }
 
         private void AddToPanel_Refreshments_AsControls()
