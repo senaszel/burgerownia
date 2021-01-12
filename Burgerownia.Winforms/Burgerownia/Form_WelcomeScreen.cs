@@ -9,27 +9,23 @@ namespace Burgerownia
     public partial class Form_WelcomeScreen : Form
     {
         IContext _context;
-        public Form_WelcomeScreen(IContext context)
+        public Form_WelcomeScreen()
         {
-            _context = context;
+            _context = Program.context;
+
             InitializeComponent();
+
+            this.pictureBox_logo.Click += new EventHandler(this.MoveOverToPlaceOrderForm);
+            this.pictureBox_placeYourOrder_alaButton.Click += new EventHandler(this.MoveOverToPlaceOrderForm);
         }
 
-        private void PictureBox_placeYourOrder_alaButton_Click(object sender, EventArgs e)
-        {
-            MoveOverToPlaceOrderForm();
-        }
-
-        private void pictureBox_logo_Click(object sender, EventArgs e)
-        {
-            MoveOverToPlaceOrderForm();
-        }
-
-        private void MoveOverToPlaceOrderForm()
+        private void MoveOverToPlaceOrderForm(object sender, EventArgs e)
         {
             this.Hide();
-            Form_PlaceOrder here = new Form_PlaceOrder(_context);
+            Form_PlaceOrder here = new Form_PlaceOrder();
             here.Show();
         }
+
+
     }
 }

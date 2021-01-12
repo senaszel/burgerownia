@@ -14,9 +14,8 @@ namespace Burgerownia.Winforms
             InitializeComponent();
         }
 
-        public TextBox TextBox_for_Ingredients { get { return this.textBox_for_Ingredients; } set { this.textBox_for_Ingredients = value; } }
-
-        public TextBox TextBox_name { get { return this.textBox_name; } set { this.textBox_name = value; } }
+        internal TextBox TextBox_for_Ingredients { get { return this.textBox_for_Ingredients; } set { this.textBox_for_Ingredients = value; } }
+        internal TextBox TextBox_name { get { return this.textBox_name; } set { this.textBox_name = value; } }
 
     }
 }

@@ -4,6 +4,7 @@ using Burgerownia.DataBase.SQLite;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Burgerownia.Back.Model;
+using System;
 
 namespace Burgerownia.Winforms
 {
@@ -12,9 +13,9 @@ namespace Burgerownia.Winforms
         private IContext _context;
         internal List<MenuPosition_Burger> _menuPositionBurgers;
 
-        public Form_PlaceOrder(IContext context)
+        public Form_PlaceOrder()
         {
-            _context = context;
+            _context = Program.context;
 
             InitializeComponent();
             InitializeMore();
@@ -24,14 +25,22 @@ namespace Burgerownia.Winforms
         {
             CreateControlsForEachBurger(_context.BurgerService);
             AddToPanel_Burgers_AsControls();
+            AddEventListenerForEachBurgerControl();
         }
 
+        private void AddEventListenerForEachBurgerControl()
+        {
+            _menuPositionBurgers.ForEach(eachControl =>
+                eachControl.Click += new EventHandler(eachControl.OnClick_EditBurger)
+                );
+        }
 
+        
 
         private void CreateControlsForEachBurger(IServiceable<Burger> burgerService)
         {
             _menuPositionBurgers = new List<MenuPosition_Burger>();
-            int counter = 0;
+            int counterForEvaluatingYneccessaryForCurrentBurgerFormLocation = 0;
             burgerService.Items.ForEach(eachBurger =>
             {
                 _menuPositionBurgers.Add(
@@ -39,10 +48,10 @@ namespace Burgerownia.Winforms
                      {
                          Left = ClientSize.Width - this.Width / 2,
                          Top = ClientSize.Height - this.Height / 2,
-                         Location = new System.Drawing.Point(0, 0 + (300 * counter)),
-                         Size = new System.Drawing.Size(700, 300),
+                         Location = new System.Drawing.Point(x: 0, y: 0 + (300 * counterForEvaluatingYneccessaryForCurrentBurgerFormLocation)),
+                         Size = new System.Drawing.Size(width: 700, height: 300),
                      });
-                counter += 1;
+                counterForEvaluatingYneccessaryForCurrentBurgerFormLocation += 1;
             });
         }
 

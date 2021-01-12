@@ -8,6 +8,7 @@ namespace Burgerownia
 {
     static class Program
     {
+        internal static IContext context;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -17,9 +18,9 @@ namespace Burgerownia
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            IContext context = new Context();
-            Application.Run(new Form1(context));
-           // Application.Run(new Form_WelcomeScreen(context));
+
+            context = new Context();
+            Application.Run(new Form_WelcomeScreen());
 
 
         }
