@@ -9,8 +9,14 @@ namespace Burgerownia.Back.Model
         public bool HasAlergens => Alergens.Count > 0;
         public List<Alergen> Alergens { get; set; }
 
+        public Ingredient(string name, double price)
+            : base(name, price)
+        {
+            Alergens = new List<Alergen>();
+        }
+
         public Ingredient(int id, string name, double price)
-           : base(name,price)
+            : this(name,price)
         {
             Id = id;
         }

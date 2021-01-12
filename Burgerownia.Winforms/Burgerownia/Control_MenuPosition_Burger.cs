@@ -14,6 +14,7 @@ namespace Burgerownia.Winforms
             : base()
         {
             ListBox_for_Ingredients.ForeColor = Color.FromArgb(255, 40, 0);
+            this.
 
             _burger = burger;
             burgerSource = new BindingSource
@@ -22,12 +23,8 @@ namespace Burgerownia.Winforms
             };
 
             TextBox_Name.DataBindings.Add(new Binding("Text", burgerSource, "Name"));
+            TextBox_Price.Text = _burger.Price.ToString();
             RefreshIngredientsListBox();
-        }
-
-        private void Here(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         internal void OnClick_EditBurger(object sender, EventArgs e)
@@ -41,6 +38,20 @@ namespace Burgerownia.Winforms
         {
             ListBox_for_Ingredients.Items.Clear();
             _burger.Ingredients.ForEach(ingredient => ListBox_for_Ingredients.Items.Add(ingredient));
+            TextBox_Price.Text = _burger.Price.ToString();
+        }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // Control_MenuPosition_Burger
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.Name = "Control_MenuPosition_Burger";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
 

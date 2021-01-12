@@ -7,10 +7,7 @@ namespace Burgerownia.Back.Model
     public class Ingredients : List<Ingredient>
     {
         private IServiceable<Ingredient> _ingredientService;
-        // todo private List<Ingredient> _listOfIngredients;
 
-
-        public List<Ingredient> GetAll() => this; //_listOfIngredients;
 
         public Ingredients(IServiceable<Ingredient> ingredientService,params int[] ingredients)
         {
@@ -33,18 +30,12 @@ namespace Burgerownia.Back.Model
             string result = string.Empty;
             ForEach(i =>
             {
-                if (i != this[Count - 1])
-                {
-                    result += i;
-                    if (i.HasAlergens)
-                    {
-                        result += "(" + string.Join(',', i.Alergens.ToArray()) + ")";
-                    }
-                }
-                else result += i;
+                    if (IndexOf(i) != (Count - 1)) result += string.Concat(i, ", "); else result += i;
+                    if (i.HasAlergens)result += "(" + string.Join(',', i.Alergens.ToArray()) + ")";
             });
-
             return result;
         }
+
+
     }
 }

@@ -9,15 +9,15 @@ namespace Burgerownia.Back.Model
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public double Price { get => TallPrice(); set => price = value; }
+        public double Price { get { if (price == default) return TallPrice(); else return price; } set { price = value; } }
         public List<Ingredient> Ingredients { get; set; }
-        public string IngredientsToString => string.Join(',', Ingredients);
+
         public bool IsService { get; set; }
 
         private double TallPrice()
         {
             double sum = 0;
-            Ingredients.ForEach(each => sum += each.Price);
+            Ingredients.ForEach(eachIngredient => sum += eachIngredient.Price);
             return sum;
         }
 
@@ -47,7 +47,7 @@ namespace Burgerownia.Back.Model
         public Item(string name, Ingredients ingredients)
             : this(name)
         {
-            ingredients.GetAll().ForEach(ingredient => this.Ingredients.Add(ingredient));
+            ingredients.ForEach(ingredient => this.Ingredients.Add(ingredient));
         }
 
         public Item(int id, string name, Ingredients ingredients)
@@ -64,21 +64,8 @@ namespace Burgerownia.Back.Model
             Price = price;
         }
 
-        public override string ToString()
-        {
-            string toString;
+        public override string ToString() => (Ingredients.Count == 0) ? Name : Name + $"({Ingredients})";
 
-            if (Ingredients.Count == 0)
-            {
-                toString = Name;
-            }
-            else
-            {
-                toString = Name + $" ({string.Join<Ingredient>(',', Ingredients.ToArray())})";
-            }
 
-            return toString;
-        }
     }
-
 }

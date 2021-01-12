@@ -13,7 +13,7 @@ namespace Burgerownia.Winforms
             this.textBox_Price.ReadOnly = true;
         }
 
-        internal TextBox TextBox_Price { get; set; }
+        internal TextBox TextBox_Price { get { return this.textBox_Price; } set {this.textBox_Price = value; } }
         internal ListBox ListBox_for_Ingredients { get { return this.listBox_Ingredients; } set { this.listBox_Ingredients = value; } }
         internal TextBox TextBox_Name { get { return this.textBox_Name; } set { this.textBox_Name = value; } }
         internal Image PictureBox_withIcon_BackgroundImage { get { return this.pictureBox_BurgerPicture.BackgroundImage; } set { this.pictureBox_BurgerPicture.BackgroundImage = value; } }

@@ -22,9 +22,9 @@ namespace Burgerownia.Back.Repositories
                     {
                         _splitted = ingredient.Split(',');
                         _ingredients.Add(new Ingredient(
-                            Convert.ToInt32(_splitted[0]),
-                            _splitted[1],
-                            Convert.ToDouble(_splitted[2])
+                            id: Convert.ToInt32(_splitted[0]),
+                            name: _splitted[1],
+                            price: Convert.ToDouble(_splitted[2])
                         ));
                     });
         }
