@@ -39,6 +39,8 @@ namespace Burgerownia.Winforms
             // 
             // tableLayoutPanel
             // 
+            this.tableLayoutPanel.BackColor = System.Drawing.Color.Black;
+            this.tableLayoutPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.tableLayoutPanel.ColumnCount = 2;
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.125F));
             this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 86.875F));
@@ -57,13 +59,14 @@ namespace Burgerownia.Winforms
             // pictureBox_YourOrder
             // 
             this.pictureBox_YourOrder.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox_YourOrder.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox_YourOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.tableLayoutPanel.SetColumnSpan(this.pictureBox_YourOrder, 2);
             this.pictureBox_YourOrder.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_YourOrder.Image")));
-            this.pictureBox_YourOrder.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox_YourOrder.Location = new System.Drawing.Point(160, 3);
             this.pictureBox_YourOrder.MaximumSize = new System.Drawing.Size(880, 200);
             this.pictureBox_YourOrder.Name = "pictureBox_YourOrder";
-            this.pictureBox_YourOrder.Size = new System.Drawing.Size(794, 101);
+            this.pictureBox_YourOrder.Size = new System.Drawing.Size(480, 101);
             this.pictureBox_YourOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_YourOrder.TabIndex = 1;
             this.pictureBox_YourOrder.TabStop = false;
@@ -71,6 +74,7 @@ namespace Burgerownia.Winforms
             // panel
             // 
             this.panel.AutoScroll = true;
+            this.panel.BackColor = System.Drawing.Color.Transparent;
             this.panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel.Location = new System.Drawing.Point(108, 110);
             this.panel.Name = "panel";
@@ -83,6 +87,7 @@ namespace Burgerownia.Winforms
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel);

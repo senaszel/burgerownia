@@ -1,6 +1,4 @@
-﻿using Burgerownia.Back;
-using Burgerownia.Back.Interface;
-using Burgerownia.DataBase.SQLite;
+﻿using Burgerownia.Back.Interface;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Burgerownia.Back.Model;
@@ -11,7 +9,10 @@ namespace Burgerownia.Winforms
     public partial class Form_PlaceOrder : Form
     {
         private IContext _context;
-        internal List<MenuPosition_Burger> _menuPositionBurgers;
+        private int counterForEvaluatingYneccessaryForCurrentCustomFormLocation = 0;
+        internal List<Control_MenuPosition_Burger> _menuPositionBurgers;
+        internal List<Control_MenuPosition_Refreshment> _menuPositionRefreshments;
+
 
         public Form_PlaceOrder()
         {
@@ -26,6 +27,43 @@ namespace Burgerownia.Winforms
             CreateControlsForEachBurger(_context.BurgerService);
             AddToPanel_Burgers_AsControls();
             AddEventListenersForEachBurgerControl();
+
+            counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;
+            CreateControlsForEachRefreshment(_context.RefreshmentService);
+            AddToPanel_Refreshments_AsControls();
+            AddEventListenersForEachRefreshmentControl();
+        }
+
+        private void AddEventListenersForEachRefreshmentControl()
+        {
+           // _menuPositionRefreshments.ForEach(eachControl =>
+             //   eachControl.Click += new EventHandler(eachControl.OnClick_EditBurger)
+               // );
+        }
+
+        private void AddToPanel_Refreshments_AsControls()
+        {
+            _menuPositionRefreshments.ForEach(c =>
+            {
+                this.panel.Controls.Add(c);
+            });
+        }
+
+        private void CreateControlsForEachRefreshment(IServiceable<Refreshment> refreshmentService)
+        {
+            _menuPositionRefreshments = new List<Control_MenuPosition_Refreshment>();
+            refreshmentService.Items.ForEach(eachRefreshment =>
+            {
+                _menuPositionRefreshments.Add(
+                     new Control_MenuPosition_Refreshment(eachRefreshment)
+                     {
+                         Left = ClientSize.Width - this.Width / 2,
+                         Top = ClientSize.Height - this.Height / 2,
+                         Location = new System.Drawing.Point(x: 0, y: 0 + (300 * counterForEvaluatingYneccessaryForCurrentCustomFormLocation)),
+                         Size = new System.Drawing.Size(width: 700, height: 300)
+                     });
+                counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;
+            });
         }
 
         private void AddEventListenersForEachBurgerControl()
@@ -37,19 +75,18 @@ namespace Burgerownia.Winforms
 
         private void CreateControlsForEachBurger(IServiceable<Burger> burgerService)
         {
-            _menuPositionBurgers = new List<MenuPosition_Burger>();
-            int counterForEvaluatingYneccessaryForCurrentBurgerFormLocation = 0;
+            _menuPositionBurgers = new List<Control_MenuPosition_Burger>();
             burgerService.Items.ForEach(eachBurger =>
             {
                 _menuPositionBurgers.Add(
-                     new MenuPosition_Burger(eachBurger)
+                     new Control_MenuPosition_Burger(eachBurger)
                      {
                          Left = ClientSize.Width - this.Width / 2,
                          Top = ClientSize.Height - this.Height / 2,
-                         Location = new System.Drawing.Point(x: 0, y: 0 + (300 * counterForEvaluatingYneccessaryForCurrentBurgerFormLocation)),
+                         Location = new System.Drawing.Point(x: 0, y: 0 + (300 * counterForEvaluatingYneccessaryForCurrentCustomFormLocation)),
                          Size = new System.Drawing.Size(width: 700, height: 300)
                      });
-                counterForEvaluatingYneccessaryForCurrentBurgerFormLocation += 1;
+                counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;
             });
         }
 
@@ -60,5 +97,7 @@ namespace Burgerownia.Winforms
                 this.panel.Controls.Add(c);
             });
         }
+
+
     }
 }

@@ -10,7 +10,7 @@ namespace Burgerownia.Winforms
         private List<Ingredient> _ingredients;
         public List<Ingredient> ConfirmedIngredients { get; internal set; }
 
-        public Form_EditBurger(List<Ingredient> ingredients)
+        public Form_EditBurger(List<Ingredient> ingredients) 
         {
             InitializeComponent();
 
@@ -57,7 +57,7 @@ namespace Burgerownia.Winforms
         private void Confirm(object sender, EventArgs e)
         {
             ConfirmedIngredients = _ingredients;
-            this.Close();
+            DialogResult = DialogResult.OK;
         }
 
 

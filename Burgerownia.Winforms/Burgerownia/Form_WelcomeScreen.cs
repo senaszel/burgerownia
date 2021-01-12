@@ -8,11 +8,8 @@ namespace Burgerownia
 {
     public partial class Form_WelcomeScreen : Form
     {
-        IContext _context;
         public Form_WelcomeScreen()
         {
-            _context = Program.context;
-
             InitializeComponent();
 
             this.pictureBox_logo.Click += new EventHandler(this.MoveOverToPlaceOrderForm);

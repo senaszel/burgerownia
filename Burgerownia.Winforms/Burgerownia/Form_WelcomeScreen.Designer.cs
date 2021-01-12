@@ -47,7 +47,6 @@
             this.pictureBox_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_logo.TabIndex = 0;
             this.pictureBox_logo.TabStop = false;
-            
             // 
             // pictureBox_placeYourOrder_alaButton
             // 
@@ -60,7 +59,6 @@
             this.pictureBox_placeYourOrder_alaButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_placeYourOrder_alaButton.TabIndex = 0;
             this.pictureBox_placeYourOrder_alaButton.TabStop = false;
-            
             // 
             // Form_WelcomeScreen
             // 

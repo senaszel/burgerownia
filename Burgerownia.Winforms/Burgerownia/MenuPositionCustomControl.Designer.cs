@@ -82,6 +82,7 @@ namespace Burgerownia.Winforms
             this.listBox_forIngredients.ItemHeight = 45;
             this.listBox_forIngredients.Location = new System.Drawing.Point(16, 104);
             this.listBox_forIngredients.Name = "listBox_forIngredients";
+            this.listBox_forIngredients.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.listBox_forIngredients.Size = new System.Drawing.Size(379, 180);
             this.listBox_forIngredients.TabIndex = 8;
             // 
@@ -89,7 +90,7 @@ namespace Burgerownia.Winforms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DimGray;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.listBox_forIngredients);
             this.Controls.Add(this.pictureBox_For_Number);
             this.Controls.Add(this.textBox_name);
