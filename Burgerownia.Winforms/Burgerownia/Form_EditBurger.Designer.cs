@@ -29,7 +29,7 @@ namespace Burgerownia.Winforms
         /// </summary>
         private void InitializeComponent()
         {
-            this.ingredientsListBox = new System.Windows.Forms.ListBox();
+            this.ListBox_inredients = new System.Windows.Forms.ListBox();
             this.button_Delete = new System.Windows.Forms.Button();
             this.button_Add = new System.Windows.Forms.Button();
             this.button_Swap = new System.Windows.Forms.Button();
@@ -38,20 +38,20 @@ namespace Burgerownia.Winforms
             // 
             // ingredientsListBox
             // 
-            this.ingredientsListBox.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.ingredientsListBox.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ingredientsListBox.FormattingEnabled = true;
-            this.ingredientsListBox.ItemHeight = 54;
-            this.ingredientsListBox.Location = new System.Drawing.Point(12, 12);
-            this.ingredientsListBox.Name = "ingredientsListBox";
-            this.ingredientsListBox.Size = new System.Drawing.Size(417, 274);
-            this.ingredientsListBox.TabIndex = 0;
+            this.ListBox_inredients.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.ListBox_inredients.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ListBox_inredients.FormattingEnabled = true;
+            this.ListBox_inredients.ItemHeight = 54;
+            this.ListBox_inredients.Location = new System.Drawing.Point(12, 12);
+            this.ListBox_inredients.Name = "ingredientsListBox";
+            this.ListBox_inredients.Size = new System.Drawing.Size(417, 274);
+            this.ListBox_inredients.TabIndex = 0;
             // 
             // button_Delete
             // 
-            this.button_Delete.Location = new System.Drawing.Point(12, 292);
+            this.button_Delete.Location = new System.Drawing.Point(12, 301);
             this.button_Delete.Name = "button_Delete";
-            this.button_Delete.Size = new System.Drawing.Size(200, 145);
+            this.button_Delete.Size = new System.Drawing.Size(200, 140);
             this.button_Delete.TabIndex = 1;
             this.button_Delete.Text = "usuń";
             this.button_Delete.UseVisualStyleBackColor = true;
@@ -60,16 +60,16 @@ namespace Burgerownia.Winforms
             // 
             this.button_Add.Location = new System.Drawing.Point(445, 12);
             this.button_Add.Name = "button_Add";
-            this.button_Add.Size = new System.Drawing.Size(200, 145);
+            this.button_Add.Size = new System.Drawing.Size(200, 140);
             this.button_Add.TabIndex = 2;
             this.button_Add.Text = "dodaj";
             this.button_Add.UseVisualStyleBackColor = true;
             // 
             // button_Swap
             // 
-            this.button_Swap.Location = new System.Drawing.Point(229, 292);
+            this.button_Swap.Location = new System.Drawing.Point(229, 301);
             this.button_Swap.Name = "button_Swap";
-            this.button_Swap.Size = new System.Drawing.Size(200, 145);
+            this.button_Swap.Size = new System.Drawing.Size(200, 140);
             this.button_Swap.TabIndex = 3;
             this.button_Swap.Text = "zamień";
             this.button_Swap.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@ namespace Burgerownia.Winforms
             // button_Confirm
             // 
             this.button_Confirm.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button_Confirm.Location = new System.Drawing.Point(445, 176);
+            this.button_Confirm.Location = new System.Drawing.Point(445, 167);
             this.button_Confirm.Name = "button_Confirm";
-            this.button_Confirm.Size = new System.Drawing.Size(200, 262);
+            this.button_Confirm.Size = new System.Drawing.Size(200, 274);
             this.button_Confirm.TabIndex = 4;
             this.button_Confirm.Text = "Jest\r\ndobrze\r\ntakiego\r\nchce";
             this.button_Confirm.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@ namespace Burgerownia.Winforms
             this.Controls.Add(this.button_Swap);
             this.Controls.Add(this.button_Add);
             this.Controls.Add(this.button_Delete);
-            this.Controls.Add(this.ingredientsListBox);
+            this.Controls.Add(this.ListBox_inredients);
             this.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_EditBurger";
@@ -109,7 +109,7 @@ namespace Burgerownia.Winforms
 
         #endregion
 
-        private System.Windows.Forms.ListBox ingredientsListBox;
+        private System.Windows.Forms.ListBox ListBox_inredients;
         private System.Windows.Forms.Button button_Delete;
         private System.Windows.Forms.Button button_Add;
         private System.Windows.Forms.Button button_Swap;

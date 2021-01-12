@@ -35,8 +35,6 @@ namespace Burgerownia.Winforms
                 );
         }
 
-        
-
         private void CreateControlsForEachBurger(IServiceable<Burger> burgerService)
         {
             _menuPositionBurgers = new List<MenuPosition_Burger>();
@@ -49,9 +47,8 @@ namespace Burgerownia.Winforms
                          Left = ClientSize.Width - this.Width / 2,
                          Top = ClientSize.Height - this.Height / 2,
                          Location = new System.Drawing.Point(x: 0, y: 0 + (300 * counterForEvaluatingYneccessaryForCurrentBurgerFormLocation)),
-                         Size = new System.Drawing.Size(width: 700, height: 300),
-                         
-                     }) ;
+                         Size = new System.Drawing.Size(width: 700, height: 300)
+                     });
                 counterForEvaluatingYneccessaryForCurrentBurgerFormLocation += 1;
             });
         }
