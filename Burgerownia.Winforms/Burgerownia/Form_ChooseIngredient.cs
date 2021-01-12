@@ -14,9 +14,9 @@ namespace Burgerownia.Winforms
 
             allPossibleIngredientsListBox.DataSource = Program.context.IngredientService.Items;
 
+            this.FormClosing += new FormClosingEventHandler(Do.Not);
             allPossibleIngredientsListBox.SelectedIndexChanged += new EventHandler(AddSelectedToPreviousForm);
         }
-
 
         private void AddSelectedToPreviousForm(object sender, EventArgs e)
         {

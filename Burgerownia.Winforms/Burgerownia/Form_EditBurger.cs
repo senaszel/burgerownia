@@ -18,12 +18,14 @@ namespace Burgerownia.Winforms
 
             RefreshIngredientsListBox();
 
+            this.FormClosing += new FormClosingEventHandler(Do.Not);
             this.button_Add.Click += new EventHandler(this.AddNewIngredient);
             this.button_Delete.Click += new EventHandler(this.DeleteIngredient);
             this.button_Swap.Click += new EventHandler(this.SwapIngredients);
             this.button_Confirm.Click += new EventHandler(this.Confirm);
         }
 
+        
 
         private void RefreshIngredientsListBox()
         {
@@ -57,6 +59,7 @@ namespace Burgerownia.Winforms
         private void Confirm(object sender, EventArgs e)
         {
             ConfirmedIngredients = _ingredients;
+            this.FormClosing -= new FormClosingEventHandler(Do.Not);
             DialogResult = DialogResult.OK;
         }
 

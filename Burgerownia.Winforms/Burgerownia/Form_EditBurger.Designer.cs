@@ -36,14 +36,14 @@ namespace Burgerownia.Winforms
             this.button_Confirm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // ingredientsListBox
+            // ListBox_inredients
             // 
             this.ListBox_inredients.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.ListBox_inredients.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ListBox_inredients.FormattingEnabled = true;
             this.ListBox_inredients.ItemHeight = 54;
             this.ListBox_inredients.Location = new System.Drawing.Point(12, 12);
-            this.ListBox_inredients.Name = "ingredientsListBox";
+            this.ListBox_inredients.Name = "ListBox_inredients";
             this.ListBox_inredients.Size = new System.Drawing.Size(417, 274);
             this.ListBox_inredients.TabIndex = 0;
             // 
