@@ -17,10 +17,16 @@ namespace Burgerownia.Winforms
             InitializeComponent();
 
             allPossibleIngredientsListBox.DataSource = ingredientsService.Items;
-            allPossibleIngredientsListBox.SelectedIndexChanged = new EventHandler(this.C);
+            allPossibleIngredientsListBox.SelectedIndexChanged += new EventHandler(AddSelectedToPreviousForm);
 
         }
 
+        public Ingredient IngredientChosenToAdd { get; internal set; }
 
+        private void AddSelectedToPreviousForm(object sender, EventArgs e)
+        {
+            IngredientChosenToAdd = allPossibleIngredientsListBox.SelectedItem as Ingredient;
+            this.Dispose();
+        }
     }
 }

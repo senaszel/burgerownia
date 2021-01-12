@@ -77,7 +77,7 @@ namespace Burgerownia.Winforms
             this.panel.Size = new System.Drawing.Size(689, 337);
             this.panel.TabIndex = 2;
             // 
-            // Here
+            // Form_PlaceOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -88,7 +88,8 @@ namespace Burgerownia.Winforms
             this.Controls.Add(this.tableLayoutPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Here";
+            this.IsMdiContainer = true;
+            this.Name = "Form_PlaceOrder";
             this.Text = "Here";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel.ResumeLayout(false);

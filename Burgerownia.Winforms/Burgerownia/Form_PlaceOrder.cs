@@ -25,10 +25,10 @@ namespace Burgerownia.Winforms
         {
             CreateControlsForEachBurger(_context.BurgerService);
             AddToPanel_Burgers_AsControls();
-            AddEventListenerForEachBurgerControl();
+            AddEventListenersForEachBurgerControl();
         }
 
-        private void AddEventListenerForEachBurgerControl()
+        private void AddEventListenersForEachBurgerControl()
         {
             _menuPositionBurgers.ForEach(eachControl =>
                 eachControl.Click += new EventHandler(eachControl.OnClick_EditBurger)
@@ -50,7 +50,8 @@ namespace Burgerownia.Winforms
                          Top = ClientSize.Height - this.Height / 2,
                          Location = new System.Drawing.Point(x: 0, y: 0 + (300 * counterForEvaluatingYneccessaryForCurrentBurgerFormLocation)),
                          Size = new System.Drawing.Size(width: 700, height: 300),
-                     });
+                         
+                     }) ;
                 counterForEvaluatingYneccessaryForCurrentBurgerFormLocation += 1;
             });
         }

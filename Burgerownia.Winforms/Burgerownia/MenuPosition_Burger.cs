@@ -20,6 +20,8 @@ namespace Burgerownia.Winforms
                 this.Hide();
                 Form_EditBurger editBurger = new Form_EditBurger(_burger.Ingredients);
                 editBurger.Show();
+                _burger.Ingredients = editBurger.ConfirmedIngredients;
+                this.Refresh();
         }
 
 

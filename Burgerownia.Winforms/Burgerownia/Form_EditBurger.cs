@@ -1,17 +1,15 @@
 ﻿using Burgerownia.Back.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Burgerownia.Winforms
 {
     public partial class Form_EditBurger : Form
     {
-        List<Ingredient> _ingredientsList;
+        private List<Ingredient> _ingredientsList;
+        public List<Ingredient> ConfirmedIngredients { get; internal set; }
+
         public Form_EditBurger(List<Ingredient> ingredients)
         {
             InitializeComponent();
@@ -19,8 +17,13 @@ namespace Burgerownia.Winforms
             _ingredientsList = ingredients;
 
             RefreshIngredientsListBox();
-            
+
+            this.button_Add.Click += new EventHandler(this.AddNewIngredient);
+            this.button_Delete.Click += new EventHandler(this.DeleteIngredient);
+            this.button_Swap.Click += new EventHandler(this.SwapIngredients);
+            this.button_Confirm.Click += new EventHandler(this.Confirm);
         }
+
 
         private void RefreshIngredientsListBox()
         {
@@ -28,17 +31,35 @@ namespace Burgerownia.Winforms
             _ingredientsList.ForEach(ingredient => ingredientsListBox.Items.Add(ingredient));
         }
 
-        private void Button_delete_Click(object sender, EventArgs e)
+        private void DeleteIngredient(object sender, EventArgs e)
         {
             _ingredientsList.Remove(ingredientsListBox.SelectedItem as Ingredient);
             RefreshIngredientsListBox();
         }
 
-        private void button_Add_Click(object sender, EventArgs e)
+        private void AddNewIngredient(object sender, EventArgs e)
         {
             Form_ChooseIngredient form_ChooseIngredient = new Form_ChooseIngredient(Program.context.IngredientService);
             form_ChooseIngredient.ShowDialog();
-            
+            _ingredientsList.Add(form_ChooseIngredient.IngredientChosenToAdd);
+            RefreshIngredientsListBox();
         }
+
+        private void SwapIngredients(object sender, EventArgs e)
+        {
+            _ingredientsList.Remove(ingredientsListBox.SelectedItem as Ingredient);
+            Form_ChooseIngredient form_ChooseIngredient = new Form_ChooseIngredient(Program.context.IngredientService);
+            form_ChooseIngredient.ShowDialog();
+            _ingredientsList.Add(form_ChooseIngredient.IngredientChosenToAdd);
+            RefreshIngredientsListBox();
+        }
+
+        private void Confirm(object sender, EventArgs e)
+        {
+            ConfirmedIngredients = _ingredientsList;
+            this.Hide();
+        }
+
+
     }
 }
