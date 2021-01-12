@@ -59,7 +59,7 @@ namespace Burgerownia.Winforms
                      {
                          Left = ClientSize.Width - this.Width / 2,
                          Top = ClientSize.Height - this.Height / 2,
-                         Location = new System.Drawing.Point(x: 0, y: 0 + (300 * counterForEvaluatingYneccessaryForCurrentCustomFormLocation)),
+                         Location = new System.Drawing.Point(x: 0, y: 0 + (320 * counterForEvaluatingYneccessaryForCurrentCustomFormLocation)),
                          Size = new System.Drawing.Size(width: 700, height: 300)
                      });
                 counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;
@@ -83,7 +83,7 @@ namespace Burgerownia.Winforms
                      {
                          Left = ClientSize.Width - this.Width / 2,
                          Top = ClientSize.Height - this.Height / 2,
-                         Location = new System.Drawing.Point(x: 0, y: 0 + (300 * counterForEvaluatingYneccessaryForCurrentCustomFormLocation)),
+                         Location = new System.Drawing.Point(x: 0, y: 0 + (320 * counterForEvaluatingYneccessaryForCurrentCustomFormLocation)),
                          Size = new System.Drawing.Size(width: 700, height: 300)
                      });
                 counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;

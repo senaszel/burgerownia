@@ -30,84 +30,111 @@ namespace Burgerownia.Winforms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuPositionCustomControl));
-            this.pictureBox_For_burgerPicture = new System.Windows.Forms.PictureBox();
-            this.pictureBox_For_Number = new System.Windows.Forms.PictureBox();
-            this.textBox_name = new System.Windows.Forms.TextBox();
-            this.listBox_forIngredients = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_For_burgerPicture)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_For_Number)).BeginInit();
+            this.pictureBox_BurgerPicture = new System.Windows.Forms.PictureBox();
+            this.listBox_Ingredients = new System.Windows.Forms.ListBox();
+            this.pictureBox_Numbers = new System.Windows.Forms.PictureBox();
+            this.textBox_Name = new System.Windows.Forms.TextBox();
+            this.textBox_Price = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_BurgerPicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Numbers)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox_For_burgerPicture
+            // pictureBox_BurgerPicture
             // 
-            this.pictureBox_For_burgerPicture.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox_For_burgerPicture.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_For_burgerPicture.Image")));
-            this.pictureBox_For_burgerPicture.Location = new System.Drawing.Point(410, 14);
-            this.pictureBox_For_burgerPicture.Name = "pictureBox_For_burgerPicture";
-            this.pictureBox_For_burgerPicture.Size = new System.Drawing.Size(255, 236);
-            this.pictureBox_For_burgerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox_For_burgerPicture.TabIndex = 4;
-            this.pictureBox_For_burgerPicture.TabStop = false;
+            this.pictureBox_BurgerPicture.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_BurgerPicture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_BurgerPicture.BackgroundImage")));
+            this.pictureBox_BurgerPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_BurgerPicture.Location = new System.Drawing.Point(596, 10);
+            this.pictureBox_BurgerPicture.Name = "pictureBox_BurgerPicture";
+            this.pictureBox_BurgerPicture.Size = new System.Drawing.Size(370, 352);
+            this.pictureBox_BurgerPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_BurgerPicture.TabIndex = 4;
+            this.pictureBox_BurgerPicture.TabStop = false;
             // 
-            // pictureBox_For_Number
+            // listBox_Ingredients
             // 
-            this.pictureBox_For_Number.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox_For_Number.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_For_Number.Location = new System.Drawing.Point(568, 167);
-            this.pictureBox_For_Number.Name = "pictureBox_For_Number";
-            this.pictureBox_For_Number.Size = new System.Drawing.Size(122, 120);
-            this.pictureBox_For_Number.TabIndex = 7;
-            this.pictureBox_For_Number.TabStop = false;
+            this.listBox_Ingredients.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox_Ingredients.BackColor = System.Drawing.SystemColors.InfoText;
+            this.listBox_Ingredients.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox_Ingredients.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listBox_Ingredients.FormattingEnabled = true;
+            this.listBox_Ingredients.ItemHeight = 40;
+            this.listBox_Ingredients.Location = new System.Drawing.Point(16, 72);
+            this.listBox_Ingredients.Name = "listBox_Ingredients";
+            this.listBox_Ingredients.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.listBox_Ingredients.Size = new System.Drawing.Size(571, 360);
+            this.listBox_Ingredients.TabIndex = 8;
             // 
-            // textBox_name
+            // pictureBox_Numbers
             // 
-            this.textBox_name.BackColor = System.Drawing.SystemColors.MenuText;
-            this.textBox_name.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox_name.ForeColor = System.Drawing.Color.Red;
-            this.textBox_name.Location = new System.Drawing.Point(16, 33);
-            this.textBox_name.MaxLength = 100;
-            this.textBox_name.Name = "textBox_name";
-            this.textBox_name.Size = new System.Drawing.Size(379, 55);
-            this.textBox_name.TabIndex = 5;
-            this.textBox_name.Text = "MARIO";
-            this.textBox_name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.pictureBox_Numbers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_Numbers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Numbers.BackgroundImage")));
+            this.pictureBox_Numbers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox_Numbers.Location = new System.Drawing.Point(447, 10);
+            this.pictureBox_Numbers.Name = "pictureBox_Numbers";
+            this.pictureBox_Numbers.Size = new System.Drawing.Size(140, 55);
+            this.pictureBox_Numbers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox_Numbers.TabIndex = 9;
+            this.pictureBox_Numbers.TabStop = false;
             // 
-            // listBox_forIngredients
+            // textBox_Name
             // 
-            this.listBox_forIngredients.BackColor = System.Drawing.SystemColors.InfoText;
-            this.listBox_forIngredients.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox_forIngredients.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.listBox_forIngredients.FormattingEnabled = true;
-            this.listBox_forIngredients.ItemHeight = 45;
-            this.listBox_forIngredients.Location = new System.Drawing.Point(16, 104);
-            this.listBox_forIngredients.Name = "listBox_forIngredients";
-            this.listBox_forIngredients.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.listBox_forIngredients.Size = new System.Drawing.Size(379, 180);
-            this.listBox_forIngredients.TabIndex = 8;
+            this.textBox_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_Name.BackColor = System.Drawing.SystemColors.MenuText;
+            this.textBox_Name.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox_Name.ForeColor = System.Drawing.Color.Red;
+            this.textBox_Name.Location = new System.Drawing.Point(39, 11);
+            this.textBox_Name.MaxLength = 100;
+            this.textBox_Name.Name = "textBox_Name";
+            this.textBox_Name.Size = new System.Drawing.Size(399, 55);
+            this.textBox_Name.TabIndex = 5;
+            this.textBox_Name.Text = "burger\'s name";
+            // 
+            // textBox_Price
+            // 
+            this.textBox_Price.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox_Price.BackColor = System.Drawing.SystemColors.MenuText;
+            this.textBox_Price.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox_Price.ForeColor = System.Drawing.Color.Red;
+            this.textBox_Price.Location = new System.Drawing.Point(596, 377);
+            this.textBox_Price.MaxLength = 100;
+            this.textBox_Price.Name = "textBox_Price";
+            this.textBox_Price.Size = new System.Drawing.Size(370, 55);
+            this.textBox_Price.TabIndex = 10;
+            this.textBox_Price.Text = "price";
+            this.textBox_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // MenuPositionCustomControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.listBox_forIngredients);
-            this.Controls.Add(this.pictureBox_For_Number);
-            this.Controls.Add(this.textBox_name);
-            this.Controls.Add(this.pictureBox_For_burgerPicture);
+            this.BackColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.textBox_Price);
+            this.Controls.Add(this.pictureBox_Numbers);
+            this.Controls.Add(this.listBox_Ingredients);
+            this.Controls.Add(this.textBox_Name);
+            this.Controls.Add(this.pictureBox_BurgerPicture);
             this.Name = "MenuPositionCustomControl";
-            this.Size = new System.Drawing.Size(700, 300);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_For_burgerPicture)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_For_Number)).EndInit();
+            this.Size = new System.Drawing.Size(978, 438);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_BurgerPicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Numbers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox_For_burgerPicture;
-        private System.Windows.Forms.PictureBox pictureBox_For_Number;
-        private System.Windows.Forms.TextBox textBox_name;
-        private System.Windows.Forms.ListBox listBox_forIngredients;
+        private System.Windows.Forms.PictureBox pictureBox_BurgerPicture;
+        private System.Windows.Forms.ListBox listBox_Ingredients;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox_Numbers;
+        private System.Windows.Forms.TextBox textBox_Name;
+        private System.Windows.Forms.TextBox textBox_Price;
     }
 }

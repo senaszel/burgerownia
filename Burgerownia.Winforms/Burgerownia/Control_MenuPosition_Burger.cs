@@ -21,7 +21,7 @@ namespace Burgerownia.Winforms
                 DataSource = _burger
             };
 
-            TextBox_name.DataBindings.Add(new Binding("Text", burgerSource, "Name"));
+            TextBox_Name.DataBindings.Add(new Binding("Text", burgerSource, "Name"));
             RefreshIngredientsListBox();
         }
 
