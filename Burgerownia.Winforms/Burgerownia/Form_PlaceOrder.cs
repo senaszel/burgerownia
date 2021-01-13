@@ -24,6 +24,7 @@ namespace Burgerownia.Winforms
             this.pictureBox_refreshmentsIcon.Click += new EventHandler(AutoscrollToRefreshments);
             this.pictureBox_burgersIcon.Click += new EventHandler(AutoscrollToBurgers);
             this.pictureBox_dolarSignIcon.Click += new EventHandler(GoToFinalizeOrder);
+            this.FormClosing += new FormClosingEventHandler(Do.Close);
         }
 
         private void AutoscrollToRefreshments(object sender, EventArgs e) => panel.ScrollControlIntoView(_menuPositionRefreshments[0]);

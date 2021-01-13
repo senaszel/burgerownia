@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace Burgerownia.Winforms
 {
@@ -9,6 +10,9 @@ namespace Burgerownia.Winforms
             e.Cancel = true;
         }
 
-
+        internal static void Close(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
