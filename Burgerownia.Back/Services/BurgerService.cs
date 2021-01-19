@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Burgerownia.Back.Services
 {
-    public class BurgerService : IServiceable<Burger>, IBurgerOfADay
+    public class BurgerService : IBurgerService
     {
         private List<Burger> _items;
 

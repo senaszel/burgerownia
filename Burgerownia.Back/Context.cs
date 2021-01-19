@@ -12,7 +12,7 @@ namespace Burgerownia.Back
         private IRepository<Ingredient> _ingredientRepository;
         private IServiceable<Ingredient> _ingredientService;
         private IRepository<Burger> _burgerRepository;
-        private IServiceable<Burger> _burgerService;
+        private IBurgerService _burgerService;
         private IRepository<Refreshment> _refreshmentRepository;
         private IServiceable<Refreshment> _refreshmentService;
 
@@ -29,7 +29,7 @@ namespace Burgerownia.Back
 
         public IDB Db => _database;
         public IRepository<Burger> BurgerRepository => _burgerRepository;
-        public IServiceable<Burger> BurgerService => _burgerService;
+        public IBurgerService BurgerService => _burgerService;
         public IRepository<Ingredient> IngredientRepository => _ingredientRepository;
         public IServiceable<Ingredient> IngredientService => _ingredientService;
         public IRepository<Refreshment> RefreshmentRepository => _refreshmentRepository;

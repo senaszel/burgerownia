@@ -12,6 +12,7 @@ namespace Burgerownia.Winforms
         private int counterForEvaluatingYneccessaryForCurrentCustomFormLocation = 0;
         internal List<Control_MenuPosition_Burger> _menuPositionBurgers;
         internal List<Control_MenuPosition_Refreshment> _menuPositionRefreshments;
+        internal Control_MenuPosition_Burger _menuPosition_BurgerOfADay;
 
 
         public Form_PlaceOrder()
@@ -21,15 +22,17 @@ namespace Burgerownia.Winforms
 
             InitializeComponent();
             InitializeMore();
+            this.pictureBox_burgerOfADay.Click += new EventHandler(AutoscrollToBurgerOfADay);
             this.pictureBox_refreshmentsIcon.Click += new EventHandler(AutoscrollToRefreshments);
             this.pictureBox_burgersIcon.Click += new EventHandler(AutoscrollToBurgers);
             this.pictureBox_dolarSignIcon.Click += new EventHandler(GoToFinalizeOrder);
             this.FormClosing += new FormClosingEventHandler(Do.Close);
         }
 
-        private void AutoscrollToRefreshments(object sender, EventArgs e) => panel.ScrollControlIntoView(_menuPositionRefreshments[0]);
-        private void AutoscrollToBurgers(object sender, EventArgs e) => panel.ScrollControlIntoView(_menuPositionBurgers[0]);
-        private void GoToFinalizeOrder(object sender, EventArgs e) 
+        private void AutoscrollToBurgerOfADay(object sender, EventArgs e) => panel_Right.ScrollControlIntoView(_menuPosition_BurgerOfADay);
+        private void AutoscrollToRefreshments(object sender, EventArgs e) => panel_Right.ScrollControlIntoView(_menuPositionRefreshments[0]);
+        private void AutoscrollToBurgers(object sender, EventArgs e) => panel_Right.ScrollControlIntoView(_menuPositionBurgers[0]);
+        private void GoToFinalizeOrder(object sender, EventArgs e)
         {
             Hide();
             Form_WelcomeScreen ws = new Form_WelcomeScreen();
@@ -38,6 +41,18 @@ namespace Burgerownia.Winforms
 
         private void InitializeMore()
         {
+            Burger burgerOfADay = _context.BurgerService.SpecialOfADay();
+            _menuPosition_BurgerOfADay = new Control_MenuPosition_Burger(burgerOfADay)
+            {
+                Left = ClientSize.Width - this.Width / 2,
+                Top = ClientSize.Height - this.Height / 2,
+                Location = new System.Drawing.Point(x: 0, y: 0 + (320 * counterForEvaluatingYneccessaryForCurrentCustomFormLocation)),
+                Size = new System.Drawing.Size(width: 700, height: 300)
+            };
+            counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;
+            panel_Right.Controls.Add(_menuPosition_BurgerOfADay);
+            _menuPosition_BurgerOfADay.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
+
             CreateControlsForEachBurger(_context.BurgerService);
             AddToPanel_Burgers_AsControls();
             AddEventListenersForEachBurgerControl();
@@ -59,7 +74,7 @@ namespace Burgerownia.Winforms
         {
             _menuPositionRefreshments.ForEach(c =>
             {
-                this.panel.Controls.Add(c);
+                this.panel_Right.Controls.Add(c);
             });
         }
 
@@ -108,7 +123,7 @@ namespace Burgerownia.Winforms
         {
             _menuPositionBurgers.ForEach(c =>
             {
-                this.panel.Controls.Add(c);
+                this.panel_Right.Controls.Add(c);
             });
         }
 
