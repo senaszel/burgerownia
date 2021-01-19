@@ -21,8 +21,6 @@ namespace Burgerownia.Winforms
             Application.SetCompatibleTextRenderingDefault(false);
 
             context = new Context();
-            order = new Order();
-
             Application.Run(new Form_WelcomeScreen());
 
 

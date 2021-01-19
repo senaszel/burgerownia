@@ -31,9 +31,7 @@ namespace Burgerownia.Winforms
         private void AutoscrollToBurgers(object sender, EventArgs e) => panel_Right.ScrollControlIntoView(_menuPositionBurgers[0]);
         private void GoToFinalizeOrder(object sender, EventArgs e)
         {
-            Hide();
-            Form_WelcomeScreen ws = new Form_WelcomeScreen();
-            ws.Show();
+            //todo
         }
 
         private void InitializeControls()
@@ -66,8 +64,16 @@ namespace Burgerownia.Winforms
             this.pictureBox_refreshmentsIcon.Click += new EventHandler(AutoscrollToRefreshments);
             this.pictureBox_burgersIcon.Click += new EventHandler(AutoscrollToBurgers);
             this.pictureBox_dolarSignIcon.Click += new EventHandler(GoToFinalizeOrder);
+            this.pictureBox_YourOrder.Click += new EventHandler(GoToBegining);
             this.FormClosing += new FormClosingEventHandler(Do.Close);
 
+        }
+
+        private void GoToBegining(object sender, EventArgs e)
+        {
+            Hide();
+            Form_WelcomeScreen ws = new Form_WelcomeScreen();
+            ws.Show();
         }
 
         private void AddToPanel_Refreshments_AsControls()
