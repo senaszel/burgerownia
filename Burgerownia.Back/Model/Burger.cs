@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Burgerownia.Back.Model
+﻿namespace Burgerownia.Back.Model
 {
     public class Burger : Item
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using Burgerownia.Back.Model;
 using System;
+using System.Drawing;
 
 namespace Burgerownia.Winforms
 {
@@ -46,6 +47,8 @@ namespace Burgerownia.Winforms
                 Location = new System.Drawing.Point(x: 0, y: 0 + (320 * counterForEvaluatingYneccessaryForCurrentCustomFormLocation)),
                 Size = new System.Drawing.Size(width: 700, height: 300)
             };
+            _menuPosition_BurgerOfADay.PictureBox_withIcon_BackgroundImage = (Image)Properties.Resources.star_icon___burger_of_a_day;
+
             counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;
             panel_Right.Controls.Add(_menuPosition_BurgerOfADay);
             _menuPosition_BurgerOfADay.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
