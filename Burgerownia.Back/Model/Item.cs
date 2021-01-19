@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Burgerownia.Back.Model
 
@@ -7,28 +8,25 @@ namespace Burgerownia.Back.Model
     {
         private double price;
 
+        [XmlIgnore]
         public int Id { get; set; }
+        [XmlElement("Name")]
         public string Name { get; set; }
+        [XmlElement("Price")]
         public double Price { get { if (price == default) return TallPrice(); else return price; } set { price = value; } }
+        [XmlElement("Ingredients")]
         public List<Ingredient> Ingredients { get; set; }
-
+        [XmlIgnore]
         public bool IsService { get; set; }
 
-        private double TallPrice()
-        {
-            double sum = 0;
-            Ingredients.ForEach(eachIngredient => sum += eachIngredient.Price);
-            return sum;
-        }
 
         public Item()
         {
-            Ingredients = new List<Ingredient>();
         }
 
         public Item(string name)
-            : this()
         {
+            Ingredients = new List<Ingredient>();
             Name = name;
         }
 
@@ -38,18 +36,12 @@ namespace Burgerownia.Back.Model
             Price = price;
         }
 
-        public Item(string name, List<Ingredient> ingredients)
-            : this(name)
-        {
-            ingredients.ForEach(ingredient => this.Ingredients.Add(ingredient));
-        }
-
-        public Item(string name, Ingredients ingredients)
-            : this(name)
-        {
-            ingredients.ForEach(ingredient => this.Ingredients.Add(ingredient));
-        }
-
+        /// <summary>
+        /// Constructor for Burgers
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="ingredients"></param>
         public Item(int id, string name, Ingredients ingredients)
             : this(name)
         {
@@ -57,11 +49,24 @@ namespace Burgerownia.Back.Model
             Ingredients = ingredients;
         }
 
+        /// <summary>
+        /// Constructor for Refreshments
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="price"></param>
         public Item(int id, string name, double price)
             : this(name)
         {
             Id = id;
             Price = price;
+        }
+
+        private double TallPrice()
+        {
+            double sum = 0;
+            Ingredients.ForEach(eachIngredient => sum += eachIngredient.Price);
+            return sum;
         }
 
         public override string ToString() => (Ingredients.Count == 0) ? Name : Name + $"({Ingredients})";

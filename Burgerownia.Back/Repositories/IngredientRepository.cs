@@ -31,7 +31,6 @@ namespace Burgerownia.Back.Repositories
 
         public List<Ingredient> GetAll() => _ingredients;
         public Ingredient Get(int id) => _ingredients.Find(b => b.Id == id);
-        public Ingredient SpecialOfADay() => Get((int)System.DateTime.Now.DayOfWeek);
 
 
     }

@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Burgerownia.Back.Services
 {
-    public class BurgerService : IServiceable<Burger>
+    public class BurgerService : IServiceable<Burger>, IBurgerOfADay
     {
         private List<Burger> _items;
 
@@ -17,6 +17,7 @@ namespace Burgerownia.Back.Services
         public List<Burger> Items => _items;
         public int ItemsCount => Items.Count; 
         public Burger GetItemById(int burgers_id) => Items[burgers_id];
+        public Burger SpecialOfADay() => GetItemById((int)System.DateTime.Now.DayOfWeek);
 
         public List<Burger> GetItemsFromArray(int[] burgers_ids) 
         {
@@ -24,6 +25,9 @@ namespace Burgerownia.Back.Services
             burgers_ids.ToList().ForEach(burger_id => resultsList.Add(GetItemById(burger_id)));
             return resultsList;
         }
+
+
+        
 
 
     }

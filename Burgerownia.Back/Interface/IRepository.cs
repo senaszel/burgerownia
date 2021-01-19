@@ -1,5 +1,4 @@
-﻿using Burgerownia.Back.Model;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Burgerownia.Back.Interface
 {
@@ -7,7 +6,6 @@ namespace Burgerownia.Back.Interface
     {
         List<T> GetAll();
         T Get(int id);
-        T SpecialOfADay();
 
 
     }

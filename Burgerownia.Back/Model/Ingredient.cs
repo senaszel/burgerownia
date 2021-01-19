@@ -1,29 +1,27 @@
 ﻿using Burgerownia.Back.Enum;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 
 namespace Burgerownia.Back.Model
 {
     public class Ingredient : Item
     {
+        [XmlElement("IsVege")]
         public bool IsVege { get; set; }
+        [XmlElement("HasAlergens")]
         public bool HasAlergens => Alergens.Count > 0;
-        public List<Alergen> Alergens { get; set; }
+        [XmlIgnore()]
+        public List<Alergen> Alergens { get; set; } = new List<Alergen>();
 
-        public Ingredient(string name, double price)
-            : base(name, price)
-        {
-            Alergens = new List<Alergen>();
-        }
+
+        public Ingredient() { }
 
         public Ingredient(int id, string name, double price)
-            : this(name,price)
-        {
-            Id = id;
-        }
+            : base(id, name, price) { }
 
-        public override string ToString()
-        {
-            return Name;
-        }
+
+        public override string ToString() => Name;
+
+
     }
 }

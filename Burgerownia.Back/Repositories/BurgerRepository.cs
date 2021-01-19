@@ -27,7 +27,6 @@ namespace Burgerownia.Back.Repositories
 
         public Burger Get(int id) => _burgers.Find(b => b.Id == id);
         public List<Burger> GetAll() => _burgers;
-        public Burger SpecialOfADay() => Get((int)System.DateTime.Now.DayOfWeek);
 
         private void GetBurgersFromDB()
         {

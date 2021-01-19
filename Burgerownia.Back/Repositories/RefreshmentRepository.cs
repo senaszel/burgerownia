@@ -31,7 +31,6 @@ namespace Burgerownia.Back.Repositories
 
         public Refreshment Get(int id) => _refreshments.Find(b => b.Id == id);
         public List<Refreshment> GetAll() => _refreshments;
-        public Refreshment SpecialOfADay() => Get((int)System.DateTime.Now.DayOfWeek);
 
 
     }
