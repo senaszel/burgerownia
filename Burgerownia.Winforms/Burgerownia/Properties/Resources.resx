@@ -121,6 +121,9 @@
   <data name="refreshment_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refreshment_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="star_icon - larger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star_icon - larger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="placeYourOrder1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\placeYourOrder1.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,10 +136,13 @@
   <data name="burger_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\burger_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="star_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="star_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\star_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="star_icon - burger of a day" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\star_icon - burger of a day.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
