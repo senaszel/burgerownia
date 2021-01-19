@@ -35,10 +35,10 @@ namespace Burgerownia.DataBase.SQLite
             db.SeedData(Tables.Ingredients, "\'masło orzechowe 35g\', 200");
             db.SeedData(Tables.Ingredients, "\'powidła śliwkowe 50g\', 200");
 
-            db.SeedData(Tables.Refreshments, "\'woda 200ml\', 4");
-            db.SeedData(Tables.Refreshments, "\'kawa 200ml\', 5");
-            db.SeedData(Tables.Refreshments, "\'herbata 200ml\', 3");
-            db.SeedData(Tables.Refreshments, "\'Pepsi 200ml\', 6");
+            db.SeedData(Tables.Refreshments, "\'woda 200ml\', 400");
+            db.SeedData(Tables.Refreshments, "\'kawa 200ml\', 500");
+            db.SeedData(Tables.Refreshments, "\'herbata 200ml\', 300");
+            db.SeedData(Tables.Refreshments, "\'Pepsi 200ml\', 600");
 
             db.SeedData(Tables.Burgers, "\'Mario\'");
             db.SeedData(Tables.Burgers, "\'Luigi\'");
