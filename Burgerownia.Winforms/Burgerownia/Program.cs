@@ -2,13 +2,14 @@ using System;
 using System.Windows.Forms;
 using Burgerownia.Back.Interface;
 using Burgerownia.Back;
-using Burgerownia.Winforms;
+using Burgerownia.Back.Model;
 
-namespace Burgerownia
+namespace Burgerownia.Winforms
 {
     static class Program
     {
         internal static IContext context;
+        internal static IOrder order;
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -20,6 +21,8 @@ namespace Burgerownia
             Application.SetCompatibleTextRenderingDefault(false);
 
             context = new Context();
+            order = new Order();
+
             Application.Run(new Form_WelcomeScreen());
 
 

@@ -9,7 +9,7 @@ namespace Burgerownia.Winforms
         private Refreshment _refreshment;        
 
         public Control_MenuPosition_Refreshment(Refreshment refreshment, (int r, int g, int b) color)
-            : base(color)
+            : base(color,refreshment)
         {
             _refreshment = refreshment;
 

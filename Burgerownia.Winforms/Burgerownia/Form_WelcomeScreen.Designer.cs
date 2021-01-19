@@ -1,4 +1,4 @@
-﻿namespace Burgerownia
+﻿namespace Burgerownia.Winforms
 {
     partial class Form_WelcomeScreen
     {

@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using Burgerownia.Back.Interface;
 using Burgerownia.Back;
 
-namespace Burgerownia
+namespace Burgerownia.Winforms
 {
     public partial class Form_WelcomeScreen : Form
     {

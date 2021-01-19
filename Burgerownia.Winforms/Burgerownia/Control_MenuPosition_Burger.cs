@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 using Burgerownia.Back.Model;
 
@@ -11,8 +10,8 @@ namespace Burgerownia.Winforms
         private Burger _burger;
         private BindingSource burgerSource;
 
-        public Control_MenuPosition_Burger(Burger burger,(int r,int g,int b)color,int pricePercentageModificator = 100)
-            : base(color)
+        public Control_MenuPosition_Burger(Burger burger, (int r, int g, int b) color, int pricePercentageModificator = 100)
+            : base(color,burger)
         {
             _pricePercentageModificator = pricePercentageModificator;
             _burger = burger;
@@ -22,8 +21,17 @@ namespace Burgerownia.Winforms
             };
 
             TextBox_Name.DataBindings.Add(new Binding("Text", burgerSource, "Name"));
-            TextBox_Price.Text = (_burger.Price*_pricePercentageModificator/10000).ToString() + " zł";
+            TextBox_Price.Text = (_burger.Price * _pricePercentageModificator / 10000).ToString() + " zł";
+            if (pricePercentageModificator == 100) AddEventLisnersSpecificToBurgers();
             RefreshIngredientsListBox();
+        }
+
+        private void AddEventLisnersSpecificToBurgers()
+        {
+            Click += new EventHandler(OnClick_EditBurger);
+            TextBox_Name.Click += new EventHandler(OnClick_EditBurger);
+            TextBox_Price.Click += new EventHandler(OnClick_EditBurger);
+            ListBox_for_Ingredients.Click += new EventHandler(OnClick_EditBurger);
         }
 
         internal void OnClick_EditBurger(object sender, EventArgs e)
@@ -37,7 +45,7 @@ namespace Burgerownia.Winforms
         {
             ListBox_for_Ingredients.Items.Clear();
             _burger.Ingredients.ForEach(ingredient => ListBox_for_Ingredients.Items.Add(ingredient));
-            TextBox_Price.Text = (_burger.Price*_pricePercentageModificator / 10000).ToString() + " zł";
+            TextBox_Price.Text = (_burger.Price * _pricePercentageModificator / 10000).ToString() + " zł";
         }
 
 

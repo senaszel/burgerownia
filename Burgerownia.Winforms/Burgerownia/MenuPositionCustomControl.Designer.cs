@@ -35,8 +35,12 @@ namespace Burgerownia.Winforms
             this.pictureBox_Numbers = new System.Windows.Forms.PictureBox();
             this.textBox_Name = new System.Windows.Forms.TextBox();
             this.textBox_Price = new System.Windows.Forms.TextBox();
+            this.pictureBox_Subtract = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Add = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_BurgerPicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Numbers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Subtract)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Add)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox_BurgerPicture
@@ -71,7 +75,7 @@ namespace Burgerownia.Winforms
             this.pictureBox_Numbers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_Numbers.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Numbers.BackgroundImage")));
             this.pictureBox_Numbers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox_Numbers.Location = new System.Drawing.Point(580, 8);
+            this.pictureBox_Numbers.Location = new System.Drawing.Point(534, 8);
             this.pictureBox_Numbers.Name = "pictureBox_Numbers";
             this.pictureBox_Numbers.Size = new System.Drawing.Size(113, 80);
             this.pictureBox_Numbers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -107,11 +111,35 @@ namespace Burgerownia.Winforms
             this.textBox_Price.Text = "price";
             this.textBox_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+            // pictureBox_Subtract
+            // 
+            this.pictureBox_Subtract.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Subtract.Image")));
+            this.pictureBox_Subtract.InitialImage = null;
+            this.pictureBox_Subtract.Location = new System.Drawing.Point(653, 47);
+            this.pictureBox_Subtract.Name = "pictureBox_Subtract";
+            this.pictureBox_Subtract.Size = new System.Drawing.Size(38, 41);
+            this.pictureBox_Subtract.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Subtract.TabIndex = 12;
+            this.pictureBox_Subtract.TabStop = false;
+            // 
+            // pictureBox_Add
+            // 
+            this.pictureBox_Add.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_Add.Image")));
+            this.pictureBox_Add.InitialImage = null;
+            this.pictureBox_Add.Location = new System.Drawing.Point(653, 8);
+            this.pictureBox_Add.Name = "pictureBox_Add";
+            this.pictureBox_Add.Size = new System.Drawing.Size(38, 41);
+            this.pictureBox_Add.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Add.TabIndex = 13;
+            this.pictureBox_Add.TabStop = false;
+            // 
             // MenuPositionCustomControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.pictureBox_Add);
+            this.Controls.Add(this.pictureBox_Subtract);
             this.Controls.Add(this.textBox_Price);
             this.Controls.Add(this.pictureBox_Numbers);
             this.Controls.Add(this.listBox_Ingredients);
@@ -121,6 +149,8 @@ namespace Burgerownia.Winforms
             this.Size = new System.Drawing.Size(700, 300);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_BurgerPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Numbers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Subtract)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Add)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +162,7 @@ namespace Burgerownia.Winforms
         private System.Windows.Forms.PictureBox pictureBox_Numbers;
         private System.Windows.Forms.TextBox textBox_Name;
         private System.Windows.Forms.TextBox textBox_Price;
+        private System.Windows.Forms.PictureBox pictureBox_Subtract;
+        private System.Windows.Forms.PictureBox pictureBox_Add;
     }
 }

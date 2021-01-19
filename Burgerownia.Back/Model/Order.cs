@@ -13,6 +13,7 @@ namespace Burgerownia.Back.Model
 
         public void AddItem(Item item) => Items.Add(item);
 
+        public void RemoveItem(Item item) => Items.Remove(item);
 
         public double TotalPrice()
         {

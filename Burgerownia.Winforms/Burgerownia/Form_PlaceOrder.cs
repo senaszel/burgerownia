@@ -51,10 +51,6 @@ namespace Burgerownia.Winforms
 
             counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;
             panel_Right.Controls.Add(_menuPosition_BurgerOfADay);
-            _menuPosition_BurgerOfADay.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
-            _menuPosition_BurgerOfADay.TextBox_Name.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
-            _menuPosition_BurgerOfADay.TextBox_Price.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
-            _menuPosition_BurgerOfADay.ListBox_for_Ingredients.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
 
             CreateControlsForEachBurger(_context.BurgerService);
             AddToPanel_Burgers_AsControls();
