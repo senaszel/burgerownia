@@ -40,7 +40,7 @@ namespace Burgerownia.Winforms
         {
             Burger specialOfADay_burger = _context.BurgerService.SpecialOfADay();
             Burger burgerOfADay = new Burger(specialOfADay_burger.Id, specialOfADay_burger.Name, new Ingredients(specialOfADay_burger.Ingredients.ToArray()));
-            _menuPosition_BurgerOfADay = new Control_MenuPosition_Burger(burgerOfADay, (255, 255, 0))
+            _menuPosition_BurgerOfADay = new Control_MenuPosition_Burger(burgerOfADay, (255, 255, 0),80)
             {
                 Left = ClientSize.Width - this.Width / 2,
                 Top = ClientSize.Height - this.Height / 2,
