@@ -22,11 +22,7 @@ namespace Burgerownia.Winforms
 
             InitializeComponent();
             InitializeMore();
-            this.pictureBox_burgerOfADay.Click += new EventHandler(AutoscrollToBurgerOfADay);
-            this.pictureBox_refreshmentsIcon.Click += new EventHandler(AutoscrollToRefreshments);
-            this.pictureBox_burgersIcon.Click += new EventHandler(AutoscrollToBurgers);
-            this.pictureBox_dolarSignIcon.Click += new EventHandler(GoToFinalizeOrder);
-            this.FormClosing += new FormClosingEventHandler(Do.Close);
+            InitializeControls();
         }
 
         private void AutoscrollToBurgerOfADay(object sender, EventArgs e) => panel_Right.ScrollControlIntoView(_menuPosition_BurgerOfADay);
@@ -39,10 +35,10 @@ namespace Burgerownia.Winforms
             ws.Show();
         }
 
-        private void InitializeMore()
+        private void InitializeControls()
         {
-            var b = _context.BurgerService.SpecialOfADay();
-            Burger burgerOfADay = new Burger(b.Id, b.Name, new Ingredients(b.Ingredients.ToArray()));
+            Burger specialOfADay_burger = _context.BurgerService.SpecialOfADay();
+            Burger burgerOfADay = new Burger(specialOfADay_burger.Id, specialOfADay_burger.Name, new Ingredients(specialOfADay_burger.Ingredients.ToArray()));
             _menuPosition_BurgerOfADay = new Control_MenuPosition_Burger(burgerOfADay, (255, 255, 0))
             {
                 Left = ClientSize.Width - this.Width / 2,
@@ -53,6 +49,9 @@ namespace Burgerownia.Winforms
             counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;
             panel_Right.Controls.Add(_menuPosition_BurgerOfADay);
             _menuPosition_BurgerOfADay.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
+            _menuPosition_BurgerOfADay.TextBox_Name.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
+            _menuPosition_BurgerOfADay.TextBox_Price.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
+            _menuPosition_BurgerOfADay.ListBox_for_Ingredients.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
 
             CreateControlsForEachBurger(_context.BurgerService);
             AddToPanel_Burgers_AsControls();
@@ -60,14 +59,16 @@ namespace Burgerownia.Winforms
 
             CreateControlsForEachRefreshment(_context.RefreshmentService);
             AddToPanel_Refreshments_AsControls();
-            AddEventListenersForEachRefreshmentControl();
         }
 
-        private void AddEventListenersForEachRefreshmentControl()
+        private void InitializeMore()
         {
-            // _menuPositionRefreshments.ForEach(eachControl =>
-            //   eachControl.Click += new EventHandler(eachControl.OnClick_EditBurger)
-            // );
+            this.pictureBox_burgerOfADay.Click += new EventHandler(AutoscrollToBurgerOfADay);
+            this.pictureBox_refreshmentsIcon.Click += new EventHandler(AutoscrollToRefreshments);
+            this.pictureBox_burgersIcon.Click += new EventHandler(AutoscrollToBurgers);
+            this.pictureBox_dolarSignIcon.Click += new EventHandler(GoToFinalizeOrder);
+            this.FormClosing += new FormClosingEventHandler(Do.Close);
+
         }
 
         private void AddToPanel_Refreshments_AsControls()

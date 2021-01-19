@@ -111,7 +111,7 @@ namespace Burgerownia.Winforms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.textBox_Price);
             this.Controls.Add(this.pictureBox_Numbers);
             this.Controls.Add(this.listBox_Ingredients);

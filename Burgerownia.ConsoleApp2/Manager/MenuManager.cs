@@ -12,11 +12,8 @@ namespace Burgerownia.ConsoleApp2.Manager
     internal class MenuManager
     {
         internal IDB _db;
-        internal IRepository<Ingredient> _ingredientRepository;
         internal IServiceable<Ingredient> _ingredientService;
-        internal IRepository<Burger> _burgerRepository;
-        internal IServiceable<Burger> _burgerService;
-        internal IRepository<Refreshment> _refreshmentRepository;
+        internal IBurgerService _burgerService;
         internal IServiceable<Refreshment> _refreshmentService;
 
         internal IOrder order;
@@ -24,11 +21,8 @@ namespace Burgerownia.ConsoleApp2.Manager
         public MenuManager(IContext contex)
         {
             _db = contex.Db;
-            _ingredientRepository = contex.IngredientRepository;
             _ingredientService = contex.IngredientService;
-            _burgerRepository = contex.BurgerRepository;
             _burgerService = contex.BurgerService;
-            _refreshmentRepository = contex.RefreshmentRepository;
             _refreshmentService = contex.RefreshmentService;
             order = new Order();
         }
@@ -44,7 +38,7 @@ namespace Burgerownia.ConsoleApp2.Manager
         internal void TakeOrder()
         {
             Message.Display("What would you like to order?");
-            Message.Display($"Todays special is : {_burgerRepository.SpecialOfADay()}");
+            Message.Display($"Todays special is : {_burgerService.SpecialOfADay()}");
             ShowMenu(new MenuService().Menus, false);
             TakeChoiceFromPassedMenu(new MenuService().Menus);
         }
@@ -129,7 +123,7 @@ namespace Burgerownia.ConsoleApp2.Manager
                     TakeChoiceFromPassedMenu(refreshments);
                     break;
                 case "Ingredients":
-                    Item[] ingredients = _ingredientRepository.GetAll().ToArray();
+                    Item[] ingredients = _ingredientService.Items.ToArray();
                     ShowMenu(ingredients, true);
                     TakeChoiceFromPassedMenu(ingredients);
                     break;

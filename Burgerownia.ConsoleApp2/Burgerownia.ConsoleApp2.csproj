@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <StartupObject>Burgerownia.ConsoleApp.Program</StartupObject>
+    <StartupObject>Burgerownia.ConsoleApp2.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
