@@ -8,13 +8,10 @@ namespace Burgerownia.Winforms
     {
         private Refreshment _refreshment;        
 
-        public Control_MenuPosition_Refreshment(Refreshment refreshment)
-            : base()
+        public Control_MenuPosition_Refreshment(Refreshment refreshment, (int r, int g, int b) color)
+            : base(color)
         {
             _refreshment = refreshment;
-
-            ListBox_for_Ingredients.ForeColor = Color.FromArgb(240, 248, 255);
-
 
             TextBox_Name.DataBindings.Add(new Binding("Text", _refreshment, "Name"));
         }

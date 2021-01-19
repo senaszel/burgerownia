@@ -41,8 +41,9 @@ namespace Burgerownia.Winforms
 
         private void InitializeMore()
         {
-            Burger burgerOfADay = _context.BurgerService.SpecialOfADay();
-            _menuPosition_BurgerOfADay = new Control_MenuPosition_Burger(burgerOfADay)
+            var b = _context.BurgerService.SpecialOfADay();
+            Burger burgerOfADay = new Burger(b.Id, b.Name, new Ingredients(b.Ingredients.ToArray()));
+            _menuPosition_BurgerOfADay = new Control_MenuPosition_Burger(burgerOfADay, (255, 255, 0))
             {
                 Left = ClientSize.Width - this.Width / 2,
                 Top = ClientSize.Height - this.Height / 2,
@@ -57,7 +58,6 @@ namespace Burgerownia.Winforms
             AddToPanel_Burgers_AsControls();
             AddEventListenersForEachBurgerControl();
 
-            counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;
             CreateControlsForEachRefreshment(_context.RefreshmentService);
             AddToPanel_Refreshments_AsControls();
             AddEventListenersForEachRefreshmentControl();
@@ -84,7 +84,7 @@ namespace Burgerownia.Winforms
             refreshmentService.Items.ForEach(eachRefreshment =>
             {
                 _menuPositionRefreshments.Add(
-                     new Control_MenuPosition_Refreshment(eachRefreshment)
+                     new Control_MenuPosition_Refreshment(eachRefreshment, (0, 72, 186))
                      {
                          Left = ClientSize.Width - this.Width / 2,
                          Top = ClientSize.Height - this.Height / 2,
@@ -108,7 +108,7 @@ namespace Burgerownia.Winforms
             burgerService.Items.ForEach(eachBurger =>
             {
                 _menuPositionBurgers.Add(
-                     new Control_MenuPosition_Burger(eachBurger)
+                     new Control_MenuPosition_Burger(eachBurger, (255, 40, 0))
                      {
                          Left = ClientSize.Width - this.Width / 2,
                          Top = ClientSize.Height - this.Height / 2,

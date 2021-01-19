@@ -10,11 +10,9 @@ namespace Burgerownia.Winforms
         private Burger _burger;
         private BindingSource burgerSource;
 
-        public Control_MenuPosition_Burger(Burger burger)
-            : base()
+        public Control_MenuPosition_Burger(Burger burger,(int r,int g,int b)color)
+            : base(color)
         {
-            ListBox_for_Ingredients.ForeColor = Color.FromArgb(255, 40, 0);
-
             _burger = burger;
             burgerSource = new BindingSource
             {
