@@ -99,7 +99,7 @@ namespace Burgerownia.Winforms
             this.textBox_Price.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox_Price.ForeColor = System.Drawing.Color.Red;
-            this.textBox_Price.Location = new System.Drawing.Point(461, 245);
+            this.textBox_Price.Location = new System.Drawing.Point(460, 236);
             this.textBox_Price.MaxLength = 100;
             this.textBox_Price.Name = "textBox_Price";
             this.textBox_Price.Size = new System.Drawing.Size(232, 55);

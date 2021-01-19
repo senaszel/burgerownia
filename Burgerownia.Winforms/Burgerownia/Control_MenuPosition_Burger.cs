@@ -20,7 +20,7 @@ namespace Burgerownia.Winforms
             };
 
             TextBox_Name.DataBindings.Add(new Binding("Text", burgerSource, "Name"));
-            TextBox_Price.Text = _burger.Price.ToString();
+            TextBox_Price.Text = (_burger.Price/100).ToString() + " zł";
             RefreshIngredientsListBox();
         }
 
@@ -35,7 +35,7 @@ namespace Burgerownia.Winforms
         {
             ListBox_for_Ingredients.Items.Clear();
             _burger.Ingredients.ForEach(ingredient => ListBox_for_Ingredients.Items.Add(ingredient));
-            TextBox_Price.Text = _burger.Price.ToString();
+            TextBox_Price.Text = (_burger.Price / 100).ToString() + " zł";
         }
 
 

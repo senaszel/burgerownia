@@ -14,6 +14,7 @@ namespace Burgerownia.Winforms
             _refreshment = refreshment;
 
             TextBox_Name.DataBindings.Add(new Binding("Text", _refreshment, "Name"));
+            this.TextBox_Price.Text = (_refreshment.Price / 100).ToString() + " zł";
         }
 
 

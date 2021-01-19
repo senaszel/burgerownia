@@ -99,8 +99,12 @@ namespace Burgerownia.Winforms
         private void AddEventListenersForEachBurgerControl()
         {
             _menuPositionBurgers.ForEach(eachControl =>
-                eachControl.Click += new EventHandler(eachControl.OnClick_EditBurger)
-                );
+            {
+                eachControl.Click += new EventHandler(eachControl.OnClick_EditBurger);
+                eachControl.TextBox_Name.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
+                eachControl.TextBox_Price.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
+                eachControl.ListBox_for_Ingredients.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
+            });
         }
 
         private void CreateControlsForEachBurger(IServiceable<Burger> burgerService)

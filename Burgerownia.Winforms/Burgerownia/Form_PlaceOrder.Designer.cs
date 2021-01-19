@@ -61,11 +61,12 @@ namespace Burgerownia.Winforms
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
-            this.tableLayoutPanel.RowCount = 3;
+            this.tableLayoutPanel.RowCount = 4;
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel.Size = new System.Drawing.Size(800, 648);
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel.Size = new System.Drawing.Size(852, 876);
             this.tableLayoutPanel.TabIndex = 0;
             // 
             // panel_Left
@@ -74,10 +75,11 @@ namespace Burgerownia.Winforms
             this.panel_Left.Controls.Add(this.pictureBox_burgersIcon);
             this.panel_Left.Controls.Add(this.pictureBox_dolarSignIcon);
             this.panel_Left.Controls.Add(this.pictureBox_refreshmentsIcon);
+            this.panel_Left.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_Left.Location = new System.Drawing.Point(3, 125);
             this.panel_Left.Name = "panel_Left";
-            this.tableLayoutPanel.SetRowSpan(this.panel_Left, 2);
-            this.panel_Left.Size = new System.Drawing.Size(199, 523);
+            this.tableLayoutPanel.SetRowSpan(this.panel_Left, 3);
+            this.panel_Left.Size = new System.Drawing.Size(212, 750);
             this.panel_Left.TabIndex = 3;
             // 
             // pictureBox_burgerOfADay
@@ -85,10 +87,10 @@ namespace Burgerownia.Winforms
             this.pictureBox_burgerOfADay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_burgerOfADay.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_burgerOfADay.Image")));
-            this.pictureBox_burgerOfADay.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox_burgerOfADay.Location = new System.Drawing.Point(0, 14);
             this.pictureBox_burgerOfADay.Name = "pictureBox_burgerOfADay";
-            this.pictureBox_burgerOfADay.Size = new System.Drawing.Size(200, 109);
-            this.pictureBox_burgerOfADay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_burgerOfADay.Size = new System.Drawing.Size(213, 170);
+            this.pictureBox_burgerOfADay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_burgerOfADay.TabIndex = 3;
             this.pictureBox_burgerOfADay.TabStop = false;
             // 
@@ -97,10 +99,10 @@ namespace Burgerownia.Winforms
             this.pictureBox_burgersIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_burgersIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_burgersIcon.Image")));
-            this.pictureBox_burgersIcon.Location = new System.Drawing.Point(0, 136);
+            this.pictureBox_burgersIcon.Location = new System.Drawing.Point(0, 190);
             this.pictureBox_burgersIcon.Name = "pictureBox_burgersIcon";
-            this.pictureBox_burgersIcon.Size = new System.Drawing.Size(200, 109);
-            this.pictureBox_burgersIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_burgersIcon.Size = new System.Drawing.Size(213, 170);
+            this.pictureBox_burgersIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_burgersIcon.TabIndex = 0;
             this.pictureBox_burgersIcon.TabStop = false;
             // 
@@ -109,22 +111,22 @@ namespace Burgerownia.Winforms
             this.pictureBox_dolarSignIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_dolarSignIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_dolarSignIcon.Image")));
-            this.pictureBox_dolarSignIcon.Location = new System.Drawing.Point(0, 417);
+            this.pictureBox_dolarSignIcon.Location = new System.Drawing.Point(0, 545);
             this.pictureBox_dolarSignIcon.Name = "pictureBox_dolarSignIcon";
-            this.pictureBox_dolarSignIcon.Size = new System.Drawing.Size(200, 109);
-            this.pictureBox_dolarSignIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_dolarSignIcon.Size = new System.Drawing.Size(213, 170);
+            this.pictureBox_dolarSignIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_dolarSignIcon.TabIndex = 2;
             this.pictureBox_dolarSignIcon.TabStop = false;
             // 
             // pictureBox_refreshmentsIcon
             // 
-            this.pictureBox_refreshmentsIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.pictureBox_refreshmentsIcon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox_refreshmentsIcon.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_refreshmentsIcon.Image")));
-            this.pictureBox_refreshmentsIcon.Location = new System.Drawing.Point(0, 278);
+            this.pictureBox_refreshmentsIcon.Location = new System.Drawing.Point(0, 388);
             this.pictureBox_refreshmentsIcon.Name = "pictureBox_refreshmentsIcon";
-            this.pictureBox_refreshmentsIcon.Size = new System.Drawing.Size(200, 109);
-            this.pictureBox_refreshmentsIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox_refreshmentsIcon.Size = new System.Drawing.Size(213, 170);
+            this.pictureBox_refreshmentsIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_refreshmentsIcon.TabIndex = 1;
             this.pictureBox_refreshmentsIcon.TabStop = false;
             // 
@@ -138,7 +140,7 @@ namespace Burgerownia.Winforms
             this.pictureBox_YourOrder.Location = new System.Drawing.Point(3, 3);
             this.pictureBox_YourOrder.MaximumSize = new System.Drawing.Size(8800, 4000);
             this.pictureBox_YourOrder.Name = "pictureBox_YourOrder";
-            this.pictureBox_YourOrder.Size = new System.Drawing.Size(794, 116);
+            this.pictureBox_YourOrder.Size = new System.Drawing.Size(846, 116);
             this.pictureBox_YourOrder.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox_YourOrder.TabIndex = 1;
             this.pictureBox_YourOrder.TabStop = false;
@@ -148,10 +150,10 @@ namespace Burgerownia.Winforms
             this.panel_Right.AutoScroll = true;
             this.panel_Right.BackColor = System.Drawing.Color.Transparent;
             this.panel_Right.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_Right.Location = new System.Drawing.Point(208, 125);
+            this.panel_Right.Location = new System.Drawing.Point(221, 125);
             this.panel_Right.Name = "panel_Right";
-            this.tableLayoutPanel.SetRowSpan(this.panel_Right, 2);
-            this.panel_Right.Size = new System.Drawing.Size(589, 523);
+            this.tableLayoutPanel.SetRowSpan(this.panel_Right, 3);
+            this.panel_Right.Size = new System.Drawing.Size(628, 750);
             this.panel_Right.TabIndex = 2;
             // 
             // Form_PlaceOrder
@@ -161,7 +163,7 @@ namespace Burgerownia.Winforms
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 648);
+            this.ClientSize = new System.Drawing.Size(852, 876);
             this.ControlBox = false;
             this.Controls.Add(this.tableLayoutPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
