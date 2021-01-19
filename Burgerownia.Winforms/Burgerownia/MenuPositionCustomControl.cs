@@ -50,7 +50,7 @@ namespace Burgerownia.Winforms
 
         internal void OnClick_Add(object sender, EventArgs e)
         {
-            Program.order.AddItem(_item);
+            Program.order.AddItem(_item.Clone() as Item);
             MessageBox.Show(Program.order.Items.Count.ToString(), $"added {_item.Name}", MessageBoxButtons.OK);
         }
 

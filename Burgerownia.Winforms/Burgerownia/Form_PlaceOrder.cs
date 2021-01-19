@@ -31,7 +31,9 @@ namespace Burgerownia.Winforms
         private void AutoscrollToBurgers(object sender, EventArgs e) => panel_Right.ScrollControlIntoView(_menuPositionBurgers[0]);
         private void GoToFinalizeOrder(object sender, EventArgs e)
         {
-            //todo
+            Hide();
+            Form_Paytime ws = new Form_Paytime();
+            ws.Show();
         }
 
         private void InitializeControls()
@@ -52,7 +54,6 @@ namespace Burgerownia.Winforms
 
             CreateControlsForEachBurger(_context.BurgerService);
             AddToPanel_Burgers_AsControls();
-            AddEventListenersForEachBurgerControl();
 
             CreateControlsForEachRefreshment(_context.RefreshmentService);
             AddToPanel_Refreshments_AsControls();
@@ -98,17 +99,6 @@ namespace Burgerownia.Winforms
                          Size = new System.Drawing.Size(width: 700, height: 300)
                      });
                 counterForEvaluatingYneccessaryForCurrentCustomFormLocation += 1;
-            });
-        }
-
-        private void AddEventListenersForEachBurgerControl()
-        {
-            _menuPositionBurgers.ForEach(eachControl =>
-            {
-                eachControl.Click += new EventHandler(eachControl.OnClick_EditBurger);
-                eachControl.TextBox_Name.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
-                eachControl.TextBox_Price.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
-                eachControl.ListBox_for_Ingredients.Click += new EventHandler(_menuPosition_BurgerOfADay.OnClick_EditBurger);
             });
         }
 

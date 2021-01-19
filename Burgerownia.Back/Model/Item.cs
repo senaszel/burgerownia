@@ -1,10 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Xml.Serialization;
 
 namespace Burgerownia.Back.Model
-
 {
-    public class Item
+    [Serializable()]
+    public class Item : ICloneable
     {
         private double price;
 
@@ -20,20 +21,12 @@ namespace Burgerownia.Back.Model
         public bool IsService { get; set; }
 
 
-        public Item()
-        {
-        }
+        public Item() { }
 
         public Item(string name)
         {
             Ingredients = new List<Ingredient>();
             Name = name;
-        }
-
-        public Item(string name, double price)
-            : this(name)
-        {
-            Price = price;
         }
 
         /// <summary>
@@ -71,6 +64,16 @@ namespace Burgerownia.Back.Model
 
         public override string ToString() => (Ingredients.Count == 0) ? Name : Name + $"({Ingredients})";
 
+        /// <summary>
+        /// Method neccessary to pass exact clones of Items to Order List.
+        /// </summary>
+        /// <returns></returns>
+        public object Clone()
+        {
+            var clone = MemberwiseClone() as Item;
+            clone.Ingredients = new Ingredients(Ingredients.ToArray());
+            return clone;
+        }
 
     }
 }
