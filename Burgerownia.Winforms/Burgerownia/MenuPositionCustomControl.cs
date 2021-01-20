@@ -43,7 +43,6 @@ namespace Burgerownia.Winforms
 
         private void AddEventLisners()
         {
-            //todo
             PictureBox_Add.Click += new EventHandler(OnClick_Add);
             PictureBox_Remove.Click += new EventHandler(OnClick_Remove);
         }
@@ -51,16 +50,37 @@ namespace Burgerownia.Winforms
         internal void OnClick_Add(object sender, EventArgs e)
         {
             Program.order.AddItem(_item.Clone() as Item);
-            MessageBox.Show(Program.order.Items.Count.ToString(), $"added {_item.Name}", MessageBoxButtons.OK);
+            //MessageBox.Show(Program.order.Items.Count.ToString(), $"added {_item.Name}", MessageBoxButtons.OK);
+            SetProperAmountIcon(Program.order.Items.FindAll(i => i.Id == _item.Id).Count);
         }
 
         internal void OnClick_Remove(object sender, EventArgs e)
         {
-            //Program.order.RemoveItem(_item.Price);
-            if (Program.order.RemoveItem(_item.Price))
-                MessageBox.Show(Program.order.Items.Count.ToString(), $"removed {_item.Name}", MessageBoxButtons.OK);
-            else
-                MessageBox.Show(Program.order.Items.Count.ToString(), $"Nie znalazło {_item.Name}", MessageBoxButtons.OK);
+            Program.order.RemoveItem(_item.Price);
+            //if (Program.order.RemoveItem(_item.Price))
+            //    MessageBox.Show(Program.order.Items.Count.ToString(), $"removed {_item.Name}", MessageBoxButtons.OK);
+            //else
+            //    MessageBox.Show(Program.order.Items.Count.ToString(), $"Nie znalazło {_item.Name}", MessageBoxButtons.OK);
+            SetProperAmountIcon(Program.order.Items.FindAll(i => i.Id == _item.Id).Count);
         }
+
+        private void SetProperAmountIcon(int amount)
+        {
+            this.pictureBox_Numbers.BackgroundImage = amount switch
+            {
+                0 => (Image)Properties.Resources._0,
+                1 => (Image)Properties.Resources.amount_1,
+                2 => (Image)Properties.Resources.amount_2,
+                3 => (Image)Properties.Resources._3,
+                4 => (Image)Properties.Resources._4,
+                5 => (Image)Properties.Resources.amount_5,
+                6 => (Image)Properties.Resources._6,
+                7 => (Image)Properties.Resources._7,
+                8 => (Image)Properties.Resources._8,
+                9 => (Image)Properties.Resources._9,
+                _ => (Image)Properties.Resources.throngAmount
+            };
+        }
+
     }
 }

@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Burgerownia.DataBase.SQLite
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Burgerownia.Winforms", "Burgerownia.Winforms\Burgerownia\Burgerownia.Winforms.csproj", "{9F85A615-76EC-466B-9995-2ACF80FBD6A7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Temp", "Temp\Temp.csproj", "{8EDB760A-627E-4079-90EE-932609F2A407}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{9F85A615-76EC-466B-9995-2ACF80FBD6A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F85A615-76EC-466B-9995-2ACF80FBD6A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F85A615-76EC-466B-9995-2ACF80FBD6A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8EDB760A-627E-4079-90EE-932609F2A407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8EDB760A-627E-4079-90EE-932609F2A407}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8EDB760A-627E-4079-90EE-932609F2A407}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8EDB760A-627E-4079-90EE-932609F2A407}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
