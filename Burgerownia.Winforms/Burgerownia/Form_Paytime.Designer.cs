@@ -32,39 +32,39 @@ namespace Burgerownia.Winforms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Paytime));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label_price = new System.Windows.Forms.Label();
+            this.listBox_Order = new System.Windows.Forms.ListBox();
+            this.pictureBox_1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_100 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_200 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_500 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_1000 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_5000 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_20000 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_2000 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_10000 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_50000 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_50 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_20 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_10 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_100)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_200)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_500)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_5000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_20000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_10000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_50000)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_10)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -83,23 +83,23 @@ namespace Burgerownia.Winforms
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.22932F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.662978F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label2, 6, 0);
-            this.tableLayoutPanel1.Controls.Add(this.listBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox1, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox2, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox3, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox7, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox8, 5, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox10, 6, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox9, 7, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox13, 8, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox14, 9, 3);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox12, 7, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox11, 8, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox15, 9, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox6, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox4, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.pictureBox5, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label_price, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.listBox_Order, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_1, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_2, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_5, 3, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_100, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_200, 5, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_500, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_1000, 7, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_5000, 8, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_20000, 9, 3);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_2000, 7, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_10000, 8, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_50000, 9, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_50, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_20, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_10, 1, 4);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -128,235 +128,235 @@ namespace Burgerownia.Winforms
             this.label1.TabIndex = 1;
             this.label1.Text = "do zapłaty";
             // 
-            // label2
+            // label_price
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label_price.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.tableLayoutPanel1.SetColumnSpan(this.label2, 3);
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(577, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(363, 64);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "price";
+            this.label_price.AutoSize = true;
+            this.tableLayoutPanel1.SetColumnSpan(this.label_price, 3);
+            this.label_price.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_price.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label_price.Location = new System.Drawing.Point(577, 0);
+            this.label_price.Name = "label_price";
+            this.label_price.Size = new System.Drawing.Size(363, 64);
+            this.label_price.TabIndex = 2;
+            this.label_price.Text = "price";
             // 
-            // listBox1
+            // listBox_Order
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listBox_Order.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.tableLayoutPanel1.SetColumnSpan(this.listBox1, 9);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(69, 67);
-            this.listBox1.Name = "listBox1";
-            this.tableLayoutPanel1.SetRowSpan(this.listBox1, 2);
-            this.listBox1.Size = new System.Drawing.Size(1010, 379);
-            this.listBox1.TabIndex = 0;
+            this.listBox_Order.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.tableLayoutPanel1.SetColumnSpan(this.listBox_Order, 9);
+            this.listBox_Order.FormattingEnabled = true;
+            this.listBox_Order.ItemHeight = 15;
+            this.listBox_Order.Location = new System.Drawing.Point(69, 67);
+            this.listBox_Order.Name = "listBox_Order";
+            this.tableLayoutPanel1.SetRowSpan(this.listBox_Order, 2);
+            this.listBox_Order.Size = new System.Drawing.Size(1010, 379);
+            this.listBox_Order.TabIndex = 0;
             // 
-            // pictureBox1
+            // pictureBox_1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(69, 459);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_1.Image")));
+            this.pictureBox_1.Location = new System.Drawing.Point(69, 459);
+            this.pictureBox_1.Name = "pictureBox_1";
+            this.pictureBox_1.Size = new System.Drawing.Size(100, 75);
+            this.pictureBox_1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_1.TabIndex = 3;
+            this.pictureBox_1.TabStop = false;
             // 
-            // pictureBox2
+            // pictureBox_2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(175, 459);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(104, 75);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.pictureBox_2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_2.Image")));
+            this.pictureBox_2.Location = new System.Drawing.Point(175, 459);
+            this.pictureBox_2.Name = "pictureBox_2";
+            this.pictureBox_2.Size = new System.Drawing.Size(104, 75);
+            this.pictureBox_2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_2.TabIndex = 4;
+            this.pictureBox_2.TabStop = false;
             // 
-            // pictureBox3
+            // pictureBox_5
             // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(285, 459);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(96, 75);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.pictureBox_5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_5.Image")));
+            this.pictureBox_5.Location = new System.Drawing.Point(285, 459);
+            this.pictureBox_5.Name = "pictureBox_5";
+            this.pictureBox_5.Size = new System.Drawing.Size(96, 75);
+            this.pictureBox_5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_5.TabIndex = 5;
+            this.pictureBox_5.TabStop = false;
             // 
-            // pictureBox7
+            // pictureBox_100
             // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_100.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(387, 459);
-            this.pictureBox7.Name = "pictureBox7";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox7, 2);
-            this.pictureBox7.Size = new System.Drawing.Size(89, 156);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 9;
-            this.pictureBox7.TabStop = false;
+            this.pictureBox_100.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_100.Image")));
+            this.pictureBox_100.Location = new System.Drawing.Point(387, 459);
+            this.pictureBox_100.Name = "pictureBox_100";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox_100, 2);
+            this.pictureBox_100.Size = new System.Drawing.Size(89, 156);
+            this.pictureBox_100.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_100.TabIndex = 9;
+            this.pictureBox_100.TabStop = false;
             // 
-            // pictureBox8
+            // pictureBox_200
             // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_200.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(482, 459);
-            this.pictureBox8.Name = "pictureBox8";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox8, 2);
-            this.pictureBox8.Size = new System.Drawing.Size(89, 156);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 10;
-            this.pictureBox8.TabStop = false;
+            this.pictureBox_200.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_200.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_200.Image")));
+            this.pictureBox_200.Location = new System.Drawing.Point(482, 459);
+            this.pictureBox_200.Name = "pictureBox_200";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox_200, 2);
+            this.pictureBox_200.Size = new System.Drawing.Size(89, 156);
+            this.pictureBox_200.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_200.TabIndex = 10;
+            this.pictureBox_200.TabStop = false;
             // 
-            // pictureBox10
+            // pictureBox_500
             // 
-            this.pictureBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_500.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(577, 459);
-            this.pictureBox10.Name = "pictureBox10";
-            this.tableLayoutPanel1.SetRowSpan(this.pictureBox10, 2);
-            this.pictureBox10.Size = new System.Drawing.Size(89, 156);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox10.TabIndex = 12;
-            this.pictureBox10.TabStop = false;
+            this.pictureBox_500.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_500.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_500.Image")));
+            this.pictureBox_500.Location = new System.Drawing.Point(577, 459);
+            this.pictureBox_500.Name = "pictureBox_500";
+            this.tableLayoutPanel1.SetRowSpan(this.pictureBox_500, 2);
+            this.pictureBox_500.Size = new System.Drawing.Size(89, 156);
+            this.pictureBox_500.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_500.TabIndex = 12;
+            this.pictureBox_500.TabStop = false;
             // 
-            // pictureBox9
+            // pictureBox_1000
             // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_1000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(672, 459);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(132, 75);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox9.TabIndex = 11;
-            this.pictureBox9.TabStop = false;
+            this.pictureBox_1000.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_1000.Image")));
+            this.pictureBox_1000.Location = new System.Drawing.Point(672, 459);
+            this.pictureBox_1000.Name = "pictureBox_1000";
+            this.pictureBox_1000.Size = new System.Drawing.Size(132, 75);
+            this.pictureBox_1000.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_1000.TabIndex = 11;
+            this.pictureBox_1000.TabStop = false;
             // 
-            // pictureBox13
+            // pictureBox_5000
             // 
-            this.pictureBox13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_5000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.Location = new System.Drawing.Point(810, 459);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(130, 75);
-            this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox13.TabIndex = 15;
-            this.pictureBox13.TabStop = false;
+            this.pictureBox_5000.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_5000.Image")));
+            this.pictureBox_5000.Location = new System.Drawing.Point(810, 459);
+            this.pictureBox_5000.Name = "pictureBox_5000";
+            this.pictureBox_5000.Size = new System.Drawing.Size(130, 75);
+            this.pictureBox_5000.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_5000.TabIndex = 15;
+            this.pictureBox_5000.TabStop = false;
             // 
-            // pictureBox14
+            // pictureBox_20000
             // 
-            this.pictureBox14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_20000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(946, 459);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(133, 75);
-            this.pictureBox14.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox14.TabIndex = 16;
-            this.pictureBox14.TabStop = false;
+            this.pictureBox_20000.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_20000.Image")));
+            this.pictureBox_20000.Location = new System.Drawing.Point(946, 459);
+            this.pictureBox_20000.Name = "pictureBox_20000";
+            this.pictureBox_20000.Size = new System.Drawing.Size(133, 75);
+            this.pictureBox_20000.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_20000.TabIndex = 16;
+            this.pictureBox_20000.TabStop = false;
             // 
-            // pictureBox12
+            // pictureBox_2000
             // 
-            this.pictureBox12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_2000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.Location = new System.Drawing.Point(672, 540);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(132, 75);
-            this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox12.TabIndex = 14;
-            this.pictureBox12.TabStop = false;
+            this.pictureBox_2000.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_2000.Image")));
+            this.pictureBox_2000.Location = new System.Drawing.Point(672, 540);
+            this.pictureBox_2000.Name = "pictureBox_2000";
+            this.pictureBox_2000.Size = new System.Drawing.Size(132, 75);
+            this.pictureBox_2000.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_2000.TabIndex = 14;
+            this.pictureBox_2000.TabStop = false;
             // 
-            // pictureBox11
+            // pictureBox_10000
             // 
-            this.pictureBox11.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_10000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(810, 540);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(130, 75);
-            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox11.TabIndex = 13;
-            this.pictureBox11.TabStop = false;
+            this.pictureBox_10000.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_10000.Image")));
+            this.pictureBox_10000.Location = new System.Drawing.Point(810, 540);
+            this.pictureBox_10000.Name = "pictureBox_10000";
+            this.pictureBox_10000.Size = new System.Drawing.Size(130, 75);
+            this.pictureBox_10000.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_10000.TabIndex = 13;
+            this.pictureBox_10000.TabStop = false;
             // 
-            // pictureBox15
+            // pictureBox_50000
             // 
-            this.pictureBox15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_50000.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.Location = new System.Drawing.Point(946, 540);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(133, 75);
-            this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox15.TabIndex = 17;
-            this.pictureBox15.TabStop = false;
+            this.pictureBox_50000.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_50000.Image")));
+            this.pictureBox_50000.Location = new System.Drawing.Point(946, 540);
+            this.pictureBox_50000.Name = "pictureBox_50000";
+            this.pictureBox_50000.Size = new System.Drawing.Size(133, 75);
+            this.pictureBox_50000.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_50000.TabIndex = 17;
+            this.pictureBox_50000.TabStop = false;
             // 
-            // pictureBox6
+            // pictureBox_50
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_50.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(285, 540);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(96, 75);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 8;
-            this.pictureBox6.TabStop = false;
+            this.pictureBox_50.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_50.Image")));
+            this.pictureBox_50.Location = new System.Drawing.Point(285, 540);
+            this.pictureBox_50.Name = "pictureBox_50";
+            this.pictureBox_50.Size = new System.Drawing.Size(96, 75);
+            this.pictureBox_50.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_50.TabIndex = 8;
+            this.pictureBox_50.TabStop = false;
             // 
-            // pictureBox4
+            // pictureBox_20
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(175, 540);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(104, 75);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
+            this.pictureBox_20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_20.Image")));
+            this.pictureBox_20.Location = new System.Drawing.Point(175, 540);
+            this.pictureBox_20.Name = "pictureBox_20";
+            this.pictureBox_20.Size = new System.Drawing.Size(104, 75);
+            this.pictureBox_20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_20.TabIndex = 6;
+            this.pictureBox_20.TabStop = false;
             // 
-            // pictureBox5
+            // pictureBox_10
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.pictureBox_10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(69, 540);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 75);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 7;
-            this.pictureBox5.TabStop = false;
+            this.pictureBox_10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_10.Image")));
+            this.pictureBox_10.Location = new System.Drawing.Point(69, 540);
+            this.pictureBox_10.Name = "pictureBox_10";
+            this.pictureBox_10.Size = new System.Drawing.Size(100, 75);
+            this.pictureBox_10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_10.TabIndex = 7;
+            this.pictureBox_10.TabStop = false;
             // 
             // Form_Paytime
             // 
@@ -372,21 +372,21 @@ namespace Burgerownia.Winforms
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_100)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_200)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_500)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_5000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_20000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_10000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_50000)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_10)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -394,23 +394,23 @@ namespace Burgerownia.Winforms
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox listBox_Order;
+        private System.Windows.Forms.Label label_price;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox pictureBox_2000;
+        private System.Windows.Forms.PictureBox pictureBox_10;
+        private System.Windows.Forms.PictureBox pictureBox_1;
+        private System.Windows.Forms.PictureBox pictureBox_2;
+        private System.Windows.Forms.PictureBox pictureBox_50;
+        private System.Windows.Forms.PictureBox pictureBox_10000;
+        private System.Windows.Forms.PictureBox pictureBox_50000;
+        private System.Windows.Forms.PictureBox pictureBox_20;
+        private System.Windows.Forms.PictureBox pictureBox_5;
+        private System.Windows.Forms.PictureBox pictureBox_500;
+        private System.Windows.Forms.PictureBox pictureBox_1000;
+        private System.Windows.Forms.PictureBox pictureBox_20000;
+        private System.Windows.Forms.PictureBox pictureBox_5000;
+        private System.Windows.Forms.PictureBox pictureBox_200;
+        private System.Windows.Forms.PictureBox pictureBox_100;
     }
 }

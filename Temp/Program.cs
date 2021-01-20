@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Reflection;
 using System.Xml.Serialization;
 using Burgerownia.Back;
 using Burgerownia.Back.Interface;
@@ -14,15 +16,30 @@ namespace Temp
             Console.WriteLine("Hello World!");
             IContext context = new Context();
 
-            List<Item> items = new List<Item>();
-            context.BurgerService.Items.ForEach(b => Console.WriteLine(b));
-            context.BurgerService.Items.ForEach(b => items.Add(b as Item));
-            context.RefreshmentService.Items.ForEach(r => items.Add(r as Item));
+            List<Refreshment> items = context.RefreshmentService.Items;
 
-            var extraTypes = new Type[] { typeof(Burger), typeof(Refreshment) };
+            Type[] extraTypes = new Type[] { typeof(Burger), typeof(Refreshment) };
             var type = items.GetType();
             XmlSerializer serializer = new XmlSerializer(type, extraTypes);
+            string dt = DateTime.Now.ToString().Replace('/', '_').Replace(' ', '_').Replace(':', '_');
+            Console.WriteLine(Directory.GetCurrentDirectory());
+            Console.ReadKey();
+            string path =$"{Directory.GetCurrentDirectory()}\\MarekParagon_{dt}.XML";
+            StreamWriter sw = new StreamWriter(path);
+            serializer.Serialize(sw, items);
             serializer.Serialize(Console.Out, items);
+            Console.WriteLine("ok");
+
+
+            //List<Item> items = new List<Item>();
+            //context.BurgerService.Items.ForEach(b => Console.WriteLine(b));
+            //context.BurgerService.Items.ForEach(b => items.Add(b as Item));
+            //context.RefreshmentService.Items.ForEach(r => items.Add(r as Item));
+
+            //var extraTypes = new Type[] { typeof(Burger), typeof(Refreshment) };
+            //var type = items.GetType();
+            //XmlSerializer serializer = new XmlSerializer(type, extraTypes);
+            //serializer.Serialize(Console.Out, items);
 
 
 
