@@ -24,6 +24,7 @@ namespace Burgerownia.Winforms
             TextBox_Price.Text = (_burger.Price * _pricePercentageModificator / 10000).ToString() + " zł";
             if (pricePercentageModificator == 100) AddEventLisnersSpecificToBurgers();
             RefreshIngredientsListBox();
+            SetProperAmountIcon(Program.order.Items.FindAll(i => i.Id == _burger.Id).Count);
         }
 
         private void AddEventLisnersSpecificToBurgers()
