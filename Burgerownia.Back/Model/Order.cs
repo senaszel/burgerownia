@@ -13,7 +13,7 @@ namespace Burgerownia.Back.Model
 
         public void AddItem(Item item) => Items.Add(item);
 
-        public void RemoveItem(Item item) => Items.Remove(item);
+        public bool RemoveItem(Item item) => Items.Remove(item);
 
         public double TotalPrice()
         {
@@ -21,6 +21,8 @@ namespace Burgerownia.Back.Model
             Items.ForEach(each => totalPrice += each.Price);
             return totalPrice;
         }
+
+        public bool RemoveItem(double price) => Items.Remove(Items.Find(i => i.Price == price));
 
 
     }

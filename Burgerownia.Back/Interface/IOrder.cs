@@ -6,7 +6,8 @@ namespace Burgerownia.Back.Model
     {
         List<Item> Items { get; }
         void AddItem(Item item);
-        void RemoveItem(Item item);
+        bool RemoveItem(Item item);
+        bool RemoveItem(double price);
         double TotalPrice();
     }
 }

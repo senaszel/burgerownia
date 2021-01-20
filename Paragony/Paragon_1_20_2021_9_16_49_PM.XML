@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item xsi:type="Burger">
+    <Name>Contra</Name>
+    <Price>900</Price>
+    <Ingredients>
+      <Name>ser biały 75g</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>ketchup</Name>
+      <Price>100</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>krewetki 50g</Name>
+      <Price>400</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>zapiekane bakłażany 80g</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Mario</Name>
+    <Price>1400</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>ser biały 75g</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Luigi</Name>
+    <Price>1000</Price>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>zestaw sałat 30g</Name>
+      <Price>300</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Space Invader</Name>
+    <Price>1200</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Refreshment">
+    <Name>kawa 200ml</Name>
+    <Price>500</Price>
+  </Item>
+</ArrayOfItem>

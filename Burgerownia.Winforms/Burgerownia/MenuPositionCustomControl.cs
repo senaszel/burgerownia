@@ -56,8 +56,11 @@ namespace Burgerownia.Winforms
 
         internal void OnClick_Remove(object sender, EventArgs e)
         {
-            Program.order.RemoveItem(_item);
-            MessageBox.Show(Program.order.Items.Count.ToString(), $"removed {_item.Name}", MessageBoxButtons.OK);
+            //Program.order.RemoveItem(_item.Price);
+            if (Program.order.RemoveItem(_item.Price))
+                MessageBox.Show(Program.order.Items.Count.ToString(), $"removed {_item.Name}", MessageBoxButtons.OK);
+            else
+                MessageBox.Show(Program.order.Items.Count.ToString(), $"Nie znalazło {_item.Name}", MessageBoxButtons.OK);
         }
     }
 }
