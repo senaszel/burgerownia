@@ -6,9 +6,9 @@ namespace Burgerownia.Back.Model
 {
     public class Ingredient : Item
     {
-        [XmlElement("IsVege")]
+        [XmlIgnore()]
         public bool IsVege { get; set; }
-        [XmlElement("HasAlergens")]
+        [XmlIgnore()]
         public bool HasAlergens => Alergens.Count > 0;
         [XmlIgnore()]
         public List<Alergen> Alergens { get; set; } = new List<Alergen>();

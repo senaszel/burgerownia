@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item xsi:type="Burger">
+    <Name>Mario</Name>
+    <Price>1400</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+      <IsVege>false</IsVege>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+      <IsVege>false</IsVege>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+      <IsVege>false</IsVege>
+    </Ingredients>
+    <Ingredients>
+      <Name>ser biały 75g</Name>
+      <Price>200</Price>
+      <IsVege>false</IsVege>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Contra</Name>
+    <Price>900</Price>
+    <Ingredients>
+      <Name>ser biały 75g</Name>
+      <Price>200</Price>
+      <IsVege>false</IsVege>
+    </Ingredients>
+    <Ingredients>
+      <Name>ketchup</Name>
+      <Price>100</Price>
+      <IsVege>false</IsVege>
+    </Ingredients>
+    <Ingredients>
+      <Name>krewetki 50g</Name>
+      <Price>400</Price>
+      <IsVege>false</IsVege>
+    </Ingredients>
+    <Ingredients>
+      <Name>zapiekane bakłażany 80g</Name>
+      <Price>200</Price>
+      <IsVege>false</IsVege>
+    </Ingredients>
+  </Item>
+</ArrayOfItem>
