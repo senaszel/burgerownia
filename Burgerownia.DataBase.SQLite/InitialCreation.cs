@@ -44,6 +44,9 @@ namespace Burgerownia.DataBase.SQLite
             db.SeedData(Tables.Burgers, "\'Luigi\'");
             db.SeedData(Tables.Burgers, "\'Space Invader\'");
             db.SeedData(Tables.Burgers, "\'Contra\'");
+            db.SeedData(Tables.Burgers, "\'Robin Hood\'");
+            db.SeedData(Tables.Burgers, "\'Dizzy\'");
+            db.SeedData(Tables.Burgers, "\'Tanks\'");
 
             db.SeedData(Tables.Compositions, "3,1");
             db.SeedData(Tables.Compositions, "4,1");
@@ -59,6 +62,16 @@ namespace Burgerownia.DataBase.SQLite
             db.SeedData(Tables.Compositions, "9,4");
             db.SeedData(Tables.Compositions, "11,4");
             db.SeedData(Tables.Compositions, "12,4");
+            db.SeedData(Tables.Compositions, "3,5");
+            db.SeedData(Tables.Compositions, "4,5");
+            db.SeedData(Tables.Compositions, "6,5");
+            db.SeedData(Tables.Compositions, "10,6");
+            db.SeedData(Tables.Compositions, "4,6");
+            db.SeedData(Tables.Compositions, "6,6");
+            db.SeedData(Tables.Compositions, "5,6");
+            db.SeedData(Tables.Compositions, "3,7");
+            db.SeedData(Tables.Compositions, "4,7");
+            db.SeedData(Tables.Compositions, "6,7");
 
             return db;
         }

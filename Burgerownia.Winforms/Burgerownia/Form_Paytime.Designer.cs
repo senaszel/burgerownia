@@ -153,12 +153,13 @@ namespace Burgerownia.Winforms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox_Order.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.tableLayoutPanel1.SetColumnSpan(this.listBox_Order, 9);
+            this.listBox_Order.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listBox_Order.FormattingEnabled = true;
-            this.listBox_Order.ItemHeight = 15;
+            this.listBox_Order.ItemHeight = 30;
             this.listBox_Order.Location = new System.Drawing.Point(69, 67);
             this.listBox_Order.Name = "listBox_Order";
             this.tableLayoutPanel1.SetRowSpan(this.listBox_Order, 2);
-            this.listBox_Order.Size = new System.Drawing.Size(1010, 379);
+            this.listBox_Order.Size = new System.Drawing.Size(1010, 364);
             this.listBox_Order.TabIndex = 0;
             // 
             // pictureBox_1

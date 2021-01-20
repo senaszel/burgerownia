@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item xsi:type="Burger">
+    <Name>Mario</Name>
+    <Price>1400</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>ser biały 75g</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Mario</Name>
+    <Price>1400</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>ser biały 75g</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Mario</Name>
+    <Price>1400</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>ser biały 75g</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Mario</Name>
+    <Price>1400</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>ser biały 75g</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Mario</Name>
+    <Price>1400</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>ser biały 75g</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Luigi</Name>
+    <Price>1000</Price>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>zestaw sałat 30g</Name>
+      <Price>300</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Space Invader</Name>
+    <Price>1200</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Space Invader</Name>
+    <Price>1200</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Luigi</Name>
+    <Price>1000</Price>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>zestaw sałat 30g</Name>
+      <Price>300</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Burger">
+    <Name>Luigi</Name>
+    <Price>1000</Price>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>zestaw sałat 30g</Name>
+      <Price>300</Price>
+    </Ingredients>
+  </Item>
+</ArrayOfItem>

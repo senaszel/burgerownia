@@ -39,7 +39,9 @@ namespace Burgerownia.Winforms
                 MessageBox.Show("Drukowanie paragonu","Drukowanie",MessageBoxButtons.OK);
                 System.Threading.Thread.Sleep(1);
                 MessageBox.Show($"{recipe.Path}", "Ścieżka do paragonu", MessageBoxButtons.OK);
-                this.Close();
+                this.Hide();
+                Form_WelcomeScreen ws = new Form_WelcomeScreen();
+                ws.Show();
             }
         }
 

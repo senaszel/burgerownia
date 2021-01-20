@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item xsi:type="Refreshment">
+    <Name>woda 200ml</Name>
+    <Price>400</Price>
+  </Item>
+  <Item xsi:type="Refreshment">
+    <Name>woda 200ml</Name>
+    <Price>400</Price>
+  </Item>
+  <Item xsi:type="Refreshment">
+    <Name>woda 200ml</Name>
+    <Price>400</Price>
+  </Item>
+  <Item xsi:type="Refreshment">
+    <Name>woda 200ml</Name>
+    <Price>400</Price>
+  </Item>
+  <Item xsi:type="Refreshment">
+    <Name>woda 200ml</Name>
+    <Price>400</Price>
+  </Item>
+  <Item xsi:type="Refreshment">
+    <Name>woda 200ml</Name>
+    <Price>400</Price>
+  </Item>
+  <Item xsi:type="Refreshment">
+    <Name>woda 200ml</Name>
+    <Price>400</Price>
+  </Item>
+</ArrayOfItem>

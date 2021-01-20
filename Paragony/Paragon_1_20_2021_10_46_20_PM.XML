@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item xsi:type="Burger">
+    <Name>Mario</Name>
+    <Price>1400</Price>
+    <Ingredients>
+      <Name>mięso drobiowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>mięso wieprzowe 180g</Name>
+      <Price>500</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>jajko sadzone 1szt</Name>
+      <Price>200</Price>
+    </Ingredients>
+    <Ingredients>
+      <Name>ser biały 75g</Name>
+      <Price>200</Price>
+    </Ingredients>
+  </Item>
+  <Item xsi:type="Refreshment">
+    <Name>woda 200ml</Name>
+    <Price>400</Price>
+  </Item>
+  <Item xsi:type="Refreshment">
+    <Name>kawa 200ml</Name>
+    <Price>500</Price>
+  </Item>
+  <Item xsi:type="Refreshment">
+    <Name>kawa 200ml</Name>
+    <Price>500</Price>
+  </Item>
+</ArrayOfItem>
