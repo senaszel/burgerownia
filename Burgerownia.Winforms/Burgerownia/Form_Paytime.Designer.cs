@@ -49,6 +49,7 @@ namespace Burgerownia.Winforms
             this.pictureBox_50 = new System.Windows.Forms.PictureBox();
             this.pictureBox_20 = new System.Windows.Forms.PictureBox();
             this.pictureBox_10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_back = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_2)).BeginInit();
@@ -65,6 +66,7 @@ namespace Burgerownia.Winforms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_50)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_back)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -100,6 +102,7 @@ namespace Burgerownia.Winforms
             this.tableLayoutPanel1.Controls.Add(this.pictureBox_50, 3, 4);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox_20, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.pictureBox_10, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.pictureBox_back, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -358,6 +361,19 @@ namespace Burgerownia.Winforms
             this.pictureBox_10.TabIndex = 7;
             this.pictureBox_10.TabStop = false;
             // 
+            // pictureBox_back
+            // 
+            this.pictureBox_back.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox_back.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox_back.Image")));
+            this.pictureBox_back.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox_back.Name = "pictureBox_back";
+            this.pictureBox_back.Size = new System.Drawing.Size(60, 58);
+            this.pictureBox_back.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_back.TabIndex = 18;
+            this.pictureBox_back.TabStop = false;
+            // 
             // Form_Paytime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -387,6 +403,7 @@ namespace Burgerownia.Winforms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_50)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_back)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,5 +429,6 @@ namespace Burgerownia.Winforms
         private System.Windows.Forms.PictureBox pictureBox_5000;
         private System.Windows.Forms.PictureBox pictureBox_200;
         private System.Windows.Forms.PictureBox pictureBox_100;
+        private System.Windows.Forms.PictureBox pictureBox_back;
     }
 }

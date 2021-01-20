@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace Burgerownia.Winforms
@@ -16,6 +12,7 @@ namespace Burgerownia.Winforms
         {
             this.FormClosing += new FormClosingEventHandler(Do.Close);
             InitializeComponent();
+            this.pictureBox_back.Click += new EventHandler(BackToPlaceOrder);
 
             Program.order.Items.ForEach(p => { totalPrice += p.Price; this.listBox_Order.Items.Add(p); });
             this.label_price.Text = (totalPrice / 100).ToString();
@@ -23,6 +20,13 @@ namespace Burgerownia.Winforms
             GatherPictureBoxes();
             money.ForEach(m => m.Click += (sender, eventArguments) => PaySome(sender, eventArguments, m.Name));
             this.label_price.TextChanged += (sender, eventArguments) => FinishIfFullyPaid(sender,eventArguments);
+        }
+
+        private void BackToPlaceOrder(object sender, EventArgs e)
+        {
+            Hide();
+            Form_PlaceOrder ws = new Form_PlaceOrder();
+            ws.Show();
         }
 
         private void FinishIfFullyPaid(object sender, EventArgs eventArguments)
